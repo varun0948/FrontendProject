@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../Header/ProfileHeader.css">
+    <script src="../Scripts/profile.js" defer></script>
+    
+    <link rel="website icon" type="png" href="../Images/logo.png">
+</head>
+
+<body>
+    <div id="ProfileHeader"></div>
+    hello
+
+</body>
+<script>
+    // Load Header
+    fetch("../Header/ProfileHeader.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("ProfileHeader").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+</script>
+
+</html>

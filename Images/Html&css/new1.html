@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script>
+
+        function student(){
+            var first = document.getElementById("first").value
+            var last  = document.getElementById("last").value
+            var date = document.getElementById("dob").value
+            var contact = document.getElementById("contact").value
+            var gender = document.getElementById("gender").value
+            var add = document.getElementById("add").value
+            var city = document.getElementById("city").value
+            var course = document.getElementById("course").value
+
+            document.getElementById("here").innerHTML = first +"<br>"+last +"<br>"
+            +date+"<br>"+contact +"<br>"+gender+"<br>"+add+"<br>"+city+"<br>"+course;
+        }
+    </script>
+</head>
+<body>
+    <h2 align = "center">STUDENT REGISTRATION FORM </h2>
+    <form >
+       <table border = "0" align = "center" cellpadding = "5" cellspacing="5">
+
+           <tr>
+               <td align="center">First Name: </td>
+               <td align="center"><input type="text" id="first"></td>
+            </tr><br><br>
+            <tr>
+                <td align="center">Last Name: </td>
+                <td align="center"><input type="text" id="last"></td>
+            </tr><br><br>
+        <tr>
+            <td align="center">Date of Birth: </td>
+            <td align="center"><input type="date" id="dob"></td>
+        </tr><br><br>
+        <tr>
+            <td align="center">Phone no: </td>
+            <td align="center"><input type="number" id="contact" ></td>
+        </tr><br><br>
+        <tr>
+            <td align="center">Gender: </td>
+            <td align="center"><input type="radio"  id="gender" >Male</td>
+            <td align="center"><input type="radio"  id="gender" >Female</td>
+        </tr><br><br>
+        <tr>
+            <td align="center">City: </td>
+            <td align="center"><input type="text" id="city" ></td>
+        </tr><br><br>
+        <tr>
+            <td align="center">Course: </td>
+            <td align="center"><input type="radio"  id="city" >BCA</td>
+            <td align="center"><input type="radio"  id="city" >BBA</td>
+            <td align="center"><input type="radio"  id="city" >B.Com</td>
+        </tr><br><br>
+        <tr>
+            <td align="center" ><input type="submit"  onclick="student()" value="Send"> </td>
+            <td align="center"><input type="reset"  value="reset"  ></td>
+        </tr><br><br>
+    </table>
+    <table >
+        <tr align="center">
+            <td>
+
+                <div id="here"></div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

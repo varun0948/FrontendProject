@@ -1,0 +1,61 @@
+* {
+    padding: 0%;
+    margin: auto;
+}
+
+.header {
+    color: black;
+    background-color: #a3b18a;
+    height: 100px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.right-header {
+    padding-left: 500px;
+    margin-right: 100px;
+}
+
+.right-header a {
+    color: aquamarine;
+    padding-right: 10px;
+    text-decoration: none;
+    
+
+}
+
+div.circle {
+    margin: 200px;
+    height: 100px;
+    width: 100px;
+    background-color: orchid;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1s;
+    animation-direction: alternate-reverse;
+    animation-delay: 0.25s;
+    
+}
+
+@keyframes slidein {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+

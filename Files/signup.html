@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../Styles/signup.css">
+    <link rel="stylesheet" href="../Header/header.css">
+    <script src="../Scripts/signup.js"></script>
+    
+    <link rel="website icon " type="png" href="../Images/logo.png">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="form">
+            <h2>Register Yourself</h2>
+            <form id="signup-form">
+                <input type="text" class="input-box" placeholder="Enter your name" id="name" required>
+                <input type="email" class="input-box" placeholder="Enter E-mail" id="email" required>
+                <input type="password" class="input-box" placeholder="Enter password" id="password" required>
+                <input type="text" class="input-box" placeholder="Enter number" id="number" required maxlength="10">
+                <input type="text" class="input-box" placeholder="Enter Otp" id="otp" required maxlength="4">
+                <button type="submit" class="btn">Submit</button><br>
+
+                <p id="error-message" style="color: red; display: none;">This email is already registered.</p>
+
+                <div class="icon">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                </div>
+            </form>
+        </div>
+        <div>
+            <p>Have an account? <a href="../Files/login.html">Sign In</a></p>
+        </div>
+    </div>
+
+
+    <script>
+        // Load Header
+        fetch("../Header/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+</body>
+
+</html>

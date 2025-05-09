@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Header/header.css">
+    <script src="../Scripts/login.js"></script>
+    
+    <link rel="website icon " type="png" href="../Images/logo.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Login Form Container -->
+    <div class="container">
+        <div class="loginBox">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" class="input-box" placeholder="Enter your email" required>
+                <input type="password" id="password" class="input-box" placeholder="Enter password" required>
+                <button type="submit" class="btn">Login</button><br>
+
+                <p id="error-message" style="color: red; display: none;">Invalid email or password.</p>
+
+                <p class="signin">Don't have an account? <a href="../Files/signup.html">Sign up</a></p>
+
+                <div class="icon">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        // Load Header
+        fetch("../Header/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+
+    </script>
+</body>
+
+</html>

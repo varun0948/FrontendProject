@@ -1,0 +1,211 @@
+.cart-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: -5px;
+}
+
+.cart-info {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: -50px;
+  font-size: 20px;
+}
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+.btninc{
+  margin-right: 320px;
+}
+button.increase,
+button.decrease {
+  background-color: #1b273292;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 50px;
+  border-radius: 8px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#clear-cart,
+#checkout-btn {
+  background-color: #6a798892;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 400px;
+  font-size: 18px;
+}
+
+.sub-head {
+  margin-top: 20px;
+  border: 1px solid #1b273292;
+  border-radius: 10px;
+  background-color: #011426b1;
+  color: #ffffff;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.total {
+  margin-top: 30px;
+  font-size: 22px;
+}
+.remove-item {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-item img {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+/* Payment Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 40%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.modal-content button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Enhanced Success Animation */
+.success {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success img {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: bounceIn 0.6s ease-in-out;
+}
+
+.success h3 {
+  color: #28a745;
+  font-size: 24px;
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+/* Confetti Animation */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #f2b01e;
+  opacity: 0.8;
+  z-index: 9999;
+  animation: confetti-fall 1.5s ease-out forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Scale Animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,93 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background: #1b2732;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation Menu */
+
+.rightSide ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.rightSide ul li {
+  display: inline;
+}
+
+.rightSide ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.rightSide ul li a:hover {
+  color: #c0392b;
+  border-radius: 5px;
+}
+
+/* Sign In Button */
+
+
+.cart-container2 {
+  position: relative;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: #ecf0f1;
+  position: relative;
+  transition: 0.3s;
+}
+
+.cart-button img {
+  width: 20px;
+  height: 18px;
+}
+
+.cart-button:hover {
+  background: #bdc3c7;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e74c3c;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

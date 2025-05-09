@@ -1,0 +1,13 @@
+.hello{
+    height: 100px;
+    width: 100px;
+    background-color: hotpink;
+    color: white;
+}
+
+@media(width :600px){
+    div{
+        color: black;
+        background-color: yellow;
+    }
+} 

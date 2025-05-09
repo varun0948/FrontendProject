@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store</title>
+    <link rel="stylesheet" href="../Styles/home.css"> 
+    <link rel="stylesheet" href="../Header/header.css"> 
+    <link rel="stylesheet" href="../Footer/footer.css">
+    <Script src="../Scripts/home.js"></Script>
+    <link rel="website icon " type="png" href="../Images/logo.png">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero">
+            <h1>Sensual Exuberant Addictive</h1>
+            <p>Smell like a dream, leave a legend behind.</p>
+            <!-- <button class="explore">Explore More</button> -->
+        </section>
+        <section class="latest-arrivals">
+
+            <p class="newArrTitle">New Arrival</p>
+            <hr class="hrStyle">
+
+            <div class="products">
+
+                <div class="product">
+                    <div data-id="1" onclick="viewProduct(this)">
+                        <img src="/Images/perfumes2.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Momento Amour</h3>
+                            <p class="productDesc">A seductive mix of dark plum, smoky vetiver, and incense.</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(1, 'Momento Sprey', 'Lorem ipsum dolor sit amet', 49.99, '/Images/perfumes2.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="2" onclick="viewProduct(this)">
+                        <img src="/Images/perfume7.jpg" alt="Creed Noir">
+                        <div class="productDetail">
+                            <p class="productTitle">Creed Noir </h3>
+                            <p class="productDesc">A seductive, dark essence of black orchid and vanilla.</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(2, 'Creed Noir', 'A seductive, dark essence of black orchid and vanilla.', 49.99,  '/Images/perfume7.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="3" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfumes3.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Laura Chaoutte</h3>
+                            <p class="productDesc">A timeless blend of French lavender, exuding elegance and charm.✨</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(3, 'Laura Chaoutte', 'A timeless blend of French lavender, exuding elegance and charm.✨', 79.99,  '/Images/perfumes3.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="4" onclick="viewProduct(this)">
+                        <img src="/Images/perfumes4.jpg" alt="">
+                        <div class="productDetail">
+                            <p class="productTitle">Blue Ember</h3>
+                            <p class="productDesc">A captivating fusion of smoky amber, and a spark of spicy cardamom.
+                            </p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(4, 'Blue Ember ', 'A captivating fusion of smoky amber, and a spark of spicy cardamom.', 79.99,  '/Images/perfumes4.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meansPerfume">
+
+            <p class="newArrTitle">Mens </p>
+            <hr class="hrStyle">
+
+            <div class="products">
+                <div class="product">
+                    <div data-id="5" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume29.jpg" alt="Black Gemstone">
+                        <div class="productDetail">
+                            <p class="productTitle">Black Gemstone</h3>
+                            <p class="productDesc"> A luxurious blend of dark oud, exuding mystery and elegance</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(5, ' Black Gemstone', 'A luxurious blend of dark oud, black amber, and velvety musk, exuding mystery and elegance', 79.99,  '/Images/perfume29.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="6" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume11.jpg" alt="Midnight Ember ">
+                        <div class="productDetail">
+                            <p class="productTitle">Midnight Ember </h3>
+                            <p class="productDesc">A hypnotic blend of smoky oud, warm amber igniting passion and
+                                mystery. </p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(7, ' Midnight Ember ', 'A hypnotic blend of smoky oud, warm amber, and spicy cinnamon, igniting passion and mystery. ', 79.99,  '/Images/perfume11.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="8" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume22.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Witch's veil</h3>
+                            <p class="productDesc">A mystical blend of dark roses, smoky casting an irresistible spell.
+                            </p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(8, ' Witch veil  ' , 'A mystical blend of dark roses, smoky casting an irresistible spell.', 79.99,  '/Images/perfume22.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="9" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfumes5.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Soft Embrace</h3>
+                            <p class="productDesc">A delicate embrace of velvety rose, wrapped in a whisper of musk.
+                            </p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(9, 'Soft Embrace  ' , 'A delicate embrace of velvety rose, creamy vanilla, and warm amber, wrapped in a whisper of musk. ', 79.99,  '/Images/perfumes5.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="explore" > <a href="more.html">Explore More For Mens</a></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="womeansPerfume">
+
+            <p class="newArrTitle">Womens </p>
+            <hr class="hrStyle">
+
+            <div class="products">
+                <div class="product">
+                    <div data-id="10" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume17.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Imperial Bloom</h3>
+                            <p class="productDesc"> A majestic fusion of radiant jasmin, exuding regal elegance.</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(10, 'Imperial Bloom  ' , 'A majestic fusion of radiant jasmin, exuding regal elegance.', 79.99,  '/Images/perfume17.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="11" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume24.jpg" alt="Bleu De Chanel">
+                        <div class="productDetail">
+                            <p class="productTitle">Whispering Rose</h3>
+                            <p class="productDesc"> A delicate symphony of blooming roses, soft musk, and evoking
+                                timeless romance. </p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(11, 'Imperial Bloom  ' , ' A delicate symphony of blooming roses, soft musk, and  evoking timeless romance.', 79.99,  '/Images/perfume24.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="12" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfume28.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Golden Temptation</h3>
+                            <p class="productDesc">A seductive blend of rich saffron, and radiating pure luxury and
+                                allure</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(12, 'Golden Temptation  ' , 'A seductive blend of rich saffron, and  radiating pure luxury and allure', 79.99,  '/Images/perfume24.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div data-id="13" onclick="viewProduct(this)">
+
+                        <img src="/Images/perfumes6.jpg" alt="Fernando Scent">
+                        <div class="productDetail">
+                            <p class="productTitle">Crystal Mirage</h3>
+                            <p class="productDesc"> A mystical blend of exotic spices and warm amber.</p>
+                            <p class="productPrice">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="btnAction">
+                        <button class="addToCart"
+                            onclick="addToCart(13, 'Crystal Mirage  ' , ' A mystical blend of exotic spices and warm amber.', 79.99,  '/Images/perfumes6.jpg')">
+                            Add to Cart</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="explore">Explore More For Womens</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="ourServices">
+            <p class="serviceTitle">Our Services</p>
+            <hr class="hrStyle">
+
+            <div class="serviceContainer">
+                <div class="service">
+                    <h3>Fast Delivery</h3>
+                    <p>Get your products delivered quickly and securely to your doorstep.</p>
+                </div>
+
+                <div class="service">
+                    <h3>24/7 Customer Support</h3>
+                    <p>We are here to assist you anytime, anywhere.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Premium Quality</h3>
+                    <p>We ensure top-notch quality in all our products.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied? Return within 7 days hassle-free.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+</body>
+
+</html>
+<script>
+    // Load Header
+    fetch("../Header/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+
+    // Load Footer
+    fetch("../Footer/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+</script>

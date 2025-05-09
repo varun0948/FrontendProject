@@ -1,0 +1,31 @@
+div{
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    justify-items: center;
+}
+div:active{
+    transition: all;
+    background-color: hotpink;
+}
+
+
+div:hover{
+    color: black;
+    height: 200px;
+    width: 200px;
+    /* transform: rotate(90deg); */
+    background-color:aquamarine;
+   transition: all 2s ease-in;
+   font-size: 20px;
+   transform: translateX(-200px)
+
+}

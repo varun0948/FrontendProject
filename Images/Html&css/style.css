@@ -1,0 +1,37 @@
+*{
+    padding: 0%;
+    margin: 0%;
+   
+}
+.navbar{
+    color: #f08804;
+    height: 60px;
+    background-color: black;
+    
+}
+.search{
+    color: white;
+    background-color: #f08804;
+}
+.logo{
+    height: 60px;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.box{
+    height: 600px;
+    width: 600px;
+}
