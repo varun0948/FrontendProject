@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#logo {
+  margin-left: 150px;
+}
+#Contact{
+  font-weight: bolder;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: rgba(65, 65, 65, 0.5); /* Lighter background */
+  background: url("../Images/p2.jpg") center/cover no-repeat;
+}
+.hero-overlay {
+  background-color: rgba(65, 65, 65, 0.5); /* Lighter background */
+  width: 100%;
+  /* border: 1px solid black; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(65, 63, 63, 0.525); /* Lighter background */
+  border: 2px solid black;
+  display: flex;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-left: 120px;
+  margin-right: 120px;
+  max-width: 80%;
+}
+.contact-info {
+  flex: 1;
+  padding: 60px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-info h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white; /* Make heading color stand out */
+}
+.contact-info p {
+  font-size: 16px;
+  color: white; /* Adjust text color to white */
+  margin-bottom: 20px;
+}
+.contact-info a,
+.contact-info span {
+  color: #fff; /* Adjust color for links */
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+}
+.info-blocks {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.info-block {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #8e8e8e;
+  max-width: 250px;
+}
+.info-block h4 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Heading inside info-blocks */
+}
+.info-block p {
+  margin: 0;
+  font-size: 14px;
+  color: white; /* Text color inside info-blocks */
+}
+.contact-form {
+  margin: 20px;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+  background-color: rgba(54, 53, 53, 0.496); /* Lighter background */
+  border-radius: 8px;
+}
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white; /* Adjust form heading color */
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.2); /* Light background for inputs */
+  color: white; /* Input text color */
+}
+.contact-form button {
+  padding: 14px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form small {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #f6f6f6;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    padding: 40px 20px;
+  }
+}
+.values-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.values-section h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.value-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 15px 10px;
+  max-width: 280px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #ff6b6b;
+  transition: transform 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  font-size: 20px;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.value-card3 {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #ff6b6b;
+  transition: transform 0.3s ease;
+}
+.value-card3:hover {
+  transform: translateY(-5px);
+}
+.value-card3 h3 {
+  font-size: 20px;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.value-card3 p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../Header/header.css">
+  <link rel="stylesheet" href="../CSS/contact.css">
+  <link rel="stylesheet" href="../Footer/footer.css">
+   
+</head>
+<body>
+<div id="header"></div>
+
+<div class="hero-overlay">
+<div class="container">
+
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>Email, call, or complete the form to learn how we can help solve your problem.</p>
+        <span>📧 info@Travelin.com</span>
+        <span>📞 +123-456-7890</span>
+        <a href="#">Customer Support</a>
+        
+        <div class="values-section">
+          <h2>Why Reach Out to Us?</h2>
+          <div class="value-cards">
+            <div class="value-card">
+              <h3>Support</h3>
+              <p>Our experts are available 24/7 to assist with any travel-related concerns.</p>
+            </div>
+            <div class="value-card">
+              <h3>Transparency</h3>
+              <p>Clear communication and no hidden surprises—your peace of mind matters.</p>
+            </div>
+            <div class="value-card3">
+              <h3>Efficiency</h3>
+              <p>We work fast and smart to get you the help you need, when you need it.</p>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    
+    <!-- Right: Contact Form -->
+    <div class="contact-form">
+        <h2>Your Feedback</h2>
+        <form>
+            <input type="text" placeholder="First name" required />
+            <input type="text" placeholder="Last name" required />
+            <input type="email" placeholder="Your email" required />
+            <input  type="num'" placeholder=" +91 Phone number"required maxlength="10" />
+            <textarea rows="4" placeholder="How can we help?" required></textarea>
+            <button type="submit">Submit</button>
+            <small>By contacting us, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</small>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    // Load Header
+    fetch("../Header/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading header:", error));
+  
+    // Load Footer
+    fetch("../Footer/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading footer:", error));
+  </script>
+  

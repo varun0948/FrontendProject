@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="../Header/header.css">
+  <link rel="stylesheet" href="../CSS/about.css">
+  <link rel="stylesheet" href="../Footer/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+ 
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- Hero Section -->
+<section class="hero-about">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Who We Are</h1>
+      <p>Creating meaningful travel experiences one journey at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Info Section -->
+<section class="about-section">
+  <div class="about-image">
+    <img src="../Images/p8.jpg" alt="Our Story">
+  </div>
+  <div class="about-text">
+    <h2>Our Story</h2>
+    <p>At Travelin, we believe in the magic of exploration. With a passion for travel and a commitment to exceptional service, we help you discover the world in comfort and style.</p>
+    <button id="btn">Learn More &nbsp;&nbsp; <span class="arrow">→</span></button>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+  <h2>What We Value</h2>
+  <div class="values-grid">
+    <div class="value-box">
+      <h3>Trust</h3>
+      <p>We’re committed to transparency, safety, and reliability.</p>
+    </div>
+    <div class="value-box">
+      <h3>Adventure</h3>
+      <p>We help travelers create moments that become unforgettable stories.</p>
+    </div>
+    <div class="value-box">
+      <h3>Excellence</h3>
+      <p>From planning to destination, we aim for perfection in every detail.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+  // Load Header
+  fetch("../Header/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header").innerHTML = data;
+    })
+    .catch((error) => console.error("Error loading header:", error));
+
+  // Load Footer
+  fetch("../Footer/footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch((error) => console.error("Error loading footer:", error));
+</script>
+
+</body>
+</html>

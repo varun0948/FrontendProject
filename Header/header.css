@@ -1,0 +1,54 @@
+.header {
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(0, 0, 0);
+  background-size: cover;
+  padding: 20px 0;
+  position: absolute;
+  z-index: 1;
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  /* margin-right: -30px; */
+}
+
+.logo a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  margin-right: 650px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.rightSide ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.rightSide li {
+  margin-left: 25px;
+  margin-right: 25px;
+
+  white-space: nowrap;
+}
+
+.rightSide a {
+  color: rgb(255, 255, 255);
+  gap: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+body {
+  /* background: transparent; */
+  font-family: Arial, sans-serif;
+}

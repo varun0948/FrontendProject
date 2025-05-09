@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../Header/header.css" />
+    <link rel="website icon " type="png" href="../Images/logo.png" />
+    <script src="../Script/login.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="loginBox">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" class="input-box" placeholder="Enter your email" required>
+                <input type="password" id="password" class="input-box" placeholder="Enter password" required>
+                <input type="submit" class="btn"  value="Login"><br>
+
+                <p id="error-message" style="color: red; display: none;">Invalid email or password.</p>
+
+                <p class="signin" id="sign-text">Don't have an account? <a href="../Files/signup.html" id="sign">Sign up</a></p>
+
+                <div class="icon">
+                    <i class="bi bi-google" aria-hidden="true"></i>
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                    <i class="bi bi-linkedin"></i>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script>
+      // Load Header
+      fetch("../Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+  </body>
+</html>

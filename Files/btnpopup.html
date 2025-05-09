@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Popup</title>
+  <link rel="stylesheet" href="../CSS/btnpopup.css">
+</head>
+<body>
+
+  <div class="container">
+    <button class="btn" onclick="openPopup()">Submit</button>
+
+    <div class="popup" id="popup">
+      <img src="../Images/tick1.png" alt="Tick">
+      <h2>Thank You!</h2>
+      <p>Your details have been successfully entered. Thank you!</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    const popup = document.getElementById("popup");
+
+    function openPopup() {
+      // Reset popup to its initial hidden and small state
+      popup.style.transition = "none";
+      popup.style.visibility = "hidden";
+      popup.style.top = "0%";
+      popup.style.transform = "translate(-50%, -50%) scale(0.1)";
+
+      // Force reflow to re-trigger the transition
+      void popup.offsetWidth;
+
+      // Apply transition and show
+      popup.style.transition = "all 0.4s ease";
+      popup.style.visibility = "visible";
+      popup.style.top = "50%";
+      popup.style.transform = "translate(-50%, -50%) scale(1)";
+    }
+
+    function closePopup() {
+      popup.style.transition = "all 0.4s ease";
+      popup.style.visibility = "hidden";
+      popup.style.top = "0%";
+      popup.style.transform = "translate(-50%, -50%) scale(0.1)";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Travelin</title>
+    <script src="../Script/profile.js"></script>
+    <link rel="stylesheet" href="../CSS/profile.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <h2 id="tag">Your Profile</h2>
+    <main class="container">
+      <!-- Profile Card -->
+      <section class="profile">
+        <img
+          src="../Images/profile1.png"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <div class="profile-info">
+          <h2 id="name">John Doe</h2>
+          <p id="email">john@example.com</p>
+          <p>Member Since: Jan 2023</p>
+          <button onclick="editProfile()">Edit Profile</button>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('trips')">
+          Upcoming Trips
+        </button>
+        <button class="tab" onclick="showTab('wishlist')">Wishlist</button>
+        <button class="tab" onclick="showTab('settings')">Settings</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="trips">
+        <h3>Upcoming Trips</h3>
+        <div class="trip-cards">
+          <div class="trip-card">
+            <h4>🛫 Paris</h4>
+            <p>Date: <span>20th May 2025</span></p>
+            <p>Duration: 5 days</p>
+            <button>View Details</button>
+          </div>
+          <div class="trip-card">
+            <h4>🌴 Bali</h4>
+            <p>Date: <span>15th June 2025</span></p>
+            <p>Duration: 7 days</p>
+            <button>View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="wishlist">
+        <h3>Your Wishlist</h3>
+        <div class="wishlist-list" id="wishlistList">
+          <div class="trip-cards">
+            <div class="wishlist-list">
+              <div class="wishlist-item">
+                <div class="icon">🏔</div>
+                <div class="details">
+                  <h4>New Zealand Adventure</h4>
+                  <p>Experience mountains, lakes, and nature trails.</p>
+                </div>
+                <div class="actions">
+                  <button class="book">Book Now</button>
+                  <button class="remove">✖</button>
+                </div>
+              </div>
+
+              <div class="wishlist-item">
+                <div class="icon">🚢</div>
+                <div class="details">
+                  <h4>Alaskan Cruise</h4>
+                  <p>Glacier views, sea breeze, and luxury sailing.</p>
+                </div>
+                <div class="actions">
+                  <button class="book">Book Now</button>
+                  <button class="remove">✖</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content hidden" id="settings">
+        <h3>Settings</h3>
+        <div class="btn">
+<!-- 
+          <button>Change Password</button>
+          <button>Manage Notifications</button> -->
+          <button onclick="logout()">Log Out</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+  // Load Header
+  fetch("../Header/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header").innerHTML = data;
+    })
+    .catch((error) => console.error("Error loading header:", error));
+</script>
