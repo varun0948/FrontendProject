@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    users.push(newUser);
+    users.push(newUser);  
     localStorage.setItem("users", JSON.stringify(users));
 
     otpStorage = otpStorage.filter((otp) => otp.mobileNumber !== newUser.mobileNumber);
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
  
 
-    
+
     alert("Registration successful!");
 
     verifyOtpForm.reset();
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otpErrorMessage.style.display = "none";
     signupForm.classList.remove("hidden");
     signupForm.reset();
-
+window.location.href="../Files/home.html"
     newUser = null;
   });
 

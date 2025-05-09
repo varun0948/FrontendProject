@@ -1,43 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
+  const errorMessage = document.getElementById("error-message");
 
-  signupForm.addEventListener("submit", function (e) {
+  loginform.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const email = document.getElementById("email").value();
-    const password = document.getElementById("password").value();
-
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let errorMessage = JSON.parse(localStorage.getItem("LoggedIn")) || [];
+    const enteredEmail = document.getElementById("email").value;
+    const enteredPass = document.getElementById("password").value;
 
     if (!email || !password) {
-      showError("All fields are required.");
-      return;
-    }
-    let existingUserEmail = users.find((users) => users.email === email);
-
-    // let existingUserPass = users.find((users) => users.password === password);
-
-    if (existingUserEmail) {
-      showError("User already registerd with this email.");
+      showError(errorMessage, "All fields are required.");
       return;
     }
 
-    // const newUser = { email, password };
-    // users.push(newUser);
-    // localStorage.setItem("users", JSON.stringify(users));
+    let users = JSON.parse(localStorage.getItem("users"));
 
-    // form.reset();
-    errorMessage.style.display = "none";
-    alert("Registration successful!");
+    const existingUser = users.find((user) => user.email === enteredEmail);
+    const existingPass = existingUser.password === enteredPass;
 
-    signupForm.classList.add("hidden");
-    verifyOtpForm.classList.remove("hidden");
+    // console.log(existingUser);
 
-    function showError(message) {
-      errorMessage.textContent = message;
-      errorMessage.style.display = "block";
+    if (existingUser && existingPass) {
+      alert("Your LoggedIn Successfully");
+
+      window.location.href = "../Files/home.html";
+    } else {
+      showError("Login credetial is not valid .");
+      return;
     }
   });
 
- 
+  function showError(message) {
+    errorMessage.textContent = message;
+    errorMessage.style.display = "block";
+  }
 });
