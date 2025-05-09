@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     otpStorage = otpStorage.filter((otp) => otp.mobileNumber !== newUser.mobileNumber);
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
-
+ 
+    
     alert("Registration successful!");
 
     verifyOtpForm.reset();
