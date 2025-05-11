@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       showError(errorMessage, "User already registered.");
       return;
     }
-
+    
     const generatedOtp = Math.floor(1000 + Math.random() * 9000);
     alert(`Your OTP is ${generatedOtp}`);
 

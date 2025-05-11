@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const errorMessage = document.getElementById("error-message");
+  let loggedInUsers = JSON.parse(localStorage.getItem("loggedInUsers")) || [];
 
   loginform.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -18,11 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const existingUser = users.find((user) => user.email === enteredEmail);
     const existingPass = existingUser.password === enteredPass;
 
-    // console.log(existingUser);
-
     if (existingUser && existingPass) {
       alert("Your LoggedIn Successfully");
-
+      if (existingUser.email && existingUser.password) {
+		  localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsers));
+		  loggedInUsers.push(existingUser);
+      }
       window.location.href = "../Files/home.html";
     } else {
       showError("Login credetial is not valid .");
