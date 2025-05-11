@@ -24,20 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const existingUser = users.find((user) => user.email === email);
-    const existigMobileNo = users.find(user => user.mobileNumber === mobileNumber)
+    const existigMobileNo = users.find(
+      (user) => user.mobileNumber === mobileNumber
+    );
 
     if (existingUser || existigMobileNo) {
       showError(errorMessage, "User already registered.");
       return;
     }
-    
+
     const generatedOtp = Math.floor(1000 + Math.random() * 9000);
     alert(`Your OTP is ${generatedOtp}`);
 
     otpStorage.push({ mobileNumber, generatedOtp });
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
 
-    newUser = { name, email, mobileNumber, password }; 
+    newUser = { name, email, mobileNumber, password };
 
     signupForm.classList.add("hidden");
     verifyOtpForm.classList.remove("hidden");
@@ -48,20 +50,22 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     const enteredOtp = document.getElementById("otp-input").value.trim();
-    const otpEntry = otpStorage.find((otp) => otp.mobileNumber === newUser.mobileNumber);
+    const otpEntry = otpStorage.find(
+      (otp) => otp.mobileNumber === newUser.mobileNumber
+    );
 
     if (!otpEntry || parseInt(enteredOtp) !== otpEntry.generatedOtp) {
       showError(otpErrorMessage, "Invalid OTP. Please try again.");
       return;
     }
 
-    users.push(newUser);  
+    users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    otpStorage = otpStorage.filter((otp) => otp.mobileNumber !== newUser.mobileNumber);
+    otpStorage = otpStorage.filter(
+      (otp) => otp.mobileNumber !== newUser.mobileNumber
+    );
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
- 
-
 
     alert("Registration successful!");
 
@@ -70,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otpErrorMessage.style.display = "none";
     signupForm.classList.remove("hidden");
     signupForm.reset();
-window.location.href="../Files/home.html"
+    window.location.href = "../Files/home.html";
     newUser = null;
   });
 
