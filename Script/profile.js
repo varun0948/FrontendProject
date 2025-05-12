@@ -9,19 +9,36 @@ function showTab(tabId) {
   event.target.classList.add("active");
 }
 
-function editProfile() {
-  const newName = prompt("Enter new name:");
-  const newEmail = prompt("Enter new email:");
+// function editProfile() {
+//   const newName = prompt("Enter new name:");
+//   const newEmail = prompt("Enter new email:");
+//   if (newName) document.getElementById("name").textContent = newName;
+//   if (newEmail) document.getElementById("email").textContent = newEmail;
+// }
+document.addEventListener("DOMContentLoaded", function () {
+  const profileBox = document.getElementById("profile-container");
 
-  if (newName) document.getElementById("name").textContent = newName;
-  if (newEmail) document.getElementById("email").textContent = newEmail;
-}
- 
-function logout() {
-  localStorage.clear();
-  sessionStorage.clear();
+  const loggedInUserId = localStorage.getItem("loggedInuserId");
 
-  window.location.href = "../Files/home.html"; 
-}
- 
-  
+  if (!loggedInUserId) {
+    // alert("No Logged-In User found. Redireccting to the Login page. ");
+    // window.location.href = "../Files/login.html";
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem("users"));
+
+  const loggedInUser = users.find(
+    (user) => user.id === parseInt(loggedInUserId)
+  );
+  if (!loggedInUser) {
+    // alert("User details not found.Redirecing to the Login page.");
+    // window.location.href = "../Files/login.html";
+    return;
+  }
+  profileBox.innerHTML = `
+      <h2>Welcome, ${loggedInUser.name}</h2>
+      <p><strong>Email:</strong>${loggedInUser.email}</p>
+      <p><strong>Mobile Number:</strong> ${loggedInUser.mobileNumber}</p>
+    `;
+});

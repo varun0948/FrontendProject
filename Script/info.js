@@ -2,24 +2,23 @@
 
 const trips = {
   Thailand: {
-    
-      title: "Trip to Thailand",
-      image: "../Images/p19.jpg",
-      destination: "Bangkok, Thailand",
-      price: "$1500",
-      description:
-        "Explore the vibrant and beautiful city of Bangkok with our all-inclusive tour package. Discover its temples, markets, and street food culture.",
-      dayNightInfo: "4 days and 3 nights in Bangkok.",
-      tripEssentials:
-        "Passport, Travel insurance, Thai Baht (THB), Camera, Comfortable clothing.",
-      transportation: "Round trip flights, local transport, and guided tours included.",
-      accommodation: "4-star hotel with breakfast.",
-      itinerary:
-        "Day 1: Arrival in Bangkok, Day 2: Grand Palace & Wat Pho, Day 3: Chatuchak Market & Chao Phraya River Cruise, Day 4: Free time and Departure.",
-      contactInfo: "support@travelco.com | +1-234-567-8910",
-      additionalInfo:
-        "Wear light, comfortable clothes as Bangkok can get very hot. Don't forget sunscreen!",
-    
+    title: "Trip to Thailand",
+    image: "../Images/thailand.jpg",
+    destination: "Bangkok, Thailand",
+    price: "$1500",
+    description:
+      "Explore the vibrant and beautiful city of Bangkok with our all-inclusive tour package. Discover its temples, markets, and street food culture.",
+    dayNightInfo: "4 days and 3 nights in Bangkok.",
+    tripEssentials:
+      "Passport, Travel insurance, Thai Baht (THB), Camera, Comfortable clothing.",
+    transportation:
+      "Round trip flights, local transport, and guided tours included.",
+    accommodation: "4-star hotel with breakfast.",
+    itinerary:
+      "Day 1: Arrival in Bangkok, Day 2: Grand Palace & Wat Pho, Day 3: Chatuchak Market & Chao Phraya River Cruise, Day 4: Free time and Departure.",
+    contactInfo: "support@travelco.com | +1-234-567-8910",
+    additionalInfo:
+      "Wear light, comfortable clothes as Bangkok can get very hot. Don't forget sunscreen!",
   },
   Edinburgh: {
     title: "Trip to Edinburgh",
@@ -56,7 +55,7 @@ const trips = {
   },
   Australia: {
     title: "Trip to Australia",
-    image: "../Images/p9.jpg",
+    image: "../Images/australia.jpg",
     destination: "Sydney, Australia",
     price: "$2500",
     description:
@@ -123,7 +122,7 @@ const trips = {
   },
   Spain: {
     title: "Trip to Spain",
-    image: "../Images/p14.jpg",
+    image: "../Images/spain.jpg",
     destination: "Madrid, Spain",
     price: "$2000",
     description:
@@ -142,7 +141,7 @@ const trips = {
   },
   Dubai: {
     title: "Trip to Dubai",
-    image: "../Images/p15.jpg",
+    image: "../Images/dubai.jpg",
     destination: "Dubai, UAE",
     price: "$2500",
     description:
@@ -162,7 +161,7 @@ const trips = {
 
   SriLanka: {
     title: "Trip to Sri Lanka",
-    image: "../Images/p16.jpg",
+    image: "../Images/sriLanka.jpg",
     destination: "Colombo & Kandy, Sri Lanka",
     price: "$2200",
     description:
@@ -182,7 +181,7 @@ const trips = {
 
   Kazakhstan: {
     title: "Trip to Kazakhstan",
-    image: "../Images/p17.jpg",
+    image: "../Images/kazakstan.jpg",
     destination: "Almaty & Astana, Kazakhstan",
     price: "$2400",
     description:

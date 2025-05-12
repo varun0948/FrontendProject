@@ -1,3 +1,4 @@
+let counter = 0;
 document.addEventListener("DOMContentLoaded", function () {
   const signupForm = document.getElementById("signup-form");
   const verifyOtpForm = document.getElementById("verify-otp-form");
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
   let otpStorage = JSON.parse(localStorage.getItem("otpStorage")) || [];
+  let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
 
   let newUser = null;
 
@@ -39,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otpStorage.push({ mobileNumber, generatedOtp });
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
 
-    newUser = { name, email, mobileNumber, password };
+    newUser = { id: generateId(), name, email, mobileNumber, password };
 
     signupForm.classList.add("hidden");
     verifyOtpForm.classList.remove("hidden");
@@ -62,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
+    loggedInTable.push({id:newUser.id, email: newUser.email, isLogin: true });
+    localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
+
     otpStorage = otpStorage.filter(
       (otp) => otp.mobileNumber !== newUser.mobileNumber
     );
@@ -74,12 +79,19 @@ document.addEventListener("DOMContentLoaded", function () {
     otpErrorMessage.style.display = "none";
     signupForm.classList.remove("hidden");
     signupForm.reset();
-    window.location.href = "../Files/home.html";
+    window.location.href = "../Files/profile.html";
     newUser = null;
   });
 
   function showError(element, message) {
     element.textContent = message;
     element.style.display = "block";
+  }
+
+  function generateId() {
+    let counter = parseInt(localStorage.getItem("userCounter")) || 0;
+    counter++;
+    localStorage.setItem("userCounter", counter);
+    return counter;
   }
 });

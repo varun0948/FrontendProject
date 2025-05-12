@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Travelin</title>
-    <script src="../Script/profile.js"></script>
-    <link rel="stylesheet" href="../CSS/profile.css" />
-  </head>
-  <body>
-    <header id="header"></header>
 
-    <h2 id="tag">Your Profile</h2>
-    <main class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Travelin</title>
+  <script src="../Script/profile.js"></script>
+  <link rel="stylesheet" href="../CSS/profile.css" />
+</head>
+
+<body>
+  <header id="header"></header>
+
+  <h2 id="tag">Your Profile</h2>
+  <main class="container">
+    <div class="hero-overlay">
+
       <!-- Profile Card -->
       <section class="profile">
-        <img
-          src="../Images/profile1.png"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
-        <div class="profile-info">
-          <h2 id="name">John Doe</h2>
-          <p id="email">john@example.com</p>
+        <img src="../Images/profile1.png" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-container">
+
           <p>Member Since: Jan 2023</p>
           <button onclick="editProfile()">Edit Profile</button>
         </div>
@@ -41,16 +40,16 @@
         <h3>Upcoming Trips</h3>
         <div class="trip-cards">
           <div class="trip-card">
-            <h4>🛫 Paris</h4>
+            <h4>🛫 Switerzland</h4>
             <p>Date: <span>20th May 2025</span></p>
             <p>Duration: 5 days</p>
-            <button>View Details</button>
+            <button id="btn-details"> <a href="../Files/info.html?trip=Switerzland">View Details</a></button>
           </div>
           <div class="trip-card">
-            <h4>🌴 Bali</h4>
+            <h4>🌴 Sri-Lanka</h4>
             <p>Date: <span>15th June 2025</span></p>
             <p>Duration: 7 days</p>
-            <button>View Details</button>
+            <button id="btn-details"> <a href="../Files/info.html?trip=SriLanka">View Details</a></button>
           </div>
         </div>
       </div>
@@ -85,21 +84,22 @@
               </div>
             </div>
           </div>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="tab-content hidden" id="settings">
-        <h3>Settings</h3>
-        <div class="btn">
-<!-- 
-          <button>Change Password</button>
+    <div class="tab-content hidden" id="settings">
+      <h3>Settings</h3>
+      <div>
+        <!--      <button>Change Password</button>
           <button>Manage Notifications</button> -->
-          <button onclick="logout()">Log Out</button>
-        </div>
+        <button id="logout" onclick="logout()">Log Out</button>
       </div>
-    </main>
-  </body>
+    </div>
+    </div>
+  </main>
+</body>
+
 </html>
 <script>
   // Load Header

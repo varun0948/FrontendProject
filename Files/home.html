@@ -1,78 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../Header/header.css" />
-    <link rel="stylesheet" href="../CSS/home.css" />
-    <link rel="stylesheet" href="../Footer/footer.css" />
-    <script src="../Script/home.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Home</title>
-  </head>
-  <body>
-    <div id="header"></div>
+  <link rel="stylesheet" href="../Header/header.css" />
+  <link rel="stylesheet" href="../CSS/home.css" />
+  <link rel="stylesheet" href="../Footer/footer.css" />
+  <script src="../Script/home.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
 
-    <main>
-      <section class="hero">
-        <div class="hero-overlay">
-          <div class="hero-content1">
-            <h1>Say Yes</h1>
-            <p>TO YOUR VACATION.</p>
-            <a href="../Files/more.html" class="hero-btn">Book Now</a>
-            <a href="../Files/more.html" class="hero-btn">Know More</a>
-          </div>
+  <title>Home</title>
+</head>
 
-          <!-- Add more trip cards as needed -->
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content1">
+          <h1>Say Yes</h1>
+          <p>TO YOUR VACATION.</p>
+          <a href="../Files/more.html" class="hero-btn">Book Now</a>
+          <a href="../Files/more.html" class="hero-btn">Know More</a>
         </div>
-      </section>
-
-      <div class="search-content">
-        <h1>It's time for a new Adventure.</h1>
-        <p>
-          Discover exciting destinations, plan unforgettable experiences, and
-          book your perfect trip today.
-        </p>
-        <div class="search-container">
-          <input type="text" id="search" placeholder="Search Trips..." />
-          <button id="search-btn">Search</button>
-        </div>
-        
       </div>
-      <section class="about">
-        <img src="../Images/p2.jpg" alt="About Us" class="home-image" />
-        <div class="about-text">
-          <h2>Discover New Horizons with Every Journey</h2>
-          <p>
-            Embark on adventures to breathtaking locations, immerse yourself in
-            diverse cultures, and create stories worth telling. Let your journey
-            begin here.
-          </p>
-          <button id="btn">
-            Learn More &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">→</span>
-          </button>
-        </div>
-      </section>
+    </section>
 
-      <section class="about1">
-        <div class="about-text1">
-          <h2>Enjoy a wonderful vacation with your family</h2>
-          <p>
-            We will help you explore beautiful destinations and create lasting
-            memories. Join us for an unforgettable travel experience.
-          </p>
-          <button id="btn">
-            Learn More &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">→</span>
-          </button>
+    <section class="popular-destinations">
+      <h2 id="popular-destinations ">Popular Destinations</h2>
+      <div class="destinations-container">
+        <div class="destination-card" style="background-image: url('../Images/europe.jpg');">
+          <div class="card-overlay">
+            <p class="card-subtitle">Old World Charm</p>
+            <h3>Europe</h3>
+          </div>
         </div>
-        <img src="../Images/p8.jpg" alt="About Us" class="home-image" />
-      </section>
-    </main>
+        <div class="destination-card" style="background-image: url('../Images/switzerland.jpg');">
+          <div class="card-overlay">
+            <p class="card-subtitle">Cultural Paradise</p>
+            <h3>Switzerland</h3>
+          </div>
+        </div>
+        <div class="destination-card" style="background-image: url('../Images/dubai.jpg');">
+          <div class="card-overlay">
+            <p class="card-subtitle">The City of Life</p>
+            <h3>Dubai</h3>
+          </div>
+        </div>
+        <div class="destination-card" style="background-image: url('../Images/maldives.jpg');">
+          <div class="card-overlay">
+            <p class="card-subtitle">Create Memories In</p>
+            <h3>Maldives</h3>
+          </div>
+        </div>
+        <div class="destination-card" style="background-image: url('../Images/singapore.jpg');">
+          <div class="card-overlay">
+            <p class="card-subtitle">The Lion City</p>
+            <h3>Singapore</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="footer"></div>
-  </body>
+    <section class="about">
+      <img src="../Images/p2.jpg" alt="About Us" class="home-image" />
+      <div class="about-text">
+        <h2>Discover New Horizons with Every Journey</h2>
+        <p>
+          Embark on adventures to breathtaking locations, immerse yourself in
+          diverse cultures, and create stories worth telling. Let your journey
+          begin here.
+        </p>
+        <button id="btn">
+          Learn More &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+
+    <section class="explore-europe">
+      <h2>Explore Europe</h2>
+      <div class="europe-countries">
+        <div class="country">
+          <img src="../Images/austria.jpg" alt="Austria">
+          <p>Austria</p>
+        </div>
+        <div class="country">
+          <img src="../Images/finland.jpg" alt="Finland">
+          <p>Finland</p>
+        </div>
+        <div class="country">
+          <img src="../Images/norway.jpg" alt="Norway">
+          <p>Norway</p>
+        </div>
+        <div class="country">
+          <img src="../Images/italy.jpg" alt="Italy">
+          <p>Italy</p>
+        </div>
+        <div class="country">
+          <img src="../Images/switzerland.jpg" alt="Switzerland">
+          <p>Switzerland</p>
+        </div>
+        <div class="country">
+          <img src="../Images/france.jpg" alt="France">
+          <p>France</p>
+        </div>
+        <div class="country">
+          <img src="../Images/uk.jpg" alt="United Kingdom">
+          <p>United Kingdom</p>
+        </div>
+        <div class="country">
+          <img src="../Images/spain.jpg" alt="Spain">
+          <p>Spain</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="unique-experiences">
+      <h2>For Unique Experiences</h2>
+      <div class="experience-cards">
+        <div class="experience-card" style="background-image: url('../Images/australia.jpg');">
+          <div class="overlay">
+            <p>Land of Down Under</p>
+            <h3>Australia</h3>
+          </div>
+        </div>
+        <div class="experience-card" style="background-image: url('../Images/newzealand.jpg');">
+          <div class="overlay">
+            <p>A city of Lake</p>
+            <h3>New Zealand</h3>
+          </div>
+        </div>
+        <div class="experience-card" style="background-image: url('../Images/Bhutan.jpg');">
+          <div class="overlay">
+            <p>A haven in the Himalayas</p>
+            <h3>Bhutan</h3>
+          </div>
+        </div>
+        <div class="experience-card" style="background-image: url('../Images/Hungary.jpg');">
+          <div class="overlay">
+            <p>A landlocked country</p>
+            <h3>Hungary</h3>
+          </div>
+        </div>
+        <div class="experience-card" style="background-image: url('../Images/johannesburg.jpg');">
+          <div class="overlay">
+            <p>City of Gold</p>
+            <h3>Johannesburg</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visa-free-section">
+      <h2 id="desti">Visa Free Destinations</h2>
+      <div class="destinations-grid">
+        <div class="card" style="background-image: url('../Images/Mauritius.jpg');">
+          <div class="overlay">
+            <h3>Mauritius</h3>
+            <p>From ₹62,500</p>
+          </div>
+        </div>
+        <div class="card large" style="background-image: url('../Images/thailand.jpg');">
+          <div class="overlay">
+            <h3>Thailand</h3>
+            <p>From ₹37,500</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url('../Images/maldives.jpg');">
+          <div class="overlay">
+            <h3>Maldives</h3>
+            <p>From ₹43,854</p>
+          </div>
+        </div>
+        <div class="card small" style="background-image: url('../Images/Malaysia.jpg');">
+          <div class="overlay">
+            <h3>Malaysia</h3>
+            <p>From ₹48,750</p>
+          </div>
+        </div>
+        <div class="card small" style="background-image: url('../Images/sriLanka.jpg');">
+          <div class="overlay">
+            <h3>Sri Lanka</h3>
+            <p>From ₹30,000</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url('../Images/seychelles.jpg');">
+          <div class="overlay">
+            <h3>Seychelles</h3>
+            <p>From ₹25,330</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url('../Images/kazakstan.jpg');">
+          <div class="overlay">
+            <h3>Kazakhstan</h3>
+            <p>From ₹40,000</p>
+          </div>
+        </div>
+        <div class="card" style="background-image: url('../Images/iran.jpg');">
+          <div class="overlay">
+            <h3>Iran</h3>
+            <p>From ₹45,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <section class="destination-guides">
+    <h2>Destination Guides</h2>
+    <div class="guide-cards">
+      <div class="guide-card green">Maldives</div>
+      <div class="guide-card cream">Singapore</div>
+      <div class="guide-card green">Bali</div>
+      <div class="guide-card cream">Thailand</div>
+      <div class="guide-card green">Sri Lanka</div>
+      <div class="guide-card cream">Maldives</div>
+      <div class="guide-card green">Singapore</div>
+      <div class="guide-card cream">Bali</div>
+      <div class="guide-card green">Thailand</div>
+      <div class="guide-card cream">Sri Lanka</div>
+    </div>
+  </section>
+  </main>
+
+  <div id="footer"></div>
+</body>
+
 </html>
 
 <script>
