@@ -17,6 +17,46 @@
   margin-left: 150px;
   color: #eff1f3;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  width: 400px;
+  z-index: 10;
+  text-align: center;
+  margin-left: -40px;
+  margin-top: 440px;
+}
+
+#search {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+#search-btn {
+  padding: 8px 16px;
+  background-color: #ed622f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #d62828;
+}
+
 .hero-overlay {
   background-color: rgba(65, 65, 65, 0.5);
   width: 100%;
@@ -162,6 +202,7 @@
 }
 .home-image {
   cursor: pointer;
+  margin-left: 100px;
 }
 
 .about1 {
@@ -251,7 +292,7 @@ h2 {
 }
 
 /* Unique Experiences */
-.unique-experiences{
+.unique-experiences {
   margin-top: 40px;
 }
 .unique-experiences h2 {
@@ -378,7 +419,6 @@ body {
 
 .destination-guides {
   padding: 40px;
-
 }
 
 .destination-guides h2 {
@@ -423,19 +463,18 @@ body {
 .green {
   background-color: #eaf4ec;
   background-image: radial-gradient(
-      circle at top right,
-      #cfe5d1 20%,
-      transparent 20%
-    ),
-     
+    circle at top right,
+    #cfe5d1 20%,
+    transparent 20%
+  );
 }
 
 .cream {
   background-color: #f7f1e9;
   background-image: radial-gradient(
-      circle at top right,
-      #e6dbd0 20%,
-      transparent 20%
-    ),
-     
+    circle at top right,
+    #e6dbd0 20%,
+    transparent 20%
+  );
 }
+ 
