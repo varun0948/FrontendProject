@@ -25,7 +25,9 @@
   font-weight: bold;
   transition: 0.3s;
 }
-
+.rightSide{
+  margin-left: -150px;
+}
 .rightSide ul {
   display: flex;
   list-style-type: none;

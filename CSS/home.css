@@ -100,16 +100,10 @@
 .hero-btn:hover {
   background-color: #ff4a4a;
 }
-#btn:hover {
-  background-color: #ff4a4a;
+#btn{
+  background-color: rgb(105, 105, 105);
 }
-
-#to {
-  color: black;
-  margin-top: 12px;
-  font-size: large;
-  font-weight: bold;
-}
+ 
 
 .popular-destinations h2 {
   text-align: center;
@@ -478,3 +472,6 @@ body {
   );
 }
  
+a{
+  text-decoration: none;
+}

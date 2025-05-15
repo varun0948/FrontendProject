@@ -272,7 +272,12 @@ body {
 }
 
 #logout:hover {
-  background-color: #ff6b6b;
-  color: #ffffff;
   transition: all ease-in-out 0.4s;
+}
+
+#logout {
+  background: #ff6b6b;
+  color: #fff;
+  margin-left: 600px;
+  margin-top: -40px;
 }
