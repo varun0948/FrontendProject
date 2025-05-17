@@ -8,7 +8,7 @@
 /* Hero   Section */
 .hero {
   background: url("../Images/p2.jpg") center/cover no-repeat;
-  height: 700px;
+  height: 730px;
   display: flex;
   justify-content: center;
   align-items: center;
