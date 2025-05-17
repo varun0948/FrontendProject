@@ -50,15 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
     switzerland: {
       title: "Discover Switzerland",
       subtitle: "Experience Alpine beauty and Swiss charm.",
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80",
+      image: "/Images/switzerland.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494522344529-bc230ed4f1e8?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+        "https://images.pexels.com/photos/2779863/pexels-photo-2779863.jpeg?cs=srgb&dl=pexels-nextvoyage-2779863.jpg&fm=jpg",
+        "https://c.wallhere.com/photos/cd/06/Switzerland_Zurich_morning_city_river_sunrise_reflection_sky-2258592.jpg!d",
+        "https://wallpapercave.com/wp/wp5101628.jpg",
+        "https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/452544/pexels-photo-452544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       ],
+
       description:
         "Enjoy pristine lakes, towering Alps, and quaint villages in Switzerland. Hike scenic trails, taste world-famous Swiss chocolates, and explore cosmopolitan cities like Zurich and Geneva.",
       itinerary: [
@@ -98,14 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     dubai: {
       title: "Dynamic Dubai",
       subtitle: "The city of the future with desert charm.",
-      image:
-        "https://images.unsplash.com/photo-1505765055940-90b13f6e3c1a?auto=format&fit=crop&w=1350&q=80",
+      image: " ../Images/dubai1.jpg",
       images: [
-        "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1486308510493-cbfa3f04e84d?auto=format&fit=crop&w=600&q=80",
+        "https://images.pexels.com/photos/3680912/pexels-photo-3680912.jpeg?cs=srgb&dl=pexels-abbas-mohammed-1990079-3680912.jpg&fm=jpg",
+        "https://www.hdwallpapers.in/download/aerial_view_of_architecture_building_city_cityscape_dubai_panorama_skyscraper_4k_hd_travel-3840x2160.jpg",
+        "https://images.pexels.com/photos/17117853/pexels-photo-17117853.jpeg?cs=srgb&dl=pexels-editz-central-editors-433312832-17117853.jpg&fm=jpg",
+        "../Images/dubai.jpg",
+        "https://images.pexels.com/photos/4612430/pexels-photo-4612430.png?cs=srgb&dl=pexels-jdgromov-4612430.jpg&fm=jpg",
       ],
       description:
         "Discover the luxurious city of Dubai with its futuristic architecture, desert safaris, and vibrant nightlife. Experience shopping, entertainment, and cultural heritage all in one place.",
@@ -141,14 +140,13 @@ document.addEventListener("DOMContentLoaded", () => {
     maldives: {
       title: "Maldives Paradise",
       subtitle: "Tropical island luxury and underwater wonders.",
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1350&q=80",
+      image: "../Images/maldives.jpg",
       images: [
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1494522344529-bc230ed4f1e8?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+        "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/1450372/pexels-photo-1450372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg",
+        "https://images5.alphacoders.com/361/361643.jpg",
       ],
       description:
         "Escape to the Maldives with pristine white sandy beaches, crystal clear lagoons, and vibrant coral reefs. Enjoy water sports, luxury overwater villas, and world-class hospitality.",
@@ -188,14 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
     singapore: {
       title: "Singapore Highlights",
       subtitle: "Modern city meets tropical paradise.",
-      image:
-        "https://images.unsplash.com/photo-1517959105823-0386156b578a?auto=format&fit=crop&w=1350&q=80",
+      image: "../Images/singapore.jpg",
       images: [
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1555217851-6141535bd771?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1697729457411-cca8844c3b6b?q=80&w=2082&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1519010470956-6d877008eaa4?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1516422641841-cd9803ab02c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       ],
       description:
         "Explore the vibrant city-state of Singapore with its iconic Marina Bay Sands, Gardens by the Bay, and cultural diversity. Indulge in world-class cuisine and shopping.",
@@ -231,18 +228,57 @@ document.addEventListener("DOMContentLoaded", () => {
         "Indonesia Getaway",
       ],
     },
-
+    australia: {
+      title: "Australia Outback and Coast",
+      subtitle: "Adventure in nature and vibrant cities.",
+      image: "../Images/australia.jpg",
+      images: [
+        "https://wallpapercat.com/w/full/3/4/2/167319-3840x2160-desktop-4k-australia-background-image.jpg",
+        "https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?cs=srgb&dl=pexels-pixelcop-1878293.jpg&fm=jpg",
+        "https://c4.wallpaperflare.com/wallpaper/749/819/640/amazing-cricket-ground-of-city-brisbane-australia-hd-photos-wallpaper-preview.jpg",
+        "https://applescoop.org/image/wallpapers/mac/gorgeous-green-yarra-river-nature-landscapes-of-melbourne-city-skyline-victoria-state-australia-01-12-2024-1733044745-hd-wallpaper.jpg",
+        "https://images.unsplash.com/photo-1470294402047-fc1b5f39bd99?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVsYm91cm5lfGVufDB8fDB8fHww",
+      ],
+      description:
+        "Explore the Australian outback, Great Barrier Reef, and vibrant cities like Sydney and Melbourne. Experience wildlife, beaches, and indigenous culture.",
+      itinerary: [
+        "Day 1: Arrival in Sydney and city tour.",
+        "Day 2: Visit Blue Mountains National Park.",
+        "Day 3: Great Barrier Reef snorkeling and diving.",
+        "Day 4: Explore Melbourne’s cultural sites.",
+        "Day 5: Wildlife spotting at Phillip Island.",
+        "Day 6: Aboriginal cultural experience.",
+        "Day 7: Departure with unforgettable memories.",
+      ],
+      price: "AUD 4,500 per person",
+      inclusions:
+        "Flights, accommodation, guided tours, breakfast, and transfers.",
+      reviews: [
+        {
+          rating: "⭐ 5/5",
+          user: "Emma J",
+          comment: "A perfect mix of adventure and culture.",
+        },
+        {
+          rating: "⭐ 4.9/5",
+          user: "Liam P",
+          comment: "Stunning nature and friendly locals.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Australia&t=&z=5&ie=UTF8&iwloc=&output=embed",
+      related: ["New Zealand Adventure", "Fiji Islands", "Tasmania Tour"],
+    },
     newzealand: {
       title: "New Zealand Adventure",
       subtitle: "Explore stunning landscapes and Maori culture.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+      image: "../Images/newzealand.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3JTIwemVhbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://a-static.besthdwallpaper.com/hill-view-of-the-city-at-night-in-queenstown-new-zealand-wallpaper-1920x1080-89327_48.jpg",
+        "https://wallpapercave.com/wp/wp2539323.jpg",
+        "https://wallpapercat.com/w/full/a/d/0/32057-2880x1620-desktop-hd-new-zealand-wallpaper-image.jpg",
+        "https://images.unsplash.com/photo-1600208669687-f19af3638cb9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXVja2xhbmR8ZW58MHx8MHx8fDA%3D",
       ],
       description:
         "Discover the breathtaking fjords, mountains, and beaches of New Zealand. Experience Maori culture, adventure sports, and vibrant cities like Auckland and Wellington.",
@@ -275,17 +311,16 @@ document.addEventListener("DOMContentLoaded", () => {
       related: ["Australia Outback", "Fiji Islands", "Tahiti Escape"],
     },
 
-    bhutan: {
+    Bhutan: {
       title: "Bhutan Spiritual Journey",
       subtitle: "Experience the Land of Happiness and Himalayan culture.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+      image: "../Images/Bhutan.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+        "https://images.pexels.com/photos/5728647/pexels-photo-5728647.jpeg?cs=srgb&dl=pexels-setu-r8-5728647.jpg&fm=jpg",
+        "https://c1.wallpaperflare.com/preview/301/696/1013/dochula-pass-monument-stupa-shanti-stupa.jpg",
+        "https://images.unsplash.com/photo-1587639895914-6f33530a3314?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1605904583059-7880dad25595?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1581588344552-b92555010a4b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       ],
       description:
         "Explore Bhutan’s serene monasteries, stunning Himalayan landscapes, and unique cultural heritage. Visit ancient dzongs, participate in festivals, and experience local hospitality.",
@@ -322,17 +357,16 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
 
-    hungary: {
+    Hungary: {
       title: "Hungary Highlights",
       subtitle: "Discover Budapest and beyond.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+      image: "../Images/Hungary.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+        "https://wallpapercat.com/w/full/2/4/3/623587-3840x2160-desktop-4k-hungary-wallpaper.jpg",
+        "https://images7.alphacoders.com/899/899292.jpg",
+        "https://wallpapers.com/images/hd/scenic-budapest-bridge-ilri15bty6nlhdzr.jpg",
+        "https://images.pexels.com/photos/66187/pexels-photo-66187.jpeg?cs=srgb&dl=pexels-musicfactory-lehmannsound-12746-66187.jpg&fm=jpg",
+        "https://c1.wallpaperflare.com/preview/1012/840/8/hungary-eger-europe-tourism.jpg",
       ],
       description:
         "Explore Hungary’s capital Budapest with its thermal baths, historic architecture, and vibrant nightlife. Visit charming towns like Eger and Lake Balaton for a perfect getaway.",
@@ -368,194 +402,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "Slovakia Highlights",
       ],
     },
-
-    mauritius: {
-      title: "Mauritius Island Escape",
-      subtitle: "Tropical paradise with rich culture and adventure.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
-      ],
-      description:
-        "Discover Mauritius with its pristine beaches, vibrant coral reefs, and unique cultural mix. Enjoy water sports, hiking, and local cuisine.",
-      itinerary: [
-        "Day 1: Arrival and beach relaxation.",
-        "Day 2: Visit Black River Gorges National Park.",
-        "Day 3: Explore Chamarel Seven Colored Earth and waterfalls.",
-        "Day 4: Snorkeling and diving at Blue Bay Marine Park.",
-        "Day 5: Cultural tour of Port Louis.",
-        "Day 6: Catamaran cruise and island hopping.",
-        "Day 7: Departure after breakfast.",
-      ],
-      price: "USD 3,500 per person",
-      inclusions:
-        "Flights, resort stay, guided tours, meals as specified, transfers.",
-      reviews: [
-        {
-          rating: "⭐ 5/5",
-          user: "Jessica L",
-          comment: "Perfect blend of nature and culture.",
-        },
-        {
-          rating: "⭐ 4.8/5",
-          user: "Tom B",
-          comment: "Amazing beaches and friendly people.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=Mauritius&t=&z=10&ie=UTF8&iwloc=&output=embed",
-      related: ["Seychelles Islands", "Maldives Luxury", "Reunion Island"],
-    },
-
-    johannesburg: {
-      title: "Johannesburg Explorer",
-      subtitle: "Urban culture, history, and wildlife adventures.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
-      ],
-      description:
-        "Experience Johannesburg’s rich history, vibrant culture, and nearby wildlife safaris. Visit museums, local markets, and enjoy South African cuisine.",
-      itinerary: [
-        "Day 1: Arrival and city tour including Apartheid Museum.",
-        "Day 2: Visit Constitution Hill and Maboneng Precinct.",
-        "Day 3: Day trip to Pilanesberg National Park Safari.",
-        "Day 4: Explore Soweto Township and Mandela House.",
-        "Day 5: Visit Johannesburg Botanical Gardens.",
-        "Day 6: Local market tours and cultural shows.",
-        "Day 7: Departure with rich cultural insights.",
-      ],
-      price: "ZAR 18,000 per person",
-      inclusions:
-        "Flights, accommodation, guided tours, breakfast, and transfers.",
-      reviews: [
-        {
-          rating: "⭐ 4.9/5",
-          user: "Nina S",
-          comment: "A wonderful mix of history and adventure.",
-        },
-        {
-          rating: "⭐ 4.7/5",
-          user: "David N",
-          comment: "The safari was a highlight of my trip.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=Johannesburg&t=&z=10&ie=UTF8&iwloc=&output=embed",
-      related: [
-        "Cape Town Highlights",
-        "Kruger National Park",
-        "Namibia Desert Tour",
-      ],
-    },
-
-    malaysia: {
-      title: "Malaysia Experience",
-      subtitle: "Diverse cultures, nature, and urban wonders.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
-      ],
-      description:
-        "Explore Malaysia's multicultural cities, tropical rainforests, and beautiful islands. Enjoy local cuisine, bustling markets, and vibrant festivals.",
-      itinerary: [
-        "Day 1: Arrival in Kuala Lumpur and city tour.",
-        "Day 2: Visit Batu Caves and Petronas Towers.",
-        "Day 3: Explore Cameron Highlands tea plantations.",
-        "Day 4: Island hopping in Langkawi.",
-        "Day 5: Cultural tour of Penang.",
-        "Day 6: Rainforest adventure in Taman Negara National Park.",
-        "Day 7: Departure after breakfast.",
-      ],
-      price: "MYR 7,500 per person",
-      inclusions:
-        "Flights, accommodation, guided tours, breakfast, and transfers.",
-      reviews: [
-        {
-          rating: "⭐ 5/5",
-          user: "Sarah L",
-          comment: "A rich blend of cultures and nature.",
-        },
-        {
-          rating: "⭐ 4.6/5",
-          user: "James W",
-          comment: "Beautiful landscapes and friendly people.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=Malaysia&t=&z=7&ie=UTF8&iwloc=&output=embed",
-      related: ["Singapore Highlights", "Indonesia Islands", "Thailand Tour"],
-    },
-
-    australia: {
-      title: "Australia Outback and Coast",
-      subtitle: "Adventure in nature and vibrant cities.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
-      ],
-      description:
-        "Explore the Australian outback, Great Barrier Reef, and vibrant cities like Sydney and Melbourne. Experience wildlife, beaches, and indigenous culture.",
-      itinerary: [
-        "Day 1: Arrival in Sydney and city tour.",
-        "Day 2: Visit Blue Mountains National Park.",
-        "Day 3: Great Barrier Reef snorkeling and diving.",
-        "Day 4: Explore Melbourne’s cultural sites.",
-        "Day 5: Wildlife spotting at Phillip Island.",
-        "Day 6: Aboriginal cultural experience.",
-        "Day 7: Departure with unforgettable memories.",
-      ],
-      price: "AUD 4,500 per person",
-      inclusions:
-        "Flights, accommodation, guided tours, breakfast, and transfers.",
-      reviews: [
-        {
-          rating: "⭐ 5/5",
-          user: "Emma J",
-          comment: "A perfect mix of adventure and culture.",
-        },
-        {
-          rating: "⭐ 4.9/5",
-          user: "Liam P",
-          comment: "Stunning nature and friendly locals.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=Australia&t=&z=5&ie=UTF8&iwloc=&output=embed",
-      related: ["New Zealand Adventure", "Fiji Islands", "Tasmania Tour"],
-    },
-
     austria: {
       title: "Austria Classic Tour",
       subtitle: "Music, culture, and alpine beauty.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+       image: "../Images/austria.jpg",
+       images: [
+        "https://images5.alphacoders.com/936/936894.jpg",
+        "https://c1.wallpaperflare.com/preview/210/766/571/vienna-austria-city-evening.jpg",
+        "https://www.hdwallpapers.in/download/lighting_buildings_along_with_river_austria_vienna_4k_hd_travel-HD.jpg",
+        "https://wallpapers.com/images/hd/the-austrian-alps-best-4k-j8eu7knfjf0u9qyn.jpg",
+        "https://pbs.twimg.com/media/GnDxzmCWcAAi6w6.jpg:large",
       ],
       description:
         "Experience Vienna’s classical music heritage, stunning architecture, and alpine landscapes of Salzburg and Innsbruck.",
@@ -596,13 +452,13 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Finland Northern Lights",
       subtitle: "Magical aurora borealis and winter activities.",
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+        "../Images/finland.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&w=600&q=80",
+        "https://images.pexels.com/photos/2311602/pexels-photo-2311602.jpeg?cs=srgb&dl=pexels-tapio-haaja-1214336-2311602.jpg&fm=jpg",
+        "https://media.cntraveller.com/photos/611bec1b623b149193c8cc63/16:9/w_2580,c_limit/aerial-view-of-Helsinki-finland-conde-nast-traveller-18march16-visit-helsinki-Jussi-Hellsten.jpg",
+        "https://wallpapercat.com/w/full/7/a/0/266966-2560x1440-desktop-hd-finland-wallpaper-image.jpg",
+        "https://wallpapercat.com/w/full/a/e/9/266982-2048x1085-desktop-hd-finland-background-image.jpg",
+        "https://wallpapercat.com/w/full/0/5/6/267126-1920x1080-desktop-full-hd-finland-wallpaper-photo.jpg",
       ],
       description:
         "Witness the stunning Northern Lights in Lapland and enjoy winter sports like snowmobiling and husky sledding.",
@@ -639,13 +495,13 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Norway Fjords and Mountains",
       subtitle: "Breathtaking fjords and scenic hikes.",
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+        "../Images/norway.jpg",
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&w=600&q=80",
+        "https://4kwallpapers.com/images/walls/thumbs_2t/4842.jpg",
+        "https://images3.alphacoders.com/597/597648.jpg ",
+        "https://images.alphacoders.com/108/1085327.jpg",
+        "https://wallpapercat.com/w/full/2/9/0/31241-3840x2160-desktop-4k-norway-background-photo.jpg",
+        "https://adventures.com/media/206231/4gzr6eqzdoc-hd.jpg?anchor=center&mode=crop&width=1360&height=813&format=jpg&quality=80&rnd=132741749490000000",
       ],
       description:
         "Explore Norway’s majestic fjords, waterfalls, and mountain trails. Enjoy boat cruises, scenic drives, and charming coastal towns.",
@@ -681,7 +537,144 @@ document.addEventListener("DOMContentLoaded", () => {
         "Iceland Adventure",
       ],
     },
-
+    
+    italy: {
+      title: "Italy Classic Tour",
+      subtitle: "History, art, and culinary delights.",
+      image:
+      "../Images/italy.jpg",
+      images: [
+        "https://wallpapercat.com/w/full/d/2/7/31660-3840x2160-desktop-4k-italy-wallpaper.jpg",
+        "https://c4.wallpaperflare.com/wallpaper/752/919/643/cityscape-basilica-st-peters-basilica-europe-wallpaper-preview.jpg",
+        "https://images6.alphacoders.com/107/1070355.jpg",
+        "https://wallpapercave.com/wp/wp14148464.jpg",
+        "https://live.staticflickr.com/5467/17544991692_f47aeee7ce_h.jpg",
+      ],
+      description:
+      "Visit Rome, Florence, Venice, and other historic cities. Enjoy art masterpieces, ancient ruins, and authentic Italian cuisine.",
+      itinerary: [
+        "Day 1: Arrival in Rome and Colosseum visit.",
+        "Day 2: Explore Vatican City and museums.",
+        "Day 3: Travel to Florence and Uffizi Gallery.",
+        "Day 4: Visit Venice and gondola ride.",
+        "Day 5: Tuscan countryside wine tour.",
+        "Day 6: Cooking class and local market visit.",
+        "Day 7: Departure with cultural memories.",
+      ],
+      price: "€2,800 per person",
+      inclusions:
+      "Flights, accommodation, guided tours, breakfast, and transfers.",
+      reviews: [
+        {
+          rating: "⭐ 5/5",
+          user: "Marco G",
+          comment: "A perfect blend of history and food.",
+        },
+        {
+          rating: "⭐ 4.8/5",
+          user: "Laura S",
+          comment: "Beautiful cities and friendly guides.",
+        },
+      ],
+      mapEmbed:
+      "https://maps.google.com/maps?q=Italy&t=&z=6&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "France Romantic Getaway",
+        "Spain Culture Trip",
+        "Austria Classic Tour",
+      ],
+    },
+    france: {
+        title: "France Romantic Getaway",
+        subtitle: "Parisian charm and countryside beauty.",
+        image:
+          "../Images/france.jpg",
+        images: [
+          "https://images8.alphacoders.com/950/thumb-1920-950381.jpg",
+          "https://s1.1zoom.me/b5148/609/France_Strasbourg_Houses_Rivers_Fence_Shrubs_529565_2560x1440.jpg",
+          "https://4kwallpapers.com/images/wallpapers/eiffel-tower-paris-france-night-time-iconic-metal-structure-1280x1280-2977.jpg",
+          "https://wallpaperbat.com/img/163197-france-hd-wallpaper-and-background-image.jpg",
+          "https://www.pixground.com/orceyrette-lake-france-4k-wallpaper/?download-img=4k",
+        ],
+        description:
+          "Discover Paris with its iconic Eiffel Tower, art museums, and charming cafes. Explore the French countryside, vineyards, and historic towns.",
+        itinerary: [
+          "Day 1: Arrival in Paris and city tour.",
+          "Day 2: Visit Louvre Museum and Notre Dame.",
+          "Day 3: Explore Montmartre and Sacré-Cœur.",
+          "Day 4: Day trip to Versailles Palace.",
+          "Day 5: Wine tasting in Burgundy region.",
+          "Day 6: Explore Loire Valley castles.",
+          "Day 7: Departure with romantic memories.",
+        ],
+        price: "€2,500 per person",
+        inclusions:
+          "Flights, accommodation, guided tours, breakfast, and transfers.",
+        reviews: [
+          {
+            rating: "⭐ 5/5",
+            user: "Isabelle C",
+            comment: "Romantic and unforgettable experience.",
+          },
+          {
+            rating: "⭐ 4.7/5",
+            user: "Pierre L",
+            comment: "Beautiful art and delicious food.",
+          },
+        ],
+        mapEmbed:
+          "https://maps.google.com/maps?q=France&t=&z=6&ie=UTF8&iwloc=&output=embed",
+        related: [
+          "Italy Classic Tour",
+          "Spain Culture Trip",
+          "United Kingdom Classics",
+        ],
+      },
+    Netherlands: {
+      title: "Netherlands Discovery",
+      subtitle: "Charming canals, tulip fields, and rich history.",
+      image: "../Images/netherlands.jpg",
+      images: [
+        "https://www.itl.cat/pngfile/big/192-1927698_snowed-in-houses-wallpaper-snow-background-with-house.jpg",
+        "https://images.pexels.com/photos/2031706/pexels-photo-2031706.jpeg?cs=srgb&dl=pexels-chaitaastic-2031706.jpg&fm=jpg",
+        "https://wallpapercat.com/w/full/7/9/b/36058-1920x1080-desktop-full-hd-netherlands-wallpaper-photo.jpg",
+        "https://www.hdwallpapers.in/download/colorful_village_home_netherlands_4k_5k_hd-5120x2880.jpg",
+        "https://a-static.besthdwallpaper.com/old-port-of-maasslui-netherlands-1-wallpaper-2880x1800-82877_8.jpg",
+      ],
+      description:
+        "Discover the beauty of the Netherlands—from vibrant Amsterdam to iconic windmills, tulip fields, and picturesque villages. Enjoy cycling tours, canal cruises, and world-famous art museums.",
+      itinerary: [
+        "Day 1: Arrival in Amsterdam and canal cruise.",
+        "Day 2: Visit Rijksmuseum, Van Gogh Museum, and Jordaan district.",
+        "Day 3: Day trip to Zaanse Schans and windmill tour.",
+        "Day 4: Explore Keukenhof Tulip Gardens and Haarlem.",
+        "Day 5: Visit Utrecht and De Haar Castle.",
+        "Day 6: Biking tour through Dutch countryside and cheese farms.",
+        "Day 7: Departure from Amsterdam.",
+      ],
+      price: "€1,450 per person",
+      inclusions:
+        "Flights, accommodation, breakfast, museum tickets, guided tours, transfers.",
+      reviews: [
+        {
+          rating: "⭐ 4.8/5",
+          user: "Emily V",
+          comment: "Charming, colorful, and culturally rich!",
+        },
+        {
+          rating: "⭐ 4.9/5",
+          user: "Tom H",
+          comment: "Cycling through the countryside was unforgettable.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Netherlands&t=&z=6&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "Belgium City Escape",
+        "France Romantic Tour",
+        "Germany Castles Trail",
+      ],
+    },
     unitedkingdom: {
       title: "United Kingdom Classics",
       subtitle: "History, culture, and iconic landmarks.",
@@ -728,102 +721,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Germany Cultural Trip",
       ],
     },
-
-    france: {
-      title: "France Romantic Getaway",
-      subtitle: "Parisian charm and countryside beauty.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&w=600&q=80",
-      ],
-      description:
-        "Discover Paris with its iconic Eiffel Tower, art museums, and charming cafes. Explore the French countryside, vineyards, and historic towns.",
-      itinerary: [
-        "Day 1: Arrival in Paris and city tour.",
-        "Day 2: Visit Louvre Museum and Notre Dame.",
-        "Day 3: Explore Montmartre and Sacré-Cœur.",
-        "Day 4: Day trip to Versailles Palace.",
-        "Day 5: Wine tasting in Burgundy region.",
-        "Day 6: Explore Loire Valley castles.",
-        "Day 7: Departure with romantic memories.",
-      ],
-      price: "€2,500 per person",
-      inclusions:
-        "Flights, accommodation, guided tours, breakfast, and transfers.",
-      reviews: [
-        {
-          rating: "⭐ 5/5",
-          user: "Isabelle C",
-          comment: "Romantic and unforgettable experience.",
-        },
-        {
-          rating: "⭐ 4.7/5",
-          user: "Pierre L",
-          comment: "Beautiful art and delicious food.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=France&t=&z=6&ie=UTF8&iwloc=&output=embed",
-      related: [
-        "Italy Classic Tour",
-        "Spain Culture Trip",
-        "United Kingdom Classics",
-      ],
-    },
-
-    italy: {
-      title: "Italy Classic Tour",
-      subtitle: "History, art, and culinary delights.",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&w=600&q=80",
-        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&w=600&q=80",
-      ],
-      description:
-        "Visit Rome, Florence, Venice, and other historic cities. Enjoy art masterpieces, ancient ruins, and authentic Italian cuisine.",
-      itinerary: [
-        "Day 1: Arrival in Rome and Colosseum visit.",
-        "Day 2: Explore Vatican City and museums.",
-        "Day 3: Travel to Florence and Uffizi Gallery.",
-        "Day 4: Visit Venice and gondola ride.",
-        "Day 5: Tuscan countryside wine tour.",
-        "Day 6: Cooking class and local market visit.",
-        "Day 7: Departure with cultural memories.",
-      ],
-      price: "€2,800 per person",
-      inclusions:
-        "Flights, accommodation, guided tours, breakfast, and transfers.",
-      reviews: [
-        {
-          rating: "⭐ 5/5",
-          user: "Marco G",
-          comment: "A perfect blend of history and food.",
-        },
-        {
-          rating: "⭐ 4.8/5",
-          user: "Laura S",
-          comment: "Beautiful cities and friendly guides.",
-        },
-      ],
-      mapEmbed:
-        "https://maps.google.com/maps?q=Italy&t=&z=6&ie=UTF8&iwloc=&output=embed",
-      related: [
-        "France Romantic Getaway",
-        "Spain Culture Trip",
-        "Austria Classic Tour",
-      ],
-    },
-
-    spain: {
+ spain: {
       title: "Spain Culture Trip",
       subtitle: "Fiestas, architecture, and beaches.",
       image:
@@ -868,6 +766,184 @@ document.addEventListener("DOMContentLoaded", () => {
         "Italy Classic Tour",
         "Portugal Explorer",
       ],
+    },
+  
+
+    RockyMountains: {
+      title: "Rocky Mountains Adventure",
+      subtitle: "Majestic peaks, wildlife, and outdoor thrills.",
+      image: "../Images/p2.jpg",
+      images: [
+        "https://images7.alphacoders.com/116/1161105.jpg",
+        "https://wallpapers.com/images/featured/rocky-mountain-rdsexhjjcce9bhob.jpg",
+        "https://images.unsplash.com/photo-1725360629578-1a8e91b911f0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8NGslMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D",
+        "https://images.unsplash.com/photo-1654139705405-ba998c0f4e12?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ja3klMjBtb3VudGFpbnN8ZW58MHx8MHx8fDA%3D",
+        "https://wallpaper.forfun.com/fetch/04/0459522bc2cc584ff0a816ccae010285.jpeg",
+      ],
+      description:
+        "Explore the awe-inspiring Rocky Mountains with guided hikes, wildlife spotting, mountain lakes, and outdoor adventures. Ideal for nature lovers and thrill-seekers alike.",
+      itinerary: [
+        "Day 1: Arrival in Denver, transfer to Estes Park.",
+        "Day 2: Rocky Mountain National Park hiking and scenic drives.",
+        "Day 3: Wildlife safari and Bear Lake trail.",
+        "Day 4: Whitewater rafting and alpine picnic.",
+        "Day 5: Visit Grand Lake and Trail Ridge Road.",
+        "Day 6: Relaxation and spa day at mountain lodge.",
+        "Day 7: Departure from Denver.",
+      ],
+      price: "$1,800 per person",
+      inclusions:
+        "Accommodation, guided hikes, park passes, transfers, meals, and activities.",
+      reviews: [
+        {
+          rating: "⭐ 4.9/5",
+          user: "Alex R",
+          comment: "Breathtaking views and well-planned adventure!",
+        },
+        {
+          rating: "⭐ 4.8/5",
+          user: "Samantha K",
+          comment: "Loved the hikes and the peaceful mountain vibe.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Rocky%20Mountains&t=&z=6&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "Yellowstone Exploration",
+        "Yosemite Hiking Tour",
+        "Alaska Wilderness Trip",
+      ],
+    },
+
+   
+    Johannesburg: {
+      title: "Johannesburg Explorer",
+      subtitle: "Urban culture, history, and wildlife adventures.",
+      image: "../Images/johannesburg.jpg",
+      images: [
+        "https://wallpaperbat.com/img/189728-johannesburg-wallpaper-top-free-johannesburg-background.jpg",
+        "https://images.unsplash.com/photo-1647801955958-6596921c272a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1577948000111-9c970dfe3743?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1647801955495-5b6e6ac9086e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1671917057310-88d5fd951ece?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      ],
+      description:
+        "Experience Johannesburg’s rich history, vibrant culture, and nearby wildlife safaris. Visit museums, local markets, and enjoy South African cuisine.",
+      itinerary: [
+        "Day 1: Arrival and city tour including Apartheid Museum.",
+        "Day 2: Visit Constitution Hill and Maboneng Precinct.",
+        "Day 3: Day trip to Pilanesberg National Park Safari.",
+        "Day 4: Explore Soweto Township and Mandela House.",
+        "Day 5: Visit Johannesburg Botanical Gardens.",
+        "Day 6: Local market tours and cultural shows.",
+        "Day 7: Departure with rich cultural insights.",
+      ],
+      price: "ZAR 18,000 per person",
+      inclusions:
+        "Flights, accommodation, guided tours, breakfast, and transfers.",
+      reviews: [
+        {
+          rating: "⭐ 4.9/5",
+          user: "Nina S",
+          comment: "A wonderful mix of history and adventure.",
+        },
+        {
+          rating: "⭐ 4.7/5",
+          user: "David N",
+          comment: "The safari was a highlight of my trip.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Johannesburg&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "Cape Town Highlights",
+        "Kruger National Park",
+        "Namibia Desert Tour",
+      ],
+    },
+    mauritius: {
+      title: "Mauritius Island Escape",
+      subtitle: "Tropical paradise with rich culture and adventure.",
+      image:
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+      ],
+      description:
+        "Discover Mauritius with its pristine beaches, vibrant coral reefs, and unique cultural mix. Enjoy water sports, hiking, and local cuisine.",
+      itinerary: [
+        "Day 1: Arrival and beach relaxation.",
+        "Day 2: Visit Black River Gorges National Park.",
+        "Day 3: Explore Chamarel Seven Colored Earth and waterfalls.",
+        "Day 4: Snorkeling and diving at Blue Bay Marine Park.",
+        "Day 5: Cultural tour of Port Louis.",
+        "Day 6: Catamaran cruise and island hopping.",
+        "Day 7: Departure after breakfast.",
+      ],
+      price: "USD 3,500 per person",
+      inclusions:
+        "Flights, resort stay, guided tours, meals as specified, transfers.",
+      reviews: [
+        {
+          rating: "⭐ 5/5",
+          user: "Jessica L",
+          comment: "Perfect blend of nature and culture.",
+        },
+        {
+          rating: "⭐ 4.8/5",
+          user: "Tom B",
+          comment: "Amazing beaches and friendly people.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Mauritius&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      related: ["Seychelles Islands", "Maldives Luxury", "Reunion Island"],
+    },
+
+    malaysia: {
+      title: "Malaysia Experience",
+      subtitle: "Diverse cultures, nature, and urban wonders.",
+      image:
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1445820130133-c00464d3f9b1?auto=format&fit=crop&w=600&q=80",
+      ],
+      description:
+        "Explore Malaysia's multicultural cities, tropical rainforests, and beautiful islands. Enjoy local cuisine, bustling markets, and vibrant festivals.",
+      itinerary: [
+        "Day 1: Arrival in Kuala Lumpur and city tour.",
+        "Day 2: Visit Batu Caves and Petronas Towers.",
+        "Day 3: Explore Cameron Highlands tea plantations.",
+        "Day 4: Island hopping in Langkawi.",
+        "Day 5: Cultural tour of Penang.",
+        "Day 6: Rainforest adventure in Taman Negara National Park.",
+        "Day 7: Departure after breakfast.",
+      ],
+      price: "MYR 7,500 per person",
+      inclusions:
+        "Flights, accommodation, guided tours, breakfast, and transfers.",
+      reviews: [
+        {
+          rating: "⭐ 5/5",
+          user: "Sarah L",
+          comment: "A rich blend of cultures and nature.",
+        },
+        {
+          rating: "⭐ 4.6/5",
+          user: "James W",
+          comment: "Beautiful landscapes and friendly people.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Malaysia&t=&z=7&ie=UTF8&iwloc=&output=embed",
+      related: ["Singapore Highlights", "Indonesia Islands", "Thailand Tour"],
     },
   };
 
