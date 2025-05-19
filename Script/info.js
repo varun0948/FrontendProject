@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "../Images/europe/europe4.jpg",
         "../Images/europe/europe5.jpg",
       ],
-      button: "../Files/booking.html",
+      button: "../Files/booking.html?trip=europe",
       description:
         "Experience the rich history, diverse cultures, and stunning architecture of Europe's top destinations including Paris, Rome, and Barcelona. Visit iconic landmarks, savor world-class cuisine, and immerse yourself in local traditions.",
       itinerary: [
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mediterranean Cruise",
       ],
     },
-    switzerland: {
+    switerzland: {
       title: "Discover Switzerland",
       subtitle: "Experience Alpine beauty and Swiss charm.",
       image: "/Images/switzerland.jpg",

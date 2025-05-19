@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travelin</title>
-    
-    <link rel="stylesheet" href="../Header/header.css"> 
-    <link rel="stylesheet" href="../Footer/footer.css">
-    <Script src="../Scripts/home.js"></Script>
+
+    <link rel="stylesheet" href="../Header/header.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
 </head>
 
 <body>
     <header class="header">
         <nav class="nav" id="nav">
-            <div class="logo"><a href="../Files/home.html" id="logo">Travelin</a></div>
-            <div class="rightSide" id="rightSide"> 
+            <div class="logo">
+                <a href="../Files/home.html" id="logo">Travelin</a>
+            </div>
+            <div class="rightSide" id="rightSide">
                 <ul id="ul">
                     <li><a href="../Files/home.html" id="home">Home</a></li>
                     <li><a href="../Files/contact.html" id="Contact">Contact Us</a></li>
                     <li><a href="../Files/about.html" id="about">About Us</a></li>
-                    <li><a href="../Files/signup.html" class="signin-btn" id="sign" >SignIn/SignUp </a></li>
-                    <li><a href="../Files/profile.html" class="signin-btn " id="profile " style="display: none;">Profile </a></li>
+                    <li><a href="../Files/login.html" class="signin-btn" id="sign">Login</a></li>
+                    <li><a href="../Files/profile.html" class="signin-btn" id="profile"
+                            style="display: none;">Profile</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileLink = document.getElementById("profile");
+            const signInLink = document.getElementById("sign");
+
+            let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
+
+            const activeUser = loggedInTable.find(user => user.isLogin === true);
+
+            if (activeUser) {
+                profileLink.style.display = "inline-block";
+                signInLink.style.display = "none";
+            } else {
+                profileLink.style.display = "none";
+                signInLink.style.display = "inline-block";
+            }
+
+        });
+    </script>
+
+
 </body>
+
 </html>

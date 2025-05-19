@@ -17,11 +17,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const profileBox = document.getElementById("profile-container");
   const users = JSON.parse(localStorage.getItem("users"));
-   let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
-    const isLogggedIn = users.find(
-      (user) => user.id === loggedInTable.id
-    );
-  
+  let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
+  const isLogggedIn = users.find((user) => user.id === loggedInTable.id);
+
   if (isLogggedIn) {
     profileBox.innerHTML = `
       <h2>Welcome, ${users.name}</h2>
@@ -30,6 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     return;
   }
- 
-  
+
 });
+function logout() {
+  let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
+  // Find the user who is currently logged in and set isLogin to false
+  loggedInTable = loggedInTable.map(user => {
+      if (user.isLogin) user.isLogin = false;
+      return user;
+  });
+  alert("you have been logged out")
+  localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
+
+  // Optionally, clear session id for logged-in user
+  localStorage.removeItem("loggedInUserId");
+
+  // Redirect to home or login page
+  window.location.href = "../Files/login.html";
+}

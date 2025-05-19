@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const errorMessage = document.getElementById("error-message");
   const loginForm = document.getElementById("login-form");
+
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const enteredEmail = document.getElementById("email").value;
+    const enteredEmail = document.getElementById("email").value.trim();
     const enteredPass = document.getElementById("password").value;
 
     if (!enteredEmail || !enteredPass) {
@@ -12,33 +13,41 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let users = JSON.parse(localStorage.getItem("users"));
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    console.log(users);
+
     const existingUser = users.find((user) => user.email === enteredEmail);
     console.log(existingUser);
 
-    const existingPass = existingUser.password === enteredPass;
+    if (existingUser == null) {
+      showError("User is not registerd.");
+      return;
+    }
 
-    if (existingUser && existingPass) {
-      showError("Invalid Email and Password!!!");
-      window.location.href = "../Files/login.html";
+    if (!existingUser || existingUser.password !== enteredPass) {
+      showError("Invalid Credenatials.");
+      return;
     }
 
     let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
-    const loggedInUser = loggedInTable.find(
+
+    const loggedInUserIndex = loggedInTable.findIndex(
       (user) => user.email === enteredEmail
     );
 
-    if (loggedInUser && loggedInUser.isLogin) {
-      alert("User is already logged in.");
+    if (loggedInUserIndex !== -1 && loggedInTable[loggedInUserIndex].isLogin) {
       showError("User is already logged in.");
       return;
     }
 
-    if (loggedInUser) {
-      loggedInUser.isLogin = true;
+    if (loggedInUserIndex !== -1) {
+      // Update existing user's login status
+      loggedInTable[loggedInUserIndex].isLogin = true;
     } else {
+      // Add new login status
       loggedInTable.push({ email: enteredEmail, isLogin: true });
     }
+
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
     alert("Login successful!");

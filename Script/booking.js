@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     europe: {
       title: "Explore Europe",
       subtitle: "7-Day journey through Europe's iconic cities and landscapes.",
-      image: "../Images/europe/europe.jpg",
+      // image: "../Images/europe/europe.jpg",
       price: "€2,500 per person",
       description:
         "Experience the rich history, diverse cultures, and stunning architecture of Europe's top destinations including Paris, Rome, and Barcelona.",
@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const params = new URLSearchParams(window.location.search);
-  const tripKey = params.get("trip") || "switerzland";
+  const tripKey = params.get("trip");
   const trip = trips[tripKey];
-
+console.log(tripKey);
+ 
   if (!trip) {
     document.getElementById(
       "bookingContent"

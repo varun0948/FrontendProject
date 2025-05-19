@@ -64,7 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    loggedInTable.push({id:newUser.id, email: newUser.email, isLogin: true });
+    loggedInTable.push({
+      id:newUser.id, 
+      email: newUser.email, 
+      isLogin: true 
+    });
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
     otpStorage = otpStorage.filter(
