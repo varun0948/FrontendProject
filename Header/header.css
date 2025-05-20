@@ -1,56 +1,35 @@
-.header {
-  background: transparent;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgb(0, 0, 0);
-  background-size: cover;
-  padding: 20px 0;
-  position: absolute;
-  z-index: 1;
-  height: 40px;
+ 
+body {
+   
+  font-family: Arial, sans-serif;
 }
-
-.nav {
+.header1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  /* margin-right: -30px; */
+  padding: 20px 60px;
+  background-color: white;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo a {
+.logo a{
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.menu a {
+  margin-left: 30px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 48px;
-  margin-right: 650px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.rightSide{
-  margin-left: -150px;
-}
-.rightSide ul {
-  display: flex;
-  list-style-type: none;
-  font-size: 16px;
-  margin-right: 20px;
-  margin-left: 20px;
-}
-.rightSide li {
-  margin-left: 25px;
-  margin-right: 25px;
-
-  white-space: nowrap;
+  color: black;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.rightSide a {
-  color: rgb(255, 255, 255);
-  gap: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 18px;
-}
-
-body {
-  /* background: transparent; */
-  font-family: Arial, sans-serif;
+.menu a:hover {
+  color: #000000; /* Optional: add a hover color */
 }

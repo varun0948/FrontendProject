@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
+   let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
+
 
     const loggedInUserIndex = loggedInTable.findIndex(
       (user) => user.email === enteredEmail

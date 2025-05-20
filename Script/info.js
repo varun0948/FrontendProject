@@ -94,6 +94,136 @@ document.addEventListener("DOMContentLoaded", () => {
         "France Alpine Escape",
       ],
     },
+    dubai: {
+      title: "Discover Dubai",
+      subtitle: "5-Day luxury escape in the heart of the UAE.",
+      image: "../Images/dubai1.jpg",
+      images: [
+        "../Images/dubai/dubai1.jpg",
+        "../Images/dubai/dubai2.jpg",
+        "../Images/dubai/dubai3.jpg",
+        "../Images/dubai/dubai4.jpg",
+        "../Images/dubai/dubai5.jpg",
+      ],
+      button: "../Files/booking.html?trip=dubai",
+      description:
+        "Dive into a world of luxury and innovation in Dubai, where modern skyscrapers meet desert adventures. Explore iconic landmarks, shop in grand malls, and experience the vibrant culture of the Middle East.",
+      itinerary: [
+        "Day 1: Arrival in Dubai and evening Dhow cruise with dinner.",
+        "Day 2: City tour - Burj Khalifa, Dubai Mall, and Dubai Fountain show.",
+        "Day 3: Desert safari with dune bashing, camel rides, and BBQ dinner.",
+        "Day 4: Visit to Miracle Garden, Dubai Frame, and shopping at Souk Madinat Jumeirah.",
+        "Day 5: Departure from Dubai.",
+      ],
+      price: "$1,800 per person",
+      inclusions:
+        "Round-trip flights, 4-star hotel, daily breakfast, guided tours, desert safari experience, and all transfers.",
+      reviews: [
+        {
+          rating: "⭐ 4.9/5",
+          user: "Arjun S",
+          comment:
+            "Dubai exceeded all expectations – a perfect blend of luxury and culture.",
+        },
+        {
+          rating: "⭐ 4.8/5",
+          user: "Lena M",
+          comment: "The desert safari was a thrilling highlight of the trip!",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Dubai&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "Abu Dhabi Getaway",
+        "Qatar Cultural Tour",
+        "Middle East Luxury Escape",
+      ],
+    },
+    maldives: {
+      title: "Maldives Paradise Escape",
+      subtitle: "6-Day tropical getaway to pristine beaches and coral islands.",
+      image: "../Images/maldives.jpg",
+      images: [
+        "../Images/maldives/maldives1.jpg",
+        "../Images/maldives/maldives2.jpg",
+        "../Images/maldives/maldives3.jpg",
+        "../Images/maldives/maldives4.jpg",
+        "../Images/maldives/maldives5.jpg",
+      ],
+      button: "../Files/booking.html?trip=maldives",
+      description:
+        "Relax on the white sandy beaches of the Maldives, swim in turquoise waters, and stay in luxurious overwater villas. Perfect for honeymooners and beach lovers seeking tranquility and adventure.",
+      itinerary: [
+        "Day 1: Arrival in Malé and speedboat transfer to the resort.",
+        "Day 2: Leisure day at the beach and spa treatments.",
+        "Day 3: Snorkeling excursion and island hopping tour.",
+        "Day 4: Sunset dolphin cruise and private candlelight dinner.",
+        "Day 5: Water sports - kayaking, paddleboarding, or scuba diving.",
+        "Day 6: Departure with unforgettable island memories.",
+      ],
+      price: "$3,200 per person",
+      inclusions:
+        "Round-trip flights, luxury overwater villa, daily breakfast and dinner, excursions, airport transfers, and taxes.",
+      reviews: [
+        {
+          rating: "⭐ 5/5",
+          user: "Sophia G",
+          comment: "A dream vacation! The water villa experience is unmatched.",
+        },
+        {
+          rating: "⭐ 4.9/5",
+          user: "Rahul N",
+          comment: "Peaceful, stunning views, and perfect service throughout.",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Maldives&t=&z=6&ie=UTF8&iwloc=&output=embed",
+      related: [
+        "Bali Beach Retreat",
+        "Seychelles Island Tour",
+        "Fiji Honeymoon Package",
+      ],
+    },
+    singapore: {
+      title: "Vibrant Singapore Tour",
+      subtitle: "4-Day city adventure in the heart of Southeast Asia.",
+      image: "../Images/singapore.jpg",
+      images: [
+        "../Images/singapore/singapore1.jpg",
+        "../Images/singapore/singapore2.jpg",
+        "../Images/singapore/singapore3.jpg",
+        "../Images/singapore/singapore4.jpg",
+        "../Images/singapore/singapore5.jpg",
+      ],
+      button: "../Files/booking.html?trip=singapore",
+      description:
+        "Explore the bustling streets, futuristic gardens, and multicultural neighborhoods of Singapore. A perfect blend of tradition and innovation, this tour is ideal for families, couples, and solo travelers.",
+      itinerary: [
+        "Day 1: Arrival and evening at Marina Bay Sands SkyPark and Spectra Light Show.",
+        "Day 2: Full day city tour - Merlion Park, Chinatown, Little India, and Gardens by the Bay.",
+        "Day 3: Sentosa Island adventure including Universal Studios and SEA Aquarium.",
+        "Day 4: Free time for shopping and departure.",
+      ],
+      price: "$1,600 per person",
+      inclusions:
+        "Round-trip airfare, 4-star hotel, daily breakfast, guided city and island tours, attraction tickets, and local transfers.",
+      reviews: [
+        {
+          rating: "⭐ 4.8/5",
+          user: "Nathan W",
+          comment:
+            "Singapore is amazing! So clean, modern, and packed with fun.",
+        },
+        {
+          rating: "⭐ 4.7/5",
+          user: "Aisha K",
+          comment: "Loved every moment – especially the Gardens by the Bay!",
+        },
+      ],
+      mapEmbed:
+        "https://maps.google.com/maps?q=Singapore&t=&z=11&ie=UTF8&iwloc=&output=embed",
+      related: ["Malaysia Explorer", "Thailand Discovery", "Hong Kong Getaway"],
+    },
   };
   const params = new URLSearchParams(window.location.search);
   const tripKey = params.get("trip");

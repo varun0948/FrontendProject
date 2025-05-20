@@ -11,44 +11,17 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav" id="nav">
-            <div class="logo">
-                <a href="../Files/home.html" id="logo">Travelin</a>
-            </div>
-            <div class="rightSide" id="rightSide">
-                <ul id="ul">
-                    <li><a href="../Files/home.html" id="home">Home</a></li>
-                    <li><a href="../Files/contact.html" id="Contact">Contact Us</a></li>
-                    <li><a href="../Files/about.html" id="about">About Us</a></li>
-                    <li><a href="../Files/login.html" class="signin-btn" id="sign">Login</a></li>
-                    <li><a href="../Files/profile.html" class="signin-btn" id="profile"
-                            style="display: none;">Profile</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const profileLink = document.getElementById("profile");
-            const signInLink = document.getElementById("sign");
-
-            let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
-
-            const activeUser = loggedInTable.find(user => user.isLogin === true);
-
-            if (activeUser) {
-                profileLink.style.display = "inline-block";
-                signInLink.style.display = "none";
-            } else {
-                profileLink.style.display = "none";
-                signInLink.style.display = "inline-block";
-            }
-
-        });
-    </script>
-
+      
+<header class="header1" id="header1">
+  <div class="logo" > <a href="../Files/home.html">Travelin</a></div>
+  <nav class="menu">
+    <a href="../Files/home.html" id="home" > Home</a>
+    <a href="../Files/contact.html" id="contact">Contact Us</a>
+    <a href="../Files/about.html" id="About">About Us</a>
+    <a href="../Files/login.html" id="login">Login</a>
+    <a href="../Files/profile.html" id="profile">Profile</a>
+  </nav>
+</header>
 
 </body>
 

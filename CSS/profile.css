@@ -1,283 +1,236 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* profile.css */
 
-#nav {
-  margin-top: -150px;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
 }
-#logo {
-  color: white;
-  margin-left: 150px;
+#profile{
+  font-weight: bolder;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo:hover{
+  text-decoration: underline;
 }
 #tag {
-  color: black;
-  margin-top: 150px;
-  margin-left: 300px;
-  margin-bottom: -150px;
-  font-size: 30px;
-  font-weight: bold;
-}
-body {
-  color: #333;
-  background: linear-gradient(rgba(65, 65, 65, 0.5), rgba(65, 65, 65, 0.5)),
-    url("../Images/p2.jpg") center/cover no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  margin: 30px 0 10px 0;
+  font-weight: 600;
+  font-size: 28px;
+  color: #222;
 }
 
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin-top: 200px;
-  margin-left: 300px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px 50px 15px;
+}
+
+.hero-overlay {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
 }
 
 .profile {
   display: flex;
   align-items: center;
-  background: url("../Images/banner\ user.jpg") center / cover no-repeat;
-  background-color: rgba(65, 65, 65, 0.5);
-  padding: 1.5rem;
-  margin-top: -40px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-  color: white;
-}
-.profile::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(65, 65, 65, 0.3); /* dark overlay */
-  z-index: 1;
-}
-
-.profile > * {
-  position: relative;
-  z-index: 2;
+  gap: 25px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  margin-right: 20px;
   object-fit: cover;
-  border: 3px solid #ff6b6b;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-container {
+  flex: 1;
+}
+
+#profileBox {
+  display: block;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.profile-container p {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  color: #666;
 }
 
 .profile-container button {
-  background: #ff6b6b;
-  color: white;
+  background-color: #007bff;
   border: none;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  color: white;
+  padding: 10px 18px;
+  margin-right: 12px;
+  font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .profile-container button:hover {
-  background: #ff6b6b;
+  background-color: #0056b3;
 }
 
 .tabs {
   display: flex;
-  margin-top: 2rem;
-  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 15px;
 }
 
 .tab {
-  flex: 1;
-  background: white;
+  background-color: #eaeaea;
   border: none;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.25s ease;
 }
 
-.tab:hover,
-.tab.active {
-  background: #ff6b6b;
+.tab.active,
+.tab:hover {
+  background-color: #007bff;
   color: white;
 }
 
 .tab-content {
-  background: white;
-  margin-top: 1rem;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 0.4s ease;
-  margin-bottom: 100px;
+  padding: 0 15px;
 }
 
 .hidden {
   display: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#btn-details a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.trip-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
+/* Trips and Wishlist Cards */
 
-.trip-card {
-  background: linear-gradient(135deg, #ff6b6b, #343333);
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.trip-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.trip-card h4 {
-  font-size: 18px;
-  color: #ffffff;
-}
-
-.trip-card p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-}
-
-.trip-card button {
-  background: #ff6b6b;
-  border: none;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  margin-top: 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.trip-card button:hover {
-  background: #0077b6;
-}
-#trips {
-  margin-bottom: 100px;
-}
-
+.trip-cards,
 .wishlist-list {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
+.trip-card,
 .wishlist-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  width: 280px;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  /* background: #ff6b6b; */
-  background: linear-gradient(150deg, #ff6b6b, #343333);
-
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: 0.3s ease;
 }
 
-.icon {
-  font-size: 2rem;
-  margin-right: 1rem;
+.trip-card h4,
+.wishlist-item h4 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  color: #007bff;
 }
 
-.details {
-  flex-grow: 1;
-}
-
-.details h4 {
-  margin-bottom: 0.3rem;
-  color: #023e8a;
-}
-
-.details p {
-  font-size: 0.9rem;
+.trip-card p,
+.wishlist-item p {
+  font-size: 14px;
   color: #555;
+  margin: 4px 0;
 }
 
-.actions {
-  display: flex;
-  gap: 0.5rem;
-}
-.actions .book {
-  background: #ff6b6b;
-  color: white;
+.trip-card button,
+.wishlist-item button.book {
+  margin-top: 15px;
+  background-color: #007bff;
   border: none;
-  padding: 0.4rem 0.8rem;
+  padding: 10px 14px;
+  color: white;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.25s ease;
+  width: 100%;
 }
 
-.actions .remove {
+.trip-card button a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.trip-card button:hover,
+.wishlist-item button.book:hover {
+  background-color: #0056b3;
+}
+
+/* Wishlist item specific */
+
+.wishlist-item {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.wishlist-item .icon {
+  font-size: 28px;
+}
+
+.wishlist-item .details {
+  flex: 1;
+}
+
+.wishlist-item .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wishlist-item button.remove {
   background: transparent;
   border: none;
-  font-size: 1.2rem;
-  color: #888;
+  font-size: 20px;
+  color: #c0392b;
   cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.3s;
 }
 
-.actions .book:hover {
-  background: #c82929;
+.wishlist-item button.remove:hover {
+  color: #e74c3c;
 }
 
-.actions .remove:hover {
-  color: rgb(255, 255, 255);
-}
 
-#settings button {
-  background: white;
-  color: #ff6b6b;
-  padding: 10px;
-  margin: 5px;
-  display: flex;
-  border: 2px solid #ff6b6b;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: flex-start;
-  border-radius: 25px;
-  cursor: pointer;
-}
 
-#logout:hover {
-  transition: all ease-in-out 0.4s;
-}
-
-#logout {
-  background: #ff6b6b;
-  color: #fff;
-  margin-left: 600px;
-  margin-top: -40px;
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .wishlist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wishlist-item .actions {
+    flex-direction: row;
+  }
 }
