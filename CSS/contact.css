@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
 }
-#logo {
+#logo a{
   margin-left: 150px;
+  text-decoration: none;
 }
-#Contact {
+#contact {
   font-weight: bolder;
 } 
 * {

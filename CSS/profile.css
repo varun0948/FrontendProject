@@ -1,18 +1,16 @@
-/* profile.css */
-
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f9fc;
   color: #333;
 }
-#profile{
+#profile {
   font-weight: bolder;
 }
 .logo a {
   text-decoration: none;
 }
-.logo:hover{
+.logo:hover {
   text-decoration: underline;
 }
 #tag {
@@ -33,7 +31,7 @@ body {
   background-color: white;
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
 }
 
@@ -73,7 +71,8 @@ body {
 }
 
 .profile-container button {
-  background-color: #007bff;
+  background-color: #008b9c;
+
   border: none;
   color: white;
   padding: 10px 18px;
@@ -85,7 +84,7 @@ body {
 }
 
 .profile-container button:hover {
-  background-color: #0056b3;
+  background-color: #008b9c;
 }
 
 .tabs {
@@ -96,18 +95,19 @@ body {
 }
 
 .tab {
-  background-color: #eaeaea;
   border: none;
   padding: 12px 28px;
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  color: #008b9c;
+  background-color: white;
 }
 
 .tab.active,
 .tab:hover {
-  background-color: #007bff;
+  background-color: #008b9c;
   color: white;
 }
 
@@ -118,8 +118,6 @@ body {
 .hidden {
   display: none;
 }
-
-/* Trips and Wishlist Cards */
 
 .trip-cards,
 .wishlist-list {
@@ -181,8 +179,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Wishlist item specific */
-
 .wishlist-item {
   flex-direction: row;
   align-items: center;
@@ -217,8 +213,6 @@ body {
 .wishlist-item button.remove:hover {
   color: #e74c3c;
 }
-
-
 
 @media (max-width: 600px) {
   .profile {

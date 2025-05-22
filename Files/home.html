@@ -20,11 +20,11 @@
   <main>
     <section class="hero">
       <div class="overlay1">
-      <div class="hero-content">
-        <h1>Make Your Life Extraordinary</h1>
-        <button class="cta">Find Destination</button>
-      
-      </div>
+        <div class="hero-content">
+          <h1>Make Your Life Extraordinary</h1>
+          <button class="cta">Find Destination</button>
+
+        </div>
       </div>
     </section>
 
@@ -305,6 +305,7 @@
 </html>
 
 <script>
+  
   // Load Header
   fetch("../Header/header.html")
     .then((response) => response.text())
@@ -320,4 +321,14 @@
       document.getElementById("footer").innerHTML = data;
     })
     .catch((error) => console.error("Error loading footer:", error));
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginLink = document.getElementByIdz("login");
+
+    const isLoggedIn = loggedInTable.some((user) => user.isLogin);
+
+    if (isLoggedIn && loginLink) {
+      loginLink.display = "none";
+    }
+  });
 </script>

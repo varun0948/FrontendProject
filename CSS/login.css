@@ -12,14 +12,19 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* Ensure header loads correctly */
+ 
 #header {
   width: 100%;
   z-index: 10;
 }
 
-/* Container for the login area */
+#login {
+  font-weight: bold;
+}
+#login:hover {
+  text-decoration: underline;
+}
+ 
 .hero-overlay {
   flex: 1;
   display: flex;
@@ -27,8 +32,7 @@ body {
   align-items: center;
   padding: 40px 20px;
 }
-
-/* Login box */
+ 
 .container {
   max-width: 420px;
   width: 100%;
@@ -44,8 +48,7 @@ body {
   font-size: 28px;
   color: #222;
 }
-
-/* Input styling */
+ 
 .input-box {
   width: 100%;
   padding: 12px 15px;
@@ -61,8 +64,7 @@ body {
   border-color: #00acc1;
   box-shadow: 0 0 5px rgba(0, 172, 193, 0.2);
 }
-
-/* Button styling */
+ 
 .btn {
   width: 100%;
   padding: 12px;
@@ -78,8 +80,7 @@ body {
 .btn:hover {
   background-color: #008b9c;
 }
-
-/* Sign up link */
+ 
 .signin {
   text-align: center;
   margin-top: 15px;
@@ -95,8 +96,7 @@ body {
 .signin a:hover {
   text-decoration: underline;
 }
-
-/* Error message */
+ 
 #error-message {
   margin-top: 10px;
   text-align: center;
@@ -104,8 +104,7 @@ body {
   color: red;
   display: none;
 }
-
-/* Social icons */
+ 
 .icon {
   display: flex;
   justify-content: center;

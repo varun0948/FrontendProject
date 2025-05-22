@@ -1,11 +1,11 @@
 * {
-  /* margin: 0px;
-  padding: 0px; */
+  margin: 0px;
+  padding: 0px;
 }
 .header1 {
   margin-bottom: -10px;
 }
-#home{
+#home {
   font-weight: bolder;
 }
 main {
@@ -16,7 +16,7 @@ main {
   background: url("../Images/australia.jpg") center center/cover no-repeat;
   height: 611px;
   margin-top: 20px;
-  /* padding-top: 100px; */
+
   position: relative;
   display: flex;
   align-items: center;
@@ -31,14 +31,12 @@ main {
   margin-top: 38px;
   margin-bottom: -30px;
   padding: 40px 60px;
-  /* height: 100%; */
-  /* width: 100%; */
 }
 .cta {
   background: #000000;
   color: white;
   border: none;
-  font-family: "Dancing Script" , cursive;
+  font-family: "Dancing Script",cursive;
   font-weight: bold;
   padding: 12px 28px;
   font-size: 16px;
@@ -47,7 +45,7 @@ main {
 }
 
 .search-bar {
-  background: #000000;
+  background: #212121;
   padding: 20px 60px;
   display: flex;
   gap: 20px;
@@ -66,6 +64,8 @@ main {
 }
 .search-bar button {
   color: #000000;
+  font-size: 19px;
+  font-weight: bold;
   background: white;
 }
 .hero-content {
@@ -81,7 +81,7 @@ main {
 .hero-content h1 {
   font-size: 38px;
   margin-bottom: 20px;
-  /* font-family: "dancing Script"; */
+  /* font-family: "dancing Script", cursive; */
   font-family: "Pacifico", cursive;
 }
 

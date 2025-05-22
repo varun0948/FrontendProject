@@ -15,34 +15,31 @@
 // }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const profileBox = document.getElementById("profile-container");
-  const users = JSON.parse(localStorage.getItem("users"));
-  let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
-  const isLogggedIn = users.find((user) => user.id === loggedInTable.id);
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-  if (isLogggedIn) {
-    profileBox.innerHTML = `
-      <h2>Welcome, ${users.name}</h2>
-      <p><strong>Email:</strong>${users.email}</p>
-      <p><strong>Mobile Number:</strong> ${users.mobileNumber}</p>
-    `;
-    return;
+  const loginLink = document.getElementById("loginLink");
+  const profileLink = document.getElementById("profileLink");
+
+  if (isLoggedIn === "true") {
+    loginLink.style.display = "none";
+    profileLink.style.display = "block";
+  } else {
+    loginLink.style.display = "block";
+    profileLink.style.display = "none";
   }
-
 });
+
 function logout() {
   let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
-  // Find the user who is currently logged in and set isLogin to false
-  loggedInTable = loggedInTable.map(user => {
-      if (user.isLogin) user.isLogin = false;
-      return user;
+
+  loggedInTable = loggedInTable.map((user) => {
+    if (user.isLogin) user.isLogin = false;
+    return user;
   });
-  alert("you have been logged out")
+  alert("you have been logged out");
   localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
-  // Optionally, clear session id for logged-in user
   localStorage.removeItem("loggedInUserId");
 
-  // Redirect to home or login page
-  window.location.href = "../Files/login.html";
+  window.location.href = "../Files/home.html";
 }
