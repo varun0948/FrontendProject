@@ -7,6 +7,8 @@
   <title>My Profile | Travelin</title>
   <script src="../Script/profile.js"></script>
   <link rel="stylesheet" href="../CSS/profile.css" />
+  <link rel="icon " type="png" href="../Images/logo.jpg" />
+
 </head>
 
 <body>
@@ -20,9 +22,9 @@
       <section class="profile">
         <img src="../Images/profile1.png" alt="Profile Picture" class="profile-pic" />
         <div class="profile-container">
-          <span id="profileBox">
-
-          </span>
+          <h3 id="userName"></h3>
+          <p id="userEmail"></p>
+          <p id="userPhone"></p>
 
           <p>Member Since: Jan 2023</p>
           <button onclick="editProfile()">Edit Profile</button>
@@ -113,4 +115,18 @@
       document.getElementById("header").innerHTML = data;
     })
     .catch((error) => console.error("Error loading header:", error));
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".wishlist-item .remove").forEach((button) => {
+      button.addEventListener("click", function () {
+        const item = this.closest(".wishlist-item");
+        if (item) {
+          item.style.transition = "opacity 0.5s";
+          item.style.opacity = 0;
+          setTimeout(() => item.remove(), 300);
+        }
+      });
+    });
+  });
+
 </script>

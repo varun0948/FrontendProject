@@ -36,7 +36,7 @@ main {
   background: #000000;
   color: white;
   border: none;
-  font-family: "Dancing Script",cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
   padding: 12px 28px;
   font-size: 16px;
@@ -167,51 +167,19 @@ main {
 
 .about-text button {
   padding: 10px 20px;
-  background: #ff6b6b;
+  background: #0000009a;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.about-text button:hover {
+  background: #000000;
+  transition: 0.7s;
 }
 .home-image {
   cursor: pointer;
   margin-left: 100px;
-}
-
-.about1 {
-  display: flex;
-  padding: 60px 40px;
-  background: white;
-  align-items: center;
-  margin-top: -30px;
-}
-
-.about1 img {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.about-text1 {
-  padding-left: 40px;
-}
-
-.about-text1 h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.about-text1 p {
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.about-text1 button {
-  padding: 10px 20px;
-  background: #ff6b6b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 /* Global Style */
@@ -358,6 +326,7 @@ h2 {
 }
 .card.large {
   grid-row: span 2;
+  height: 220px;
 }
 
 .card.small {
@@ -433,24 +402,8 @@ body {
   background-size: 80px, 80px;
 }
 
-.green {
-  background-color: #eaf4ec;
-  background-image: radial-gradient(
-    circle at top right,
-    #cfe5d1 20%,
-    transparent 20%
-  );
-}
-
-.cream {
-  background-color: #f7f1e9;
-  background-image: radial-gradient(
-    circle at top right,
-    #e6dbd0 20%,
-    transparent 20%
-  );
-}
-
 a {
   text-decoration: none;
 }
+
+/* Animation */

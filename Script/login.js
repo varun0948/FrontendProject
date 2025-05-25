@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-   let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
-
+    let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
 
     const loggedInUserIndex = loggedInTable.findIndex(
       (user) => user.email === enteredEmail
@@ -52,7 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
     alert("Login successful!");
-    window.location.href = "../Files/profile.html";
+    console.log(newUser.id);
+    
+    window.location.href = `../Files/profile.html?id=${existingUser.id}`;
   });
 
   function showError(message) {

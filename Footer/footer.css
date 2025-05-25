@@ -8,7 +8,7 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 15px;
 }
@@ -32,7 +32,12 @@
 .footer-section ul li {
   margin: 5px 0;
 }
-
+#quickLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+}
 .footer-section ul li a {
   text-decoration: none;
   color: white;

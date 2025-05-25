@@ -19,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = inputs[1].value.trim();
     const mobileNumber = inputs[2].value.trim();
     const password = inputs[3].value.trim();
-
-    if (!name || !email || !mobileNumber || !password) {
+    const Image = inputs[4].value.trim();
+    
+    if (!name || !email || !mobileNumber || !password || !Image) {
       showError(errorMessage, "All fields are required.");
       return;
     }
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otpStorage.push({ mobileNumber, generatedOtp });
     localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
 
-    newUser = { id: generateId(), name, email, mobileNumber, password };
+    newUser = { id: generateId(), name, email, Image, mobileNumber, password };
 
     signupForm.classList.add("hidden");
     verifyOtpForm.classList.remove("hidden");
@@ -65,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("users", JSON.stringify(users));
 
     loggedInTable.push({
-      id:newUser.id, 
-      email: newUser.email, 
-      isLogin: true 
+      id: newUser.id,
+      email: newUser.email,
+      isLogin: true,
     });
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
@@ -83,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
     otpErrorMessage.style.display = "none";
     signupForm.classList.remove("hidden");
     signupForm.reset();
-    window.location.href = "../Files/profile.html";
+    console.log(newUser.id);
+    window.location.href = `../Files/profile.html?id=${newUser.id}`;
     newUser = null;
   });
 

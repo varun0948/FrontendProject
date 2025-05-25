@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="../Header/header.css" />
   <link rel="stylesheet" href="../CSS/home.css" />
   <link rel="stylesheet" href="../Footer/footer.css" />
@@ -45,50 +44,53 @@
     </section>
     <section class="popular-destinations">
       <h2 id="popular-destinations ">Popular Destinations</h2>
-      <a href="info.html?trip=europe">
-        <div class="destinations-container">
-
-          <div class="destination-card" style="background-image: url('../Images/europe/europe.jpg');">
+      <div class="destinations-container">
+        <a href="info.html?trip=europe">
+          <div class="destination-card" data-title="Europe" data-category="romantic" data-region="europe"
+            style="background-image: url('../Images/europe.jpg');">
             <div class="card-overlay">
               <p class="card-subtitle">Old World Charm</p>
               <h3>Europe</h3>
             </div>
           </div>
-      </a>
-      <a href="info.html?trip=switerzland">
-        <div class="destination-card" style="background-image: url('../Images/switzerland.jpg');">
-          <div class="card-overlay">
-            <p class="card-subtitle">Cultural Paradise</p>
-            <h3>Switzerland</h3>
+        </a>
+        <a href="info.html?trip=switerzland">
+          <div class="destination-card" data-title="Switzerland" data-category="romantic" data-region="europe"
+            style="background-image: url('../Images/switzerland.jpg');">
+            <div class="card-overlay">
+              <p class="card-subtitle">Cultural Paradise</p>
+              <h3>Switzerland</h3>
+            </div>
           </div>
-        </div>
-      </a>
-      <a href="info.html?trip=dubai">
+        </a>
+        <a href="info.html?trip=dubai">
 
-        <div class="destination-card" style="background-image: url('../Images/dubai1.jpg');">
-          <div class="card-overlay">
-            <p class="card-subtitle">The City of Life</p>
-            <h3>Dubai</h3>
+          <div class="destination-card" data-title="Dubai" data-category="adventure" data-region="asia"
+            style="background-image: url('../Images/dubai1.jpg');">
+            <div class="card-overlay">
+              <p class="card-subtitle">The City of Life</p>
+              <h3>Dubai</h3>
+            </div>
           </div>
-        </div>
-      </a>
-      <a href="info.html?trip=maldives">
-        <div class="destination-card" style="background-image: url('../Images/maldives.jpg');">
-          <div class="card-overlay">
-            <p class="card-subtitle">Create Memories In</p>
-            <h3>Maldives</h3>
+        </a>
+        <a href="info.html?trip=maldives">
+          <div class="destination-card" data-title="Maldives" data-category="romantic" data-region="asia"
+            style="background-image: url('../Images/maldives.jpg');">
+            <div class="card-overlay">
+              <p class="card-subtitle">Create Memories In</p>
+              <h3>Maldives</h3>
+            </div>
           </div>
-        </div>
-      </a>
-      <a href="info.html?trip=singapore">
-
-        <div class="destination-card" style="background-image: url('../Images/singapore.jpg');">
-          <div class="card-overlay">
-            <p class="card-subtitle">The Lion City</p>
-            <h3>Singapore</h3>
+        </a>
+        <a href="info.html?trip=singapore">
+          <div class="destination-card" data-title="Singapore" data-category="adventure" data-region="asia"
+            style="background-image: url('../Images/singapore.jpg');">
+            <div class="card-overlay">
+              <p class="card-subtitle">The Lion City</p>
+              <h3>Singapore</h3>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
       </div>
     </section>
 
@@ -104,7 +106,7 @@
         </p>
         <a href="info.html?trip=RockyMountains">
           <button id="btn">
-            Learn More &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">→</span>
+            See More &nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">→</span>
           </button>
         </a>
       </div>
@@ -114,56 +116,49 @@
     <section class="explore-europe">
       <h2>Explore Europe</h2>
       <div class="europe-countries">
-        <div class="country">
+        <div class="country" data-title="Finland" data-category="romantic" data-region="europe">
           <a href="info.html?trip=austria">
-
             <img src="../Images/austria.jpg" alt="Austria">
             <p>Austria</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country" data-title="Finland" data-category="romantic" data-region="europe">
           <a href="info.html?trip=finland">
-
             <img src="../Images/finland.jpg" alt="Finland">
             <p>Finland</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country " data-title="Norway" data-category="adventure" data-region="europe">
           <a href="info.html?trip=norway">
-
             <img src="../Images/norway.jpg" alt="Norway">
             <p>Norway</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country" data-title="italy" data-category="adventure" data-region="europe">
           <a href="info.html?trip=italy">
-
-            <img src="../Images/italy.jpg" alt="Italy">
+            <img src="../Images/italy.jpg" alt="italy">
             <p>Italy</p>
           </a>
         </div>
-        <div class="country">
-          <a href="info.html?trip=Netherlands">
-
+        <div class="country" data-title="Switzerland" data-category="adventure" data-region="europe">
+          <a href="info.html?trip=norway">
             <img src="../Images/netherlands.jpg" alt="Switzerland">
             <p>Netherlands</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country" data-title="France" data-category="adventure" data-region="europe">
           <a href="info.html?trip=france">
-
             <img src="../Images/france.jpg" alt="France">
             <p>France</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country" data-title="United-Kingdom" data-category="adventure" data-region="europe">
           <a href="info.html?trip=uk">
-
-            <img src="../Images/uk.jpg" alt="United Kingdom">
+            <img src="../Images/uk.jpg" alt="United-Kingdom">
             <p>United Kingdom</p>
           </a>
         </div>
-        <div class="country">
+        <div class="country" data-title="Spain" data-category="adventure" data-region="europe">
           <a href="info.html?trip=spain">
 
             <img src="../Images/spain.jpg" alt="Spain">
@@ -179,7 +174,8 @@
       <div class="experience-cards">
         <a href="info.html?trip=australia">
 
-          <div class="experience-card" style="background-image: url('../Images/australia.jpg');">
+          <div class="experience-card" data-title="Australia" data-category="adventure" data-region="asia"
+            style="background-image: url('../Images/australia.jpg');">
             <div class="overlay">
               <p>Land of Down Under</p>
               <h3>Australia</h3>
@@ -187,39 +183,44 @@
           </div>
         </a>
         <a href="info.html?trip=newzealand">
-          <div class="experience-card" style="background-image: url('../Images/newzealand.jpg');">
+          <div class="experience-card" data-title="New Zealand" data-category="adventure" data-region="asia"
+            style="background-image: url('../Images/newzealand.jpg');">
             <div class="overlay">
               <p>A city of Lake</p>
               <h3>New Zealand</h3>
             </div>
           </div>
-        </a>
-        <a href="info.html?trip=Bhutan">
+          <a href="info.html?trip=Bhutan">
 
-          <div class="experience-card" style="background-image: url('../Images/Bhutan.jpg');">
-            <div class="overlay">
-              <p>A haven in the Himalayas</p>
-              <h3>Bhutan</h3>
+            <div class="experience-card" data-title="Bhutan" data-category="adventure" data-region="asia"
+              style="background-image: url('../Images/Bhutan.jpg');">
+              <div class="overlay">
+                <p>A haven in the Himalayas</p>
+                <h3>Bhutan</h3>
+              </div>
             </div>
-          </div>
-        </a>
-        <a href="info.html?trip=Hungary">
-          <div class="experience-card" style="background-image: url('../Images/Hungary.jpg');">
-            <div class="overlay">
-              <p>A landlocked country</p>
-              <h3>Hungary</h3>
-            </div>
-          </div>
-        </a>
-        <a href="info.html?trip=Johannesburg">
 
-          <div class="experience-card" style="background-image: url('../Images/johannesburg.jpg');">
-            <div class="overlay">
-              <p>City of Gold</p>
-              <h3>Johannesburg</h3>
+          </a>
+          <a href="info.html?trip=Hungary">
+            <div class="experience-card" data-title="Hungary" data-category="romantic" data-region="europe"
+              style="background-image: url('../Images/Hungary.jpg');">
+              <div class="overlay">
+                <p>A landlocked country</p>
+                <h3>Hungary</h3>
+              </div>
             </div>
-          </div>
-        </a>
+
+          </a>
+          <a href="info.html?trip=Johannesburg">
+
+            <div class="experience-card" data-title="Johannesburg" data-category="adventure" data-region="africa"
+              style="background-image: url('../Images/johannesburg.jpg');">
+              <div class="overlay">
+                <p>City of Gold</p>
+                <h3>Johannesburg</h3>
+              </div>
+            </div>
+          </a>
       </div>
 
     </section>
@@ -228,12 +229,15 @@
       <h2 id="desti">Visa Free Destinations</h2>
       <a href="info.html?trip=mauritius">
         <div class="destinations-grid">
-          <div class="card" style="background-image: url('../Images/Mauritius.jpg');">
+
+          <div class="card" data-title="Mauritius" data-category="romantic" data-region="africa"
+            style="background-image: url('../Images/Mauritius.jpg');">
             <div class="overlay">
               <h3>Mauritius</h3>
               <p>From ₹62,500</p>
             </div>
           </div>
+
       </a>
       <a href="info.html?trip=thailand">
 
@@ -253,7 +257,7 @@
           </div>
         </div>
       </a>
-      <a href="info.html?trip=Malaysia">
+      <a href="info.html?trip=malaysia">
 
         <div class="card small" style="background-image: url('../Images/Malaysia.jpg');">
           <div class="overlay">
@@ -262,6 +266,8 @@
           </div>
         </div>
       </a>
+      <a style="display: noen;"></a>
+
       <a href="info.html?trip=sriLanka">
         <div class="card small" style="background-image: url('../Images/sriLanka.jpg');">
           <div class="overlay">
@@ -278,7 +284,7 @@
           </div>
         </div>
       </a>
-      <a href="info.html?trip=kazakstan">
+      <a href="info.html?trip=kazakhstan">
         <div class="card" style="background-image: url('../Images/kazakstan.jpg');">
           <div class="overlay">
             <h3>Kazakhstan</h3>
@@ -286,7 +292,7 @@
           </div>
         </div>
       </a>
-      <a href="info.html?trip=iran">
+      <a href="info.html?trip=iran" id="iran">
         <div class="card" style="background-image: url('../Images/iran.jpg');">
           <div class="overlay">
             <h3>Iran</h3>
@@ -302,10 +308,8 @@
   <div id="footer"></div>
 </body>
 
-</html>
-
 <script>
-  
+
   // Load Header
   fetch("../Header/header.html")
     .then((response) => response.text())
@@ -321,14 +325,6 @@
       document.getElementById("footer").innerHTML = data;
     })
     .catch((error) => console.error("Error loading footer:", error));
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const loginLink = document.getElementByIdz("login");
-
-    const isLoggedIn = loggedInTable.some((user) => user.isLogin);
-
-    if (isLoggedIn && loginLink) {
-      loginLink.display = "none";
-    }
-  });
-</script>
+    
+ </script>
+</html>

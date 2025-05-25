@@ -2,27 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travelin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelin</title>
 
-    <link rel="stylesheet" href="../Header/header.css" />
-    <link rel="stylesheet" href="../Footer/footer.css" />
+  <link rel="stylesheet" href="../Header/header.css" />
+  <link rel="stylesheet" href="../Footer/footer.css" />
+  <script src="../Script/header.js"></script>
 </head>
 
 <body>
-      
-<header class="header1" id="header1">
-  <div class="logo" > <a href="../Files/home.html">Travelin</a></div>
-  <nav class="menu">
-    <a href="../Files/home.html" id="home" > Home</a>
-    <a href="../Files/contact.html" id="contact">Contact Us</a>
-    <a href="../Files/about.html" id="About">About Us</a>
-    <a href="../Files/login.html" id="login">Login</a>
-    <a href="../Files/profile.html" id="profile">Profile</a>
-  </nav>
-</header>
+
+  <header class="header1" id="header1">
+    <div class="logo"> <a href="../Files/home.html">Travelin</a></div>
+    <nav class="menu">
+      <a href="../Files/home.html" id="home"> Home</a>
+      <a href="../Files/contact.html" id="contact">Contact Us</a>
+      <a href="../Files/about.html" id="About">About Us</a>
+      <a href="../Files/login.html" id="login" onclick="loginLink()">Login</a>
+      <a href="../Files/profile.html" id="profile" onclick="profileLink()">Profile</a>
+    </nav>
+  </header>
 
 </body>
 
 </html>
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
+
+    function loginLink() {
+      if (isLogin === "true") {
+        window.location.href = "../Files/profile.html";
+      }
+      else{
+        window.location.href = "../Files/login.html";
+      }
+    }
+    function profileLink() {
+      if (isLogin === "false") {
+        alert("you don't have any Account ");
+        window.location.href = "../Files/login.html";
+      }
+      else{
+        window.location.href="../Files/profile.html"
+      }
+    }
+  });
+
+</script>
