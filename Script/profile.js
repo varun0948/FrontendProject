@@ -30,18 +30,19 @@ function editProfile() {
 // });
 
 function logout() {
-  let loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
+  sessionStorage.removeItem("loggedInUserId");
 
-  loggedInTable = loggedInTable.map((user) => {
-    if (user.isLogin) user.isLogin = false;
+  const loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
+  const userId = localStorage.getItem("loggedInUserId");
+  const updatedTable = loggedInTable.map((user) => {
+    
+    if (user.id == userId) return { ...user, isLogin: false };
     return user;
   });
-  alert("you have been logged out");
-  localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
+  localStorage.setItem("loggedInTable", JSON.stringify(updatedTable));
 
-  localStorage.removeItem("loggedInUserId");
-
-  window.location.href = "../Files/home.html";
+  alert("Logged out successfully");
+  window.location.href = "login.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -53,10 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
   const user = users.find((user) => String(user.id) == userId);
-  console.log(user);
+
   if (user) {
     document.getElementById("userName").innerText = `Name: ${user.name}`;
     document.getElementById("userEmail").innerText = `Email: ${user.email}`;
-    document.getElementById("userPhone").innerText = `Phone: ${user.mobileNumber}`;
+    document.getElementById(
+      "userPhone"
+    ).innerText = `Phone: ${user.mobileNumber}`;
+    document.getElementById("profileImage").src = user.profileImage;
   }
 });

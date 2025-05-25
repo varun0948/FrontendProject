@@ -24,10 +24,12 @@
 					<input type="text" class="input-box" placeholder="Enter your name" name="name" required />
 					<input type="email" class="input-box" placeholder="Enter email" name="password" required />
 					<input type="text" class="input-box" placeholder="Mobile Number" name="password" maxlength="10"
-						required />
+						 autocomplete="current-mobileno" required />
 					<input type="password" class="input-box" placeholder="Password" name="password" maxlength="6"
-						required />
-					<input type="file" id="image" alt="Image" width="48" height="48"  maxlength="1" class="input-box" required />
+						 autocomplete="current-password" required />
+				 
+					<input type="file" id="userImage" alt="Image" width="48" height="48" accept="image/*" maxlength="1"
+						class="input-box" required />
 
 					<input type="submit" class="btn" id="btnRegister" value="Next"><br />
 					<p id="error-message" style="color: red; display: none">

@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = inputs[1].value.trim();
     const mobileNumber = inputs[2].value.trim();
     const password = inputs[3].value.trim();
-    const Image = inputs[4].value.trim();
-    
-    if (!name || !email || !mobileNumber || !password || !Image) {
+    const fileInput = document.getElementById("userImage");
+    const file = fileInput.files[0];
+
+    if (!name || !email || !mobileNumber || !password || !file) {
       showError(errorMessage, "All fields are required.");
       return;
     }
@@ -36,17 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const generatedOtp = Math.floor(1000 + Math.random() * 9000);
-    alert(`Your OTP is ${generatedOtp}`);
+    const reader = new FileReader();
 
-    otpStorage.push({ mobileNumber, generatedOtp });
-    localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
+    reader.onload = function () {
+      const base64Image = reader.result;
 
-    newUser = { id: generateId(), name, email, Image, mobileNumber, password };
+      newUser = {
+        id: generateId(),
+        name,
+        email,
+        mobileNumber,
+        password,
+        profileImage: base64Image,
+      };
 
-    signupForm.classList.add("hidden");
-    verifyOtpForm.classList.remove("hidden");
-    errorMessage.style.display = "none";
+      const generatedOtp = Math.floor(1000 + Math.random() * 9000);
+      alert(`Your OTP is ${generatedOtp}`);
+
+      otpStorage.push({ mobileNumber, generatedOtp });
+      localStorage.setItem("otpStorage", JSON.stringify(otpStorage));
+
+      signupForm.classList.add("hidden");
+      verifyOtpForm.classList.remove("hidden");
+      errorMessage.style.display = "none";
+    };
+
+    reader.readAsDataURL(file);
   });
 
   verifyOtpForm.addEventListener("submit", function (e) {
@@ -72,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
+    // Store logged in user id
+    sessionStorage.setItem("loggedInUserId", newUser.id);
+
+    // Read logged in user id
+
     otpStorage = otpStorage.filter(
       (otp) => otp.mobileNumber !== newUser.mobileNumber
     );
@@ -84,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     otpErrorMessage.style.display = "none";
     signupForm.classList.remove("hidden");
     signupForm.reset();
-    console.log(newUser.id);
+
     window.location.href = `../Files/profile.html?id=${newUser.id}`;
     newUser = null;
   });

@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const loginLink = document.getElementById("login");
-  const loggedInTable = JSON.parse(localStorage.getItem("loggedInTable"));
+  const loginLinkEl = document.getElementById("login");
+  const profileLinkEl = document.getElementById("profile");
 
-  function loginLink() {
-    if (isLogin === "true") {
-      window.location.href = "../Files/profile.html";
-    }
-  }
-  loginLink();
-  function profileLink() {
-    if (isLogin === "false") {
-      alert("you don't have any Account ");
-      window.location.href = "../Files/login.html";
-    }
+  const loggedInUserId = sessionStorage.getItem("loggedInUserId");
+  console.log("Logged in user id:", loggedInUserId);
+
+  if (loggedInUserId) {
+    loginLinkEl.style.display = "none";
+    profileLinkEl.style.display = "inline-block";
+    profileLinkEl.href = `../Files/profile.html?id=${loggedInUserId}`;
+  } else {
+    loginLinkEl.style.display = "inline-block";
+    profileLinkEl.style.display = "none";
+    loginLinkEl.href = "../Files/login.html";
   }
 });
