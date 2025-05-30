@@ -83,7 +83,7 @@ function renderBookingPage(trip) {
       tripTitle: trip.title,
       tripPrice: trip.price,
     });
-    // bookingDB = JSON.parse(localStorage.setItem("bookedTable"));
+
     localStorage.setItem("bookingTable", JSON.stringify(bookingTable));
 
     alert(`
@@ -95,6 +95,7 @@ function renderBookingPage(trip) {
       Number of People: ${numPeople}
       Special Requests: ${specialRequests || "None"}
     `);
+
     window.location.href = "home.html";
   });
 }

@@ -60,7 +60,7 @@ function renderTrip(trip, tripKey) {
     <div class="price-box">
       <h2>${trip.price}</h2>
       <p>${trip.inclusions}</p>
-      <button class="book-btn" id="bookNowBtn">Book Now</button>
+      <button class="book-btn"  id="bookNowBtn">Book Now</button>
     </div>
   `;
 

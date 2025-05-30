@@ -14,28 +14,12 @@ function editProfile() {
   if (newName) document.getElementById("name").textContent = newName;
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const isLoggedIn = localStorage.getItem("loggedInTable");
-
-//   const loginLink = document.getElementById("loginLink");
-//   const profileLink = document.getElementById("profileLink");
-
-//   if (isLoggedIn === "true") {
-//     loginLink.style.display = "none";
-//     profileLink.style.display = "block";
-//   } else {
-//     loginLink.style.display = "block";
-//     profileLink.style.display = "none";
-//   }
-// });
-
 function logout() {
   sessionStorage.removeItem("loggedInUserId");
 
   const loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
   const userId = localStorage.getItem("loggedInUserId");
   const updatedTable = loggedInTable.map((user) => {
-    
     if (user.id == userId) return { ...user, isLogin: false };
     return user;
   });
@@ -62,5 +46,30 @@ document.addEventListener("DOMContentLoaded", () => {
       "userPhone"
     ).innerText = `Phone: ${user.mobileNumber}`;
     document.getElementById("profileImage").src = user.profileImage;
+
+    const tripsContainer = document.querySelector(".tripCards");
+    const bookedTrips = user.bookedTrips || [];
+
+    if (bookedTrips.length === 0) {
+      tripsContainer.innerHTML = "<p>No upcoming trips yet.</p>";
+    } else {
+      tripsContainer.innerHTML = "";
+      bookedTrips.forEach((trip, index) => {
+        const tripCard = document.createElement("div");
+        tripCard.classList.add(".tripCards");
+
+        tripCard.innerHTML = `
+          <div>
+            <h4 style="color: #007bff;">${trip.title}</h4>
+            <p>${trip.description}</p>
+            <p><strong>Date:</strong> ${trip.date || "Not set"}</p>
+          </div>
+          <button class="book">Book Now</button>
+          <span class="remove-btn" data-index="${index}">❌</span>
+        `;
+
+        tripsContainer.appendChild(tripCard);
+      });
+    }
   }
 });

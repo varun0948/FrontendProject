@@ -108,6 +108,48 @@
     "mapEmbed": "https://maps.google.com/maps?q=Dubai&t=&z=10&ie=UTF8&iwloc=&output=embed",
     "related": ["Abu Dhabi Tour", "Oman Desert Adventure", "Qatar Highlights"]
   },
+  "maldives": {
+    "title": "Maldives Paradise",
+    "subtitle": "Tropical island luxury and underwater wonders.",
+    "image": "../Images/maldives.jpg",
+    "images": [
+      "https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1450372/pexels-photo-1450372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://wallpapers.com/images/featured/maldives-23wyvlaqa7aydqny.jpg",
+      "https://images5.alphacoders.com/361/361643.jpg"
+    ],
+    "description": "Escape to the Maldives with pristine white sandy beaches, crystal clear lagoons, and vibrant coral reefs. Enjoy water sports, luxury overwater villas, and world-class hospitality.",
+    "itinerary": [
+      "Day 1: Arrival and check-in to overwater villa.",
+      "Day 2: Snorkeling and scuba diving adventure.",
+      "Day 3: Relax on the beach and spa day.",
+      "Day 4: Sunset dolphin cruise.",
+      "Day 5: Visit local islands and markets.",
+      "Day 6: Water sports and beach volleyball.",
+      "Day 7: Departure after a leisurely breakfast."
+    ],
+    "price": "USD 4,500 per person",
+    "inclusions": "Flights, luxury resort stay, water activities, breakfast and dinner.",
+    "reviews": [
+      {
+        "rating": "⭐ 5/5",
+        "user": "Lucy P",
+        "comment": "The ultimate tropical paradise getaway."
+      },
+      {
+        "rating": "⭐ 4.9/5",
+        "user": "Mark S",
+        "comment": "Breathtaking views and amazing underwater life."
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Maldives&t=&z=9&ie=UTF8&iwloc=&output=embed",
+    "related": [
+      "Seychelles Escape",
+      "Bali Beach Holiday",
+      "Mauritius Adventure"
+    ]
+  },
   "singapore": {
     "title": "Singapore Highlights",
     "subtitle": "Modern city meets tropical paradise.",

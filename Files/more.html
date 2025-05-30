@@ -1,306 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Know more</title>
-    <link rel="stylesheet" href="../Header/header.css" />
-    <link rel="stylesheet" href="../Footer/footer.css" />
-    <link rel="stylesheet" href="../CSS/more.css" />
-    <script src="../Script/more.js" defer></script>
-  </head>
-  <body>
-    <div class="page-overlay">
-      <div id="header"></div>
 
-      <div class="search-container">
-        <input type="text" id="search" placeholder="Search Trips..." />
-        <button id="search-btn">Search</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next-Level Netflix Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #222;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* Apply Inter font globally */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #141414;
+      /* Dark background for Netflix feel */
+      color: #e5e5e5;
+      /* Light text for contrast */
+      overflow-x: hidden;
+      /* Prevent horizontal scrollbar on body */
+    }
+
+    /* Custom styles for movie row scrolling */
+    .movie-row-scroll {
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on touch devices */
+      scrollbar-width: none;
+      /* Hide scrollbar for Firefox */
+      -ms-overflow-style: none;
+      /* Hide scrollbar for IE and Edge */
+    }
+
+    .movie-row-scroll::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar for Chrome, Safari, Opera */
+    }
+
+    /* Modal backdrop for blur effect */
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      /* Safari support */
+    }
+
+    /* Gradient overlay for hero section */
+    .hero-gradient-overlay {
+      background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 1) 100%);
+    }
+
+    /* Custom animation for modal fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    /* Custom animation for modal fade-out */
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+
+    .animate-fade-out {
+      animation: fadeOut 0.3s ease-out forwards;
+    }
+
+    /* Aspect ratio for video player */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black to-transparent p-4 flex items-center justify-between transition-all duration-300"
+    id="navbar">
+    <div class="flex items-center space-x-6">
+      <a href="#" class="text-red-600 text-3xl font-bold tracking-tight">NETFLIX</a>
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200">Home</a>
+        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200">TV Shows</a>
+        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200">Movies</a>
+        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200">New & Popular</a>
+        <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200" id="myListNav">My List</a>
       </div>
-      <main>
-        <div class="trip-container">
-          
-          
- 
-            <div class="trip-card" >
-            <a href="info.html?trip=Thailand">
-
-              <img src="../Images/thailand.jpg" alt="Trip Image" class="trip-image" />
-              <div class="trip-info" >
-                <h3 class="trip-title">Trip to Thailand</h3>
-                <p class="trip-destination">Destination: Bangkok, Thailand</p>
-                <p class="trip-price">$1500</p>
-                <p class="trip-description">
-                  Explore the romantic city of Paris with our all-inclusive tour
-                  package. Visit famous landmarks like the Eiffel Tower, Louvre
-                  Museum, and more.
-                </p>
-                <a href="#" class="book-btn">Book Now</a>
-              </div>
-            </a>
-            </div>
-        
-           
-          <div class="trip-card">
-            <a href="info.html?trip=japan">
-            <img src="../Images/p7.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Tokyo</h3>
-              <p class="trip-destination">Destination: Tokyo, Japan</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Edinburgh">
-            
-            <img src="../Images/p10.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Edinburgh</h3>
-              <p class="trip-destination">Destination: Edinburgh, Scotland</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Australia">
-
-            <img src="../Images/australia.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Australia</h3>
-              <p class="trip-destination">Destination: Sydney, Australia</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Vietnam">
-            <img src="../Images/p11.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Vietnam</h3>
-              <p class="trip-destination">Destination: BINH DINH, Vietnam</p>
-              <p class="trip-price">$1500</p>
-              <p class="trip-description">
-                Explore the romantic city of Paris with our all-inclusive tour
-                package. Visit famous landmarks like the Eiffel Tower, Louvre
-                Museum, and more.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=London">
-
-            <img src="../Images/p13.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to London</h3>
-              <p class="trip-destination">Destination: Camdem Town, London</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Switerzland">
-            <img src="../Images/p6.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Switerzland</h3>
-              <p class="trip-destination">Destination: Zurich, Switerzland</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Spain">
-
-            <img src="../Images/spain.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Spain</h3>
-              <p class="trip-destination">Destination: Madrid,Spain</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Tokyo, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Dubai">
-
-            <img src="../Images/dubai.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Dubai</h3>
-              <p class="trip-destination">Destination: BINH-DINH, Vietnam</p>
-              <p class="trip-price">$1500</p>
-              <p class="trip-description">
-                Explore the romantic city of Paris with our all-inclusive tour
-                package. Visit famous landmarks like the Eiffel Tower, Louvre
-                Museum, and more.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=SriLanka">
-            <img src="../Images/sriLanka.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Sri Lanka</h3>
-              <p class="trip-destination">Destination: Camdem Town, London</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of London, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Kazakhstan">
-
-            <img src="../Images/kazakstan.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Kazakhstan</h3>
-              <p class="trip-destination">Destination: Astana, Kazakhstan</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Kazakhstan, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=SouthKorea">
-
-            <img src="../Images/p18.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to South Korea</h3>
-              <p class="trip-destination">Destination: Seoul,South Korea</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Madrid, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=singapore">
-
-            <img src="../Images/singapore.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Singapore</h3>
-              <p class="trip-destination">Destination: HongKong,Singapore</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of HongKong, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Maldives">
-
-            <img src="../Images/maldives.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Maldives</h3>
-              <p class="trip-destination">Destination: Malé,Maldives</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Malé, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=Europe">
-
-            <img src="../Images/europe.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to Europe </h3>
-              <p class="trip-destination">Destination: Belgium,Europe</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Belgium, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-          <div class="trip-card">
-            <a href="info.html?trip=NewZealand">
-
-            <img src="../Images/newzealand.jpg" alt="Trip Image" class="trip-image" />
-            <div class="trip-info">
-              <h3 class="trip-title">Trip to NewZealand</h3>
-              <p class="trip-destination">Destination: Auckland,NewZealand</p>
-              <p class="trip-price">$1800</p>
-              <p class="trip-description">
-                Experience the culture and modern attractions of Auckland, from
-                ancient temples to futuristic skyscrapers.
-              </p>
-              <a href="#" class="book-btn">Book Now</a>
-            </div>
-            </a>
-          </div>
-        </div>
-
-
-      </main>
-      <div id="footer"></div>
     </div>
-  </body>
+    <div class="flex items-center space-x-4">
+      <div class="relative">
+        <input type="text" id="searchInput" placeholder="Search..."
+          class="bg-gray-800 text-white px-3 py-1 rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 transition-all duration-300 w-0 opacity-0 md:w-auto md:opacity-100" />
+        <button id="searchButton"
+          class="text-white hover:text-gray-300 focus:outline-none absolute right-2 top-1/2 -translate-y-1/2 md:static md:translate-y-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-search">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+        </button>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1535713875002-d1d0cfce5475?auto=format&fit=crop&q=80&w=40&h=40&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="User Profile"
+        class="w-8 h-8 md:w-10 md:h-10 rounded-md cursor-pointer hover:ring-2 hover:ring-white transition-all duration-200">
+    </div>
+  </nav>
+
+  <header class="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center flex items-end" id="heroSection">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+    <div class="absolute inset-0 hero-gradient-overlay"></div>
+    <div class="z-10 p-6 md:p-12 lg:p-20 max-w-lg md:max-w-2xl">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 drop-shadow-lg" id="heroTitle"></h1>
+      <p class="text-sm md:text-base text-white mb-6 line-clamp-3 drop-shadow-md" id="heroDescription"></p>
+      <div class="flex space-x-3">
+        <button
+          class="flex items-center px-4 py-2 md:px-6 md:py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-300 transition-colors duration-200 shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-play mr-2">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Play
+        </button>
+        <button
+          class="flex items-center px-4 py-2 md:px-6 md:py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors duration-200 shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-info mr-2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          More Info
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-20 md:-mt-32 px-4 md:px-8 lg:px-12 pb-10">
+    <section id="searchResultsSection" class="hidden mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Search Results</h2>
+      <div id="searchResultsContainer"
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+      </div>
+      <p id="noSearchResults" class="text-gray-400 text-center mt-8 hidden">No results found for your search.</p>
+    </section>
+
+    <div id="movieCategoriesContainer"></div>
+  </main>
+
+  <div id="movieModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
+    <div
+      class="relative bg-gray-800 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300"
+      id="modalContent">
+      <button class="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl focus:outline-none z-10"
+        id="closeModalButton">
+        ×
+      </button>
+
+      <div id="modalVideoPlayer" class="hidden">
+        <div class="video-container rounded-t-xl">
+          <iframe id="modalVideoFrame" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="p-6 md:p-8">
+          <button
+            class="flex items-center px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors duration-200 shadow-md"
+            id="backToDetailsButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-arrow-left mr-2">
+              <path d="m12 19-7-7 7-7" />
+              <path d="M19 12H5" />
+            </svg>
+            Back to Details
+          </button>
+        </div>
+      </div>
+
+      <div id="modalDetailsSection">
+        <div class="relative h-64 md:h-80 bg-cover bg-center rounded-t-xl" id="modalBackdrop">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-6 md:p-8">
+          <h3 class="text-3xl md:text-4xl font-bold text-white mb-4" id="modalTitle"></h3>
+          <div class="flex items-center space-x-4 text-sm md:text-base text-gray-300 mb-4">
+            <span id="modalYear"></span>
+            <span class="text-green-500 font-semibold" id="modalRating"></span>
+          </div>
+          <p class="text-gray-200 mb-6" id="modalDescription"></p>
+          <div class="flex space-x-4 mb-6">
+            <button
+              class="flex items-center px-5 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-md"
+              id="modalPlayButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-play mr-2">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              Play
+            </button>
+            <button
+              class="flex items-center px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors duration-200 shadow-md"
+              id="myListToggleButton">
+              <svg id="myListIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus mr-2">
+                <path d="M12 5v14" />
+                <path d="M5 12h14" />
+              </svg>
+              <span id="myListButtonText">Add to My List</span>
+            </button>
+          </div>
+          <p class="text-gray-400 text-sm">
+            <span class="font-semibold">Genres:</span> <span id="modalGenres"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data for movies and TV shows with actual image and video URLs
+    const moviesData = [
+      {
+        id: 'm1',
+        title: 'The Witcher',
+        genre: 'Fantasy, Action',
+        description: 'Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2019,
+        rating: '92% Match',
+        videoUrl: 'https://www.youtube.com/embed/szXbJbA8W6o?autoplay=1&modestbranding=1&rel=0' // The Witcher Season 3 Trailer
+      },
+      {
+        id: 'm2',
+        title: 'Stranger Things',
+        genre: 'Sci-Fi, Horror',
+        description: 'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.',
+        thumbnail: 'https://images.unsplash.com/photo-1605330364949-b0c2b2b2b2b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1605330364949-b0c2b2b2b2b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2016,
+        rating: '98% Match',
+        videoUrl: 'https://www.youtube.com/embed/mnd7sFt5z3A?autoplay=1&modestbranding=1&rel=0' // Stranger Things 4 Trailer
+      },
+      {
+        id: 'm3',
+        title: 'Squid Game',
+        genre: 'Thriller, Drama',
+        description: 'Hundreds of cash-strapped players accept a strange invitation to compete in children\'s games. Inside, a tempting prize awaits — with deadly high stakes.',
+        thumbnail: 'https://images.unsplash.com/photo-1631402636427-4a0b2b2a6c1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1631402636427-4a0b2b2a6c1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2021,
+        rating: '95% Match',
+        videoUrl: 'https://www.youtube.com/embed/oqxAJKy0grk?autoplay=1&modestbranding=1&rel=0' // Squid Game Official Trailer
+      },
+      {
+        id: 'm4',
+        title: 'Money Heist',
+        genre: 'Crime, Thriller',
+        description: 'Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2017,
+        rating: '90% Match',
+        videoUrl: 'https://www.youtube.com/embed/_InqQJRqGW4?autoplay=1&modestbranding=1&rel=0' // Money Heist Official Trailer
+      },
+      {
+        id: 'm5',
+        title: 'The Crown',
+        genre: 'Drama, Historical',
+        description: 'Follows the political rivalries and romance of Queen Elizabeth II\'s reign and the events that shaped the second half of the 20th century.',
+        thumbnail: 'https://images.unsplash.com/photo-1598899127295-a45e43c1b1c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1598899127295-a45e43c1b1c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2016,
+        rating: '88% Match',
+        videoUrl: 'https://www.youtube.com/embed/JWtnJln6WWM?autoplay=1&modestbranding=1&rel=0' // The Crown Official Trailer
+      },
+      {
+        id: 'm6',
+        title: 'Lupin',
+        genre: 'Mystery, Crime',
+        description: 'Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2021,
+        rating: '91% Match',
+        videoUrl: 'https://www.youtube.com/embed/gaGA3g7_K0Y?autoplay=1&modestbranding=1&rel=0' // Lupin Official Trailer
+      },
+      {
+        id: 'm7',
+        title: 'Bridgerton',
+        genre: 'Romance, Drama',
+        description: 'The eight close-knit siblings of the Bridgerton family look for love and happiness in London high society.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2020,
+        rating: '85% Match',
+        videoUrl: 'https://www.youtube.com/embed/gpv7ayf_ZsE?autoplay=1&modestbranding=1&rel=0' // Bridgerton Official Trailer
+      },
+      {
+        id: 'm8',
+        title: 'Ozark',
+        genre: 'Crime, Drama',
+        description: 'A financial adviser drags his family from Chicago to the Missouri Ozarks, where he must launder money to appease a drug cartel.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2017,
+        rating: '94% Match',
+        videoUrl: 'https://www.youtube.com/embed/A0h_y_r6W_M?autoplay=1&modestbranding=1&rel=0' // Ozark Official Trailer
+      },
+      {
+        id: 'm9',
+        title: 'Dark',
+        genre: 'Sci-Fi, Thriller',
+        description: 'A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the double lives and fractured relationships among four families.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2017,
+        rating: '97% Match',
+        videoUrl: 'https://www.youtube.com/embed/CQhGf4f9Q-M?autoplay=1&modestbranding=1&rel=0' // Dark Official Trailer
+      },
+      {
+        id: 'm10',
+        title: 'The Queen\'s Gambit',
+        genre: 'Drama',
+        description: 'Orphaned at 9, prodigious chess talent Beth Harmon discovers a remarkable aptitude for chess and begins her journey to become a Grandmaster.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2020,
+        rating: '96% Match',
+        videoUrl: 'https://www.youtube.com/embed/oSU_yBw0L-s?autoplay=1&modestbranding=1&rel=0' // The Queen's Gambit Official Trailer
+      },
+      {
+        id: 'm11',
+        title: 'Extraction',
+        genre: 'Action, Thriller',
+        description: 'A black-market mercenary who has nothing to lose is hired to rescue the kidnapped son of an imprisoned international crime lord.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2020,
+        rating: '89% Match',
+        videoUrl: 'https://www.youtube.com/embed/L6P3nI6VnlY?autoplay=1&modestbranding=1&rel=0' // Extraction Official Trailer
+      },
+      {
+        id: 'm12',
+        title: 'Red Notice',
+        genre: 'Action, Comedy',
+        description: 'An Interpol agent tracks the world\'s most wanted art thief, but a daring heist brings them together in a global adventure.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2021,
+        rating: '87% Match',
+        videoUrl: 'https://www.youtube.com/embed/Pj0g529xP28?autoplay=1&modestbranding=1&rel=0' // Red Notice Official Trailer
+      },
+      {
+        id: 'm13',
+        title: 'Don\'t Look Up',
+        genre: 'Comedy, Sci-Fi',
+        description: 'Two astronomers go on a media tour to warn humanity of a planet-killing comet hurtling toward Earth.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2021,
+        rating: '80% Match',
+        videoUrl: 'https://www.youtube.com/embed/RbIxYm3mC8k?autoplay=1&modestbranding=1&rel=0' // Don't Look Up Official Trailer
+      },
+      {
+        id: 'm14',
+        title: 'Bird Box',
+        genre: 'Thriller, Horror',
+        description: 'Five years after an unseen presence drives most of society to suicide, a woman and her two children make a desperate bid to reach safety.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2018,
+        rating: '78% Match',
+        videoUrl: 'https://www.youtube.com/embed/o2AsfU_I_eQ?autoplay=1&modestbranding=1&rel=0' // Bird Box Official Trailer
+      },
+      {
+        id: 'm15',
+        title: 'Enola Holmes',
+        genre: 'Mystery, Adventure',
+        description: 'Teenage Enola Holmes uses her detective skills to outsmart her famous brother Sherlock and help a runaway heiress.',
+        thumbnail: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=300',
+        backdrop: 'https://images.unsplash.com/photo-1620712948281-c7c1a2f6c0f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=1280',
+        year: 2020,
+        rating: '84% Match',
+        videoUrl: 'https://www.youtube.com/embed/1d0Zf9sXlHk?autoplay=1&modestbranding=1&rel=0' // Enola Holmes Official Trailer
+      }
+    ];
+
+    // Categories of movies to display
+    const categories = {
+      'Trending Now': moviesData.slice(0, 5),
+      'New Releases': moviesData.slice(5, 10),
+      'Critically Acclaimed': moviesData.slice(10, 15),
+      'Action & Adventure': moviesData.filter(m => m.genre.includes('Action')),
+      'Dramas': moviesData.filter(m => m.genre.includes('Drama'))
+    };
+
+    // DOM Elements
+    const navbar = document.getElementById('navbar');
+    const heroSection = document.getElementById('heroSection');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroDescription = document.getElementById('heroDescription');
+    const movieCategoriesContainer = document.getElementById('movieCategoriesContainer');
+    const movieModal = document.getElementById('movieModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalYear = document.getElementById('modalYear');
+    const modalRating = document.getElementById('modalRating');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalGenres = document.getElementById('modalGenres');
+    const myListToggleButton = document.getElementById('myListToggleButton');
+    const myListIcon = document.getElementById('myListIcon');
+    const myListButtonText = document.getElementById('myListButtonText');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const searchResultsSection = document.getElementById('searchResultsSection');
+    const searchResultsContainer = document.getElementById('searchResultsContainer');
+    const noSearchResults = document.getElementById('noSearchResults');
+    const myListNav = document.getElementById('myListNav');
+
+    // New DOM elements for video playback
+    const modalVideoPlayer = document.getElementById('modalVideoPlayer');
+    const modalVideoFrame = document.getElementById('modalVideoFrame');
+    const modalDetailsSection = document.getElementById('modalDetailsSection');
+    const modalPlayButton = document.getElementById('modalPlayButton');
+    const backToDetailsButton = document.getElementById('backToDetailsButton');
+
+    let myMovieList = []; // Array to store IDs of movies in "My List"
+    let currentModalMovieId = null; // Store the ID of the movie currently in the modal
+
+    /**
+     * Initializes the hero section with a random movie.
+     */
+    function initializeHeroSection() {
+      const featuredMovie = moviesData[Math.floor(Math.random() * moviesData.length)];
+      heroSection.style.backgroundImage = `url('${featuredMovie.backdrop}')`;
+      heroTitle.textContent = featuredMovie.title;
+      heroDescription.textContent = featuredMovie.description;
+    }
+
+    /**
+     * Creates a movie thumbnail element.
+     * @param {Object} movie - The movie object.
+     * @returns {HTMLElement} The created thumbnail element.
+     */
+    function createMovieThumbnail(movie) {
+      const img = document.createElement('img');
+      img.src = movie.thumbnail;
+      img.alt = movie.title;
+      img.classList.add('w-full', 'h-auto', 'rounded-lg', 'object-cover', 'cursor-pointer', 'transform', 'transition-transform', 'duration-300', 'hover:scale-105', 'hover:shadow-xl', 'hover:ring-2', 'hover:ring-white');
+      img.dataset.movieId = movie.id; // Store movie ID for modal
+      img.onerror = () => {
+        // Fallback image using placehold.co if the provided image URL fails
+        img.src = `https://placehold.co/300x169/222/FFF?text=${encodeURIComponent(movie.title)}`;
+      };
+      return img;
+    }
+
+    /**
+     * Renders movie rows for each category.
+     */
+    function renderMovieRows() {
+      movieCategoriesContainer.innerHTML = ''; // Clear previous content
+
+      // Render "My List" row if it has items
+      if (myMovieList.length > 0) {
+        const myListMovies = moviesData.filter(movie => myMovieList.includes(movie.id));
+        createMovieRow('My List', myListMovies, true);
+      } else {
+        // If "My List" is empty, remove it from categories if it was there.
+        const existingMyListRow = document.getElementById('my-list-row');
+        if (existingMyListRow) {
+          existingMyListRow.remove();
+        }
+      }
+
+      // Render other categories
+      for (const categoryName in categories) {
+        // Skip rendering "My List" if it's already handled above
+        if (categoryName === 'My List' && myMovieList.length > 0) {
+          continue;
+        }
+        createMovieRow(categoryName, categories[categoryName]);
+      }
+    }
+
+    /**
+     * Creates and appends a movie row to the container.
+     * @param {string} title - The title of the row (e.g., "Trending Now").
+     * @param {Array<Object>} movies - Array of movie objects for this row.
+     * @param {boolean} isMyList - True if this is the "My List" row.
+     */
+    function createMovieRow(title, movies, isMyList = false) {
+      if (movies.length === 0) return; // Don't create empty rows
+
+      const section = document.createElement('section');
+      section.classList.add('mb-8');
+      if (isMyList) {
+        section.id = 'my-list-row'; // Add ID for easy access
+      }
+
+      const h2 = document.createElement('h2');
+      h2.classList.add('text-xl', 'md:text-2xl', 'font-bold', 'text-white', 'mb-4', 'pl-2');
+      h2.textContent = title;
+      section.appendChild(h2);
+
+      const div = document.createElement('div');
+      div.classList.add('flex', 'space-x-3', 'movie-row-scroll', 'pb-4', 'px-2'); // Added px-2 for padding
+
+      movies.forEach(movie => {
+        const thumbnail = createMovieThumbnail(movie);
+        div.appendChild(thumbnail);
+      });
+
+      section.appendChild(div);
+      movieCategoriesContainer.appendChild(section);
+    }
+
+    /**
+     * Opens the movie details modal.
+     * @param {Object} movie - The movie object to display.
+     */
+    function openModal(movie) {
+      currentModalMovieId = movie.id; // Set current movie ID
+
+      // Reset modal to show details section and hide video player
+      modalDetailsSection.classList.remove('hidden');
+      modalVideoPlayer.classList.add('hidden');
+      modalVideoFrame.src = ''; // Clear video source
+
+      modalBackdrop.style.backgroundImage = `url('${movie.backdrop}')`;
+      modalBackdrop.onerror = () => {
+        // Fallback image for backdrop if the provided image URL fails
+        modalBackdrop.style.backgroundImage = `url('https://placehold.co/1280x720/333/FFF?text=${encodeURIComponent(movie.title)}+Backdrop')`;
+      };
+      modalTitle.textContent = movie.title;
+      modalYear.textContent = movie.year;
+      modalRating.textContent = movie.rating;
+      modalDescription.textContent = movie.description;
+      modalGenres.textContent = movie.genre;
+
+      // Update My List button status
+      updateMyListButton(movie.id);
+
+      // Show modal with animation
+      movieModal.classList.remove('hidden');
+      movieModal.classList.add('flex');
+      modalContent.classList.remove('opacity-0', 'scale-95', 'animate-fade-out');
+      modalContent.classList.add('animate-fade-in');
+
+      // Store current movie ID in button for easy access
+      myListToggleButton.dataset.movieId = movie.id;
+      modalPlayButton.dataset.movieId = movie.id; // Also store on play button
+    }
+
+    /**
+     * Closes the movie details modal.
+     */
+    function closeModal() {
+      modalContent.classList.remove('animate-fade-in');
+      modalContent.classList.add('animate-fade-out');
+      modalContent.addEventListener('animationend', () => {
+        movieModal.classList.add('hidden');
+        movieModal.classList.remove('flex');
+        modalContent.classList.remove('animate-fade-out'); // Clean up class
+        modalVideoFrame.src = ''; // Stop video playback when modal closes
+      }, { once: true }); // Ensure listener is removed after one use
+    }
+
+    /**
+     * Toggles a movie in/out of "My List".
+     * @param {string} movieId - The ID of the movie to toggle.
+     */
+    function toggleMyList(movieId) {
+      const index = myMovieList.indexOf(movieId);
+      if (index > -1) {
+        myMovieList.splice(index, 1); // Remove from list
+      } else {
+        myMovieList.push(movieId); // Add to list
+      }
+      updateMyListButton(movieId); // Update button text/icon
+      renderMovieRows(); // Re-render rows to update "My List" section
+    }
+
+    /**
+     * Updates the text and icon of the "My List" button in the modal.
+     * @param {string} movieId - The ID of the movie.
+     */
+    function updateMyListButton(movieId) {
+      if (myMovieList.includes(movieId)) {
+        myListIcon.innerHTML = `<path d="M20 6 9 17l-5-5"/>`; // Check icon
+        myListButtonText.textContent = 'Remove from My List';
+      } else {
+        myListIcon.innerHTML = `<path d="M12 5v14"/><path d="M5 12h14"/>`; // Plus icon
+        myListButtonText.textContent = 'Add to My List';
+      }
+    }
+
+    /**
+     * Plays the video for the current movie in the modal.
+     * @param {string} movieId - The ID of the movie whose video should play.
+     */
+    function playMovieVideo(movieId) {
+      const movie = moviesData.find(m => m.id === movieId);
+      if (movie && movie.videoUrl) {
+        modalDetailsSection.classList.add('hidden'); // Hide details
+        modalVideoPlayer.classList.remove('hidden'); // Show video player
+        modalVideoFrame.src = movie.videoUrl; // Set video source
+      } else {
+        console.warn('No video URL found for this movie or movie not found:', movieId);
+        // Optionally, show a message to the user that no video is available
+      }
+    }
+
+    /**
+     * Returns from video playback to movie details in the modal.
+     */
+    function showMovieDetails() {
+      modalVideoPlayer.classList.add('hidden'); // Hide video player
+      modalVideoFrame.src = ''; // Stop video playback
+      modalDetailsSection.classList.remove('hidden'); // Show details
+    }
+
+    /**
+     * Performs a client-side search and displays results.
+     * @param {string} query - The search query.
+     */
+    function performSearch(query) {
+      const normalizedQuery = query.toLowerCase().trim();
+      searchResultsContainer.innerHTML = ''; // Clear previous results
+
+      if (normalizedQuery.length === 0) {
+        searchResultsSection.classList.add('hidden');
+        noSearchResults.classList.add('hidden');
+        movieCategoriesContainer.classList.remove('hidden'); // Show regular categories
+        return;
+      }
+
+      const filteredMovies = moviesData.filter(movie =>
+        movie.title.toLowerCase().includes(normalizedQuery) ||
+        movie.description.toLowerCase().includes(normalizedQuery) ||
+        movie.genre.toLowerCase().includes(normalizedQuery)
+      );
+
+      movieCategoriesContainer.classList.add('hidden'); // Hide regular categories
+      searchResultsSection.classList.remove('hidden');
+
+      if (filteredMovies.length > 0) {
+        noSearchResults.classList.add('hidden');
+        filteredMovies.forEach(movie => {
+          const thumbnail = createMovieThumbnail(movie);
+          searchResultsContainer.appendChild(thumbnail);
+        });
+      } else {
+        noSearchResults.classList.remove('hidden');
+      }
+    }
+
+    // Event Listeners
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-black');
+        navbar.classList.remove('from-black', 'to-transparent');
+      } else {
+        navbar.classList.remove('bg-black');
+        navbar.classList.add('from-black', 'to-transparent');
+      }
+    });
+
+    // Event delegation for opening modal on thumbnail click
+    document.addEventListener('click', (event) => {
+      if (event.target.tagName === 'IMG' && event.target.dataset.movieId) {
+        const movieId = event.target.dataset.movieId;
+        const movie = moviesData.find(m => m.id === movieId);
+        if (movie) {
+          openModal(movie);
+        }
+      }
+    });
+
+    // Close modal button
+    closeModalButton.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside the content
+    movieModal.addEventListener('click', (event) => {
+      if (event.target === movieModal) {
+        closeModal();
+      }
+    });
+
+    // Toggle "My List" button in modal
+    myListToggleButton.addEventListener('click', () => {
+      const movieId = myListToggleButton.dataset.movieId;
+      if (movieId) {
+        toggleMyList(movieId);
+      }
+    });
+
+    // Play button in modal
+    modalPlayButton.addEventListener('click', () => {
+      const movieId = modalPlayButton.dataset.movieId;
+      if (movieId) {
+        playMovieVideo(movieId);
+      }
+    });
+
+    // Back to Details button in modal
+    backToDetailsButton.addEventListener('click', showMovieDetails);
+
+    // Search functionality
+    searchButton.addEventListener('click', () => {
+      // Toggle search input visibility on small screens
+      if (window.innerWidth < 768) { // Tailwind's md breakpoint
+        searchInput.classList.toggle('w-0');
+        searchInput.classList.toggle('opacity-0');
+        searchInput.classList.toggle('w-auto');
+        searchInput.classList.toggle('opacity-100');
+        searchInput.focus();
+      }
+    });
+
+    searchInput.addEventListener('input', (event) => {
+      performSearch(event.target.value);
+    });
+
+    // Navigate to My List section (if it exists)
+    myListNav.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const myListRow = document.getElementById('my-list-row');
+      if (myListRow) {
+        myListRow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Optionally, show a message if My List is empty
+        console.log("My List is empty!");
+      }
+    });
+
+    // Initial setup on page load
+    window.onload = function () {
+      initializeHeroSection();
+      renderMovieRows();
+    };
+
+  </script>
+</body>
+
 </html>
-
-<script>
-  // Load Header
-  fetch("../Header/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading header:", error));
-
-  // Load Footer
-  fetch("../Footer/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading footer:", error));
-</script>
