@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("loggedInTable", JSON.stringify(loggedInTable));
 
     alert("Login successful!");
-    console.log(newUser.id);
     
     window.location.href = `../Files/profile.html?id=${existingUser.id}`;
   });

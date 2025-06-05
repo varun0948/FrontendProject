@@ -15,19 +15,23 @@ function editProfile() {
 }
 
 function logout() {
-  sessionStorage.removeItem("loggedInUserId");
+  const userId = sessionStorage.getItem("loggedInUserId");
 
   const loggedInTable = JSON.parse(localStorage.getItem("loggedInTable")) || [];
-  const userId = localStorage.getItem("loggedInUserId");
+
   const updatedTable = loggedInTable.map((user) => {
-    if (user.id == userId) return { ...user, isLogin: false };
+    if (String(user.id) === String(userId)) return { ...user, isLogin: false };
     return user;
   });
+
   localStorage.setItem("loggedInTable", JSON.stringify(updatedTable));
+
+  sessionStorage.removeItem("loggedInUserId");
 
   alert("Logged out successfully");
   window.location.href = "login.html";
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
@@ -36,8 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(userId);
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-
   const user = users.find((user) => String(user.id) == userId);
+
+  const upcomingContainer = document.getElementById("upcoming-trips");
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+  const tripBookings = bookings[userId] || [];
 
   if (user) {
     document.getElementById("userName").innerText = `Name: ${user.name}`;
@@ -46,29 +53,23 @@ document.addEventListener("DOMContentLoaded", () => {
       "userPhone"
     ).innerText = `Phone: ${user.mobileNumber}`;
     document.getElementById("profileImage").src = user.profileImage;
+  }
+  if (upcomingContainer) {
+    upcomingContainer.innerHTML = ""; // Clear old content
 
-    const tripsContainer = document.querySelector(".tripCards");
-    const bookedTrips = user.bookedTrips || [];
-
-    if (bookedTrips.length === 0) {
-      tripsContainer.innerHTML = "<p>No upcoming trips yet.</p>";
+    if (tripBookings.length === 0) {
+      upcomingContainer.innerHTML = "<p>No upcoming trips booked yet.</p>";
     } else {
-      tripsContainer.innerHTML = "";
-      bookedTrips.forEach((trip, index) => {
-        const tripCard = document.createElement("div");
-        tripCard.classList.add(".tripCards");
+      tripBookings.forEach((trip) => {
+        const card = document.createElement("div");
 
-        tripCard.innerHTML = `
-          <div>
-            <h4 style="color: #007bff;">${trip.title}</h4>
-            <p>${trip.description}</p>
-            <p><strong>Date:</strong> ${trip.date || "Not set"}</p>
-          </div>
-          <button class="book">Book Now</button>
-          <span class="remove-btn" data-index="${index}">❌</span>
-        `;
-
-        tripsContainer.appendChild(tripCard);
+        card.className = "trip-card";
+        card.innerHTML = `
+        <img src="${trip.image}" alt="${trip.title}" id="imageBookedTrip"  >
+        <h3>${trip.title}</h3>
+        <p>Booked on: ${trip.date}</p>
+      `;
+        upcomingContainer.appendChild(card);
       });
     }
   }

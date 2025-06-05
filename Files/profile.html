@@ -35,8 +35,7 @@
 
       <!-- Tabs -->
       <div class="tabs">
-        <button class="tab active" onclick="showTab('trips')">
-          Upcoming Trips
+        <button class="tab active" onclick="showTab('trips')"> Upcoming Trips
         </button>
         <button class="tab" onclick="showTab('wishlist')">Wishlist</button>
         <button class="tab" onclick="showTab('settings')">Settings</button>
@@ -45,7 +44,8 @@
       <!-- Tab Content -->
       <div class="tab-content" id="trips">
         <h3>Upcoming Trips</h3>
-        <div class="tripCards"></div>
+        <div id="upcoming-trips" class="tripCards">
+        </div>
       </div>
 
       <div class="tab-content hidden" id="wishlist">

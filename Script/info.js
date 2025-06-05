@@ -24,6 +24,29 @@ document.addEventListener("DOMContentLoaded", () => {
       ).innerHTML = `<h2>Error loading trip data.</h2>`;
     });
 });
+function bookTrip(title, image) {
+  const userId = sessionStorage.getItem("loggedInUserId");
+
+  if (!userId) {
+    // alert("Please login or sign up to book a trip.");
+    window.location.href = "login.html";
+    return;
+  }
+  const tripBooking = JSON.parse(localStorage.getItem("bookings")) || {};
+  if (!tripBooking[userId]) {
+    tripBooking[userId] = [];
+  }
+
+  tripBooking[userId].push({
+    title,
+    image,
+    date: new Date().toLocaleDateString(),
+  });
+
+  localStorage.setItem("bookings", JSON.stringify(tripBooking));
+
+  // alert("Trip booked successfully!");
+}
 
 function renderTrip(trip, tripKey) {
   const hero = document.getElementById("hero");
@@ -60,7 +83,8 @@ function renderTrip(trip, tripKey) {
     <div class="price-box">
       <h2>${trip.price}</h2>
       <p>${trip.inclusions}</p>
-      <button class="book-btn"  id="bookNowBtn">Book Now</button>
+      <button class="book-btn"  id="bookNowBtn" onclick="bookTrip('Trip Title', 'Trip Image URL')">Book Now</button>
+
     </div>
   `;
 
