@@ -1,7 +1,8 @@
- 
+// Global variables
 let currentTrip = null;
 let isSubmitting = false;
- 
+
+// Initialize page when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const tripKey = params.get("trip");
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>`;
         return;
       }
-      
+
       currentTrip = trip;
       populateTripDetails(trip);
       initializeFormHandlers();
@@ -40,14 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function populateTripDetails(trip) {
   document.getElementById("loadingMessage").style.display = "none";
   document.getElementById("bookingContainer").style.display = "block";
-  
+
   // Populate trip information
   document.getElementById("tripTitle").textContent = trip.title;
   document.getElementById("tripSubtitle").textContent = trip.subtitle;
   document.getElementById("basePrice").textContent = trip.price;
   document.getElementById("totalPrice").textContent = trip.price;
   document.getElementById("tripDescription").textContent = trip.description;
-  
+
   // Set minimum date to today
   document.getElementById("travelDate").min = getTodayDate();
 }
@@ -82,7 +83,9 @@ function initializeFormHandlers() {
       document.getElementById("guestAge").required = false;
 
       // Clear guest field errors
-      ["guestName", "guestEmail", "guestMobile", "guestAge"].forEach(clearError);
+      ["guestName", "guestEmail", "guestMobile", "guestAge"].forEach(
+        clearError
+      );
     }
   });
 
@@ -105,20 +108,24 @@ function initializeFormHandlers() {
     const numPeople = numPeopleSelect.value;
     if (numPeople && currentTrip) {
       const totalPrice = calculateTotalPrice(currentTrip.price, numPeople);
-      document.getElementById("totalPrice").textContent = `₹${totalPrice.toLocaleString()}`;
+      document.getElementById(
+        "totalPrice"
+      ).textContent = `₹${totalPrice.toLocaleString()}`;
       clearError("numPeople");
     }
   });
 
   // Clear errors on input
-  ["fullName", "email", "age", "guestName", "guestEmail", "guestAge"].forEach((fieldId) => {
-    const field = document.getElementById(fieldId);
-    if (field) {
-      field.addEventListener("input", () => {
-        clearError(fieldId);
-      });
+  ["fullName", "email", "age", "guestName", "guestEmail", "guestAge"].forEach(
+    (fieldId) => {
+      const field = document.getElementById(fieldId);
+      if (field) {
+        field.addEventListener("input", () => {
+          clearError(fieldId);
+        });
+      }
     }
-  });
+  );
 
   // Form submission
   form.addEventListener("submit", (e) => {
@@ -215,7 +222,10 @@ function validateForm() {
   // Primary contact validation
   const fullName = document.getElementById("fullName").value.trim();
   if (!validateName(fullName)) {
-    showError("fullName", "Please enter a valid name (2-50 characters, letters only)");
+    showError(
+      "fullName",
+      "Please enter a valid name (2-50 characters, letters only)"
+    );
     isValid = false;
   }
 
@@ -255,7 +265,10 @@ function validateForm() {
   if (forSomeoneCheckbox.checked) {
     const guestName = document.getElementById("guestName").value.trim();
     if (!validateName(guestName)) {
-      showError("guestName", "Please enter a valid guest name (2-50 characters, letters only)");
+      showError(
+        "guestName",
+        "Please enter a valid guest name (2-50 characters, letters only)"
+      );
       isValid = false;
     }
 
@@ -267,7 +280,10 @@ function validateForm() {
 
     const guestMobile = document.getElementById("guestMobile").value.trim();
     if (!validateMobile(guestMobile)) {
-      showError("guestMobile", "Please enter a valid 10-digit guest mobile number");
+      showError(
+        "guestMobile",
+        "Please enter a valid 10-digit guest mobile number"
+      );
       isValid = false;
     }
 
@@ -318,8 +334,12 @@ function submitBooking() {
           image: currentTrip.image || "",
           travelDate: document.getElementById("travelDate").value,
           numPeople: parseInt(document.getElementById("numPeople").value),
-          totalPrice: calculateTotalPrice(currentTrip.price, document.getElementById("numPeople").value),
-          specialRequests: document.getElementById("specialRequests").value.trim() || "None",
+          totalPrice: calculateTotalPrice(
+            currentTrip.price,
+            document.getElementById("numPeople").value
+          ),
+          specialRequests:
+            document.getElementById("specialRequests").value.trim() || "None",
         },
 
         // Guest information (if applicable)
@@ -327,7 +347,9 @@ function submitBooking() {
           ? {
               fullName: document.getElementById("guestName").value.trim(),
               email: document.getElementById("guestEmail").value.trim(),
-              mobile: formatMobileNumber(document.getElementById("guestMobile").value),
+              mobile: formatMobileNumber(
+                document.getElementById("guestMobile").value
+              ),
               age: parseInt(document.getElementById("guestAge").value),
               isPrimary: false,
             }
@@ -349,7 +371,9 @@ function submitBooking() {
       showSuccessModal(formData);
     } catch (error) {
       console.error("Booking submission error:", error);
-      alert("An error occurred while processing your booking. Please try again.");
+      alert(
+        "An error occurred while processing your booking. Please try again."
+      );
     } finally {
       // Reset button state
       isSubmitting = false;
@@ -362,7 +386,9 @@ function submitBooking() {
 
 // Generate unique booking ID
 function generateBookingId() {
-  return "BK" + Date.now() + Math.random().toString(36).substr(2, 5).toUpperCase();
+  return (
+    "BK" + Date.now() + Math.random().toString(36).substr(2, 5).toUpperCase()
+  );
 }
 
 // Save booking data to storage
@@ -401,7 +427,9 @@ function showSuccessModal(formData) {
     <div class="booking-success">
       <div class="success-header">
         <h3>🎊 Booking Confirmation</h3>
-        <p class="booking-id">Booking ID: <strong>${formData.bookingMeta.bookingId}</strong></p>
+        <p class="booking-id">Booking ID: <strong>${
+          formData.bookingMeta.bookingId
+        }</strong></p>
       </div>
       
       <div class="success-details">
@@ -412,7 +440,9 @@ function showSuccessModal(formData) {
         
         <div class="detail-row">
           <span class="label">📅 Travel Date:</span>
-          <span class="value">${new Date(formData.tripDetails.travelDate).toLocaleDateString()}</span>
+          <span class="value">${new Date(
+            formData.tripDetails.travelDate
+          ).toLocaleDateString()}</span>
         </div>
         
         <div class="detail-row">
@@ -425,12 +455,16 @@ function showSuccessModal(formData) {
           <span class="value">₹${formData.tripDetails.totalPrice.toLocaleString()}</span>
         </div>
         
-        ${formData.guestInfo ? `
+        ${
+          formData.guestInfo
+            ? `
         <div class="detail-row">
           <span class="label">🎁 Guest:</span>
           <span class="value">${formData.guestInfo.fullName} (${formData.guestInfo.email})</span>
         </div>
-        ` : ""}
+        `
+            : ""
+        }
         
         <div class="detail-row">
           <span class="label">📝 Special Requests:</span>
@@ -464,3 +498,4 @@ function showSuccessModal(formData) {
     window.location.href = "home.html";
   }, 10000);
 }
+  

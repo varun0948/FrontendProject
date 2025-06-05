@@ -10,11 +10,19 @@
       "../Images/europe/europe4.jpg",
       "../Images/europe/europe5.jpg"
     ],
-    "price": "€2,500 per person",
+    "price": "₹2,50,000  per person",
     "description": "Experience the rich history, diverse cultures...",
     "itinerary": [
-      "Day 1: Arrival in Paris and welcome dinner...",
-      "Day 2: Full day city tour of Paris..."
+      "Day 1: Arrival in Paris and welcome dinner near Eiffel Tower.",
+      "Day 2: Paris city tour – Eiffel Tower, Arc de Triomphe, Seine cruise.",
+      "Day 3: Versailles Palace visit and explore Montmartre.",
+      "Day 4: Drive to Amsterdam via Brussels stopover.",
+      "Day 5: Amsterdam tour – canal cruise, windmills, cheese tasting.",
+      "Day 6: Travel to Germany – Cologne Cathedral, Rhine River cruise.",
+      "Day 7: Visit Black Forest, continue to Lucerne, Switzerland.",
+      "Day 8: Lucerne tour and Mt. Titlis snow adventure.",
+      "Day 9: Interlaken visit and short Bern city tour.",
+      "Day 10: Departure from Zurich – trip ends."
     ],
     "inclusions": "Round-trip flights, 4-star accommodations...",
     "reviews": [
@@ -49,7 +57,7 @@
       "Day 6: Day trip to Montreux and Chillon Castle.",
       "Day 7: Departure from Geneva after a leisurely morning."
     ],
-    "price": "CHF 3,200 per person",
+    "price": "₹3,75,600 per person",
     "inclusions": "Flights, 4-star hotels, Swiss Travel Pass, guided tours, breakfast included.",
     "reviews": [
       {
@@ -91,7 +99,7 @@
       "Day 6: Cultural tour of Al Fahidi Historical District and Dubai Museum.",
       "Day 7: Relax at JBR beach and departure."
     ],
-    "price": "AED 7,000 per person",
+    "price": "₹1,40,000 per person",
     "inclusions": "Flights, 5-star hotels, desert safari, breakfast, and city tours.",
     "reviews": [
       {
@@ -129,7 +137,7 @@
       "Day 6: Water sports and beach volleyball.",
       "Day 7: Departure after a leisurely breakfast."
     ],
-    "price": "USD 4,500 per person",
+    "price": "₹1,05,000  per person",
     "inclusions": "Flights, luxury resort stay, water activities, breakfast and dinner.",
     "reviews": [
       {
@@ -171,7 +179,7 @@
       "Day 6: Singapore Zoo and Night Safari.",
       "Day 7: Departure with last-minute sightseeing."
     ],
-    "price": "SGD 3,000 per person",
+    "price": "₹1,25,000,  per person",
     "inclusions": "Flights, hotel stay, attraction tickets, breakfast, and transfers.",
     "reviews": [
       {
@@ -213,7 +221,7 @@
       "Day 6: Aboriginal cultural experience.",
       "Day 7: Departure with unforgettable memories."
     ],
-    "price": "AUD 4,500 per person",
+    "price": "₹4,10,000  per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -251,7 +259,7 @@
       "Day 6: Explore Wellington – Te Papa Museum and waterfront.",
       "Day 7: Departure with memories of stunning landscapes."
     ],
-    "price": "NZD 4,200 per person",
+    "price": "₹2,45,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -289,7 +297,7 @@
       "Day 6: Attend traditional Bhutanese festival (if available).",
       "Day 7: Departure from Paro with spiritual memories."
     ],
-    "price": "USD 3,800 per person",
+    "price": "80,000 per person",
     "inclusions": "Flights, accommodation, all transfers, local guide, meals as per itinerary.",
     "reviews": [
       {
@@ -331,7 +339,7 @@
       "Day 6: Visit Hungarian National Museum and local markets.",
       "Day 7: Departure after breakfast."
     ],
-    "price": "€1,800 per person",
+    "price": "₹1,75,000 per person",
     "inclusions": "Flights, accommodation, guided tours, entrance fees, breakfast.",
     "reviews": [
       {
@@ -373,7 +381,7 @@
       "Day 6: Local market tours and cultural shows.",
       "Day 7: Departure with rich cultural insights."
     ],
-    "price": "ZAR 18,000 per person",
+    "price": "₹1,53,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -415,7 +423,7 @@
       "Day 6: Attend classical music concert.",
       "Day 7: Departure with cultural memories."
     ],
-    "price": "€2,200 per person",
+    "price": "₹1,30,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -457,7 +465,7 @@
       "Day 6: Relax in a glass igloo accommodation.",
       "Day 7: Departure with unforgettable memories."
     ],
-    "price": "€3,000 per person",
+    "price": "₹1,60,000 per person",
     "inclusions": "Flights, accommodation, guided tours, winter gear, and transfers.",
     "reviews": [
       {
@@ -495,7 +503,7 @@
       "Day 6: Hiking and nature photography.",
       "Day 7: Departure with scenic memories."
     ],
-    "price": "NOK 25,000 per person",
+    "price": "₹1,25,000 per person",
     "inclusions": "Flights, accommodation, guided tours, boat cruises, and transfers.",
     "reviews": [
       {
@@ -537,7 +545,7 @@
       "Day 6: Cooking class and local market visit.",
       "Day 7: Departure with cultural memories."
     ],
-    "price": "€2,800 per person",
+    "price": "₹1,70,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -579,7 +587,7 @@
       "Day 6: Explore Loire Valley castles.",
       "Day 7: Departure with romantic memories."
     ],
-    "price": "€2,500 per person",
+    "price": "₹1,60,000  per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -621,7 +629,7 @@
       "Day 6: Biking tour through Dutch countryside and cheese farms.",
       "Day 7: Departure from Amsterdam."
     ],
-    "price": "€1,450 per person",
+    "price": "₹1,40,000 per person",
     "inclusions": "Flights, accommodation, breakfast, museum tickets, guided tours, transfers.",
     "reviews": [
       {
@@ -663,7 +671,7 @@
       "Day 6: Explore Oxford and Cambridge universities.",
       "Day 7: Departure with lasting memories."
     ],
-    "price": "£2,000 per person",
+    "price": "₹3,50,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -748,7 +756,7 @@
       "Day 6: Relaxation and spa day at mountain lodge.",
       "Day 7: Departure from Denver."
     ],
-    "price": "$1,800 per person",
+    "price": "₹1,27,000 per person",
     "inclusions": "Accommodation, guided hikes, park passes, transfers, meals, and activities.",
     "reviews": [
       {
@@ -790,7 +798,7 @@
       "Day 6: Catamaran cruise and island hopping.",
       "Day 7: Departure after breakfast."
     ],
-    "price": "USD 3,500 per person",
+    "price": "₹1,46,000 per person",
     "inclusions": "Flights, resort stay, guided tours, meals as specified, transfers.",
     "reviews": [
       {
@@ -828,7 +836,7 @@
       "Day 6: Rainforest adventure in Taman Negara National Park.",
       "Day 7: Departure after breakfast."
     ],
-    "price": "MYR 7,500 per person",
+    "price": "₹1,70,000 per person",
     "inclusions": "Flights, accommodation, guided tours, breakfast, and transfers.",
     "reviews": [
       {
@@ -868,7 +876,7 @@
       "Day 6: Island hopping tour to Phi Phi and Maya Bay.",
       "Day 7: Return from Phuket with unforgettable memories."
     ],
-    "price": "฿65,000 per person",
+    "price": "₹1,65,000 per person",
     "inclusions": "Domestic flights, 4-star stays, daily breakfast, guided tours, elephant sanctuary visit, island tour, and airport transfers.",
     "reviews": [
       {
@@ -907,7 +915,7 @@
       "Day 6: Return to Mahe and spa relaxation.",
       "Day 7: Departure with peaceful island memories."
     ],
-    "price": "$3,200 per person",
+    "price": "₹1,33,000 per person",
     "inclusions": "Island transfers, luxury stays, breakfast and dinners, ferry rides, nature excursions, and guided island tours.",
     "reviews": [
       {
@@ -946,7 +954,7 @@
       "Day 6: Drive to Bentota for beach relaxation.",
       "Day 7: Return to Colombo and fly out."
     ],
-    "price": "$1,800 per person",
+    "price": "₹85,000 per person",
     "inclusions": "Hotel stays, transport, guided tours, cultural performances, breakfast, and entrance fees.",
     "reviews": [
       {
@@ -985,7 +993,7 @@
       "Day 6: Visit Kok-Tobe Hill and local bazaars.",
       "Day 7: Departure from Almaty."
     ],
-    "price": "$2,000 per person",
+    "price": "₹1,24,000 per person",
     "inclusions": "Domestic flights, 3/4-star hotels, guided tours, breakfast, canyon and lake excursions.",
     "reviews": [
       {
@@ -1028,7 +1036,7 @@
       "Day 6: Explore Naqsh-e Jahan Square, mosques, and palaces.",
       "Day 7: Return to Tehran and departure."
     ],
-    "price": "$2,300 per person",
+    "price": "₹96,000 person",
     "inclusions": "Domestic flights, cultural entry fees, 4-star hotels, transport, guided heritage tours, and meals.",
     "reviews": [
       {

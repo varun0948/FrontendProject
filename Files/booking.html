@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Trip</title>
     <link rel="stylesheet" href="../CSS/booking.css">
-
 </head>
 
 <body>
     <div id="header"></div>
+
     <!-- Loading Message -->
     <div id="loadingMessage" class="loading-container">
         <div class="spinner"></div>
@@ -115,6 +115,14 @@
 
             <!-- Additional Options Section -->
             <div class="form-section">
+                <h3 class="section-title">⚙️ Additional Options</h3>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" rows="4"
+                        placeholder="Any special dietary requirements, accessibility needs, or other requests (optional)..."></textarea>
+                </div>
+
                 <div class="checkbox-group">
                     <label class="checkbox-label">
                         <input type="checkbox" id="forSomeoneElse" />
@@ -126,29 +134,29 @@
 
             <!-- Guest Information Section (Hidden by default) -->
             <div id="guestSection" class="form-section" style="display: none;">
-                <h3 class="section-title">👥 Traveller Information</h3>
+                <h3 class="section-title">👥 Guest Information</h3>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="guestName" class="required">Traveller's Full Name</label>
+                        <label for="guestName" class="required">Guest's Full Name</label>
                         <input type="text" id="guestName" placeholder="Enter guest's full name" maxlength="50" />
                     </div>
 
                     <div class="form-group">
-                        <label for="guestEmail" class="required">Traveller's Email</label>
+                        <label for="guestEmail" class="required">Guest's Email</label>
                         <input type="email" id="guestEmail" placeholder="guest.email@example.com" />
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="guestMobile" class="required">Traveller's Mobile</label>
+                        <label for="guestMobile" class="required">Guest's Mobile</label>
                         <input type="tel" id="guestMobile" placeholder="Guest's 10-digit mobile number"
                             maxlength="10" />
                     </div>
 
                     <div class="form-group">
-                        <label for="guestAge" class="required">Traveller's Age</label>
+                        <label for="guestAge" class="required">Guest's Age</label>
                         <input type="number" id="guestAge" placeholder="Enter guest's age" min="1" max="120" />
                     </div>
                 </div>

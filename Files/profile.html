@@ -7,8 +7,7 @@
   <title>My Profile | Travelin</title>
   <script src="../Script/profile.js"></script>
   <link rel="stylesheet" href="../CSS/profile.css" />
-  <link rel="icon " type="png" href="../Images/logo.jpg" />
-
+  <link rel="icon" type="image/png" href="../Images/logo.jpg" />
 </head>
 
 <body>
@@ -20,7 +19,7 @@
 
       <!-- Profile Card -->
       <section class="profile">
-        <img id="profileImage" src="" alt="Profile Image" class="profile=pic" width="150">
+        <img id="profileImage" src="" alt="Profile Image" class="profile-pic" width="150">
 
         <div class="profile-container">
           <h3 id="userName"></h3>
@@ -35,8 +34,7 @@
 
       <!-- Tabs -->
       <div class="tabs">
-        <button class="tab active" onclick="showTab('trips')"> Upcoming Trips
-        </button>
+        <button class="tab active" onclick="showTab('trips')">Upcoming Trips</button>
         <button class="tab" onclick="showTab('wishlist')">Wishlist</button>
         <button class="tab" onclick="showTab('settings')">Settings</button>
       </div>
@@ -44,57 +42,47 @@
       <!-- Tab Content -->
       <div class="tab-content" id="trips">
         <h3>Upcoming Trips</h3>
-        <div id="upcoming-trips" class="tripCards">
-        </div>
+        <div id="upcoming-trips" class="trip-cards"></div>
       </div>
 
       <div class="tab-content hidden" id="wishlist">
         <h3>Your Wishlist</h3>
         <div class="wishlist-list" id="wishlistList">
-          <div class="trip-cards">
-            <div class="wishlist-list">
-              <div class="wishlist-item">
-                <div class="icon">🏔</div>
-                <div class="details">
-                  <h4>New Zealand Adventure</h4>
-                  <p>Experience mountains, lakes, and nature trails.</p>
-                </div>
-                <div class="actions">
-                  <button class="book">Book Now</button>
-                  <button class="remove">✖</button>
-                </div>
-              </div>
+          <div class="wishlist-item">
+            <div class="icon">🏔</div>
+            <div class="details">
+              <h4>New Zealand Adventure</h4>
+              <p>Experience mountains, lakes, and nature trails.</p>
+            </div>
+            <div class="actions">
+              <button class="book">Book Now</button>
+              <button class="remove">✖</button>
+            </div>
+          </div>
 
-              <div class="wishlist-item">
-                <div class="icon">🚢</div>
-                <div class="details">
-                  <h4>Alaskan Cruise</h4>
-                  <p>Glacier views, sea breeze, and luxury sailing.</p>
-                </div>
-                <div class="actions">
-                  <button class="book">Book Now</button>
-                  <button class="remove">✖</button>
-                </div>
-              </div>
+          <div class="wishlist-item">
+            <div class="icon">🚢</div>
+            <div class="details">
+              <h4>Alaskan Cruise</h4>
+              <p>Glacier views, sea breeze, and luxury sailing.</p>
+            </div>
+            <div class="actions">
+              <button class="book">Book Now</button>
+              <button class="remove">✖</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="tab-content hidden" id="settings">
-      <h3>Settings</h3>
-      <div>
-        <!--      <button>Change Password</button>
-          <button>Manage Notifications</button> -->
-
+      <div class="tab-content hidden" id="settings">
+        <h3>Settings</h3>
       </div>
-    </div>
     </div>
   </main>
 </body>
 
 </html>
+
 <script>
   // Load Header
   fetch("../Header/header.html")
@@ -104,6 +92,7 @@
     })
     .catch((error) => console.error("Error loading header:", error));
 
+  // Wishlist remove button
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".wishlist-item .remove").forEach((button) => {
       button.addEventListener("click", function () {
@@ -116,5 +105,4 @@
       });
     });
   });
-
 </script>
