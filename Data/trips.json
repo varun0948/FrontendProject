@@ -1052,5 +1052,288 @@
     ],
     "mapEmbed": "https://maps.google.com/maps?q=Iran&t=&z=5&ie=UTF8&iwloc=&output=embed",
     "related": ["Turkey Explorer", "Jordan & Petra", "Egyptian Wonders"]
+  },
+  "nepal": {
+    "title": "Discover Nepal",
+    "subtitle": "8-Day spiritual and mountain adventure in the Himalayas.",
+    "image": "../Images/nepal.jpg",
+    "images": [
+      "https://wallpapercat.com/w/full/6/b/9/633079-2560x1440-desktop-hd-nepal-wallpaper.jpg",
+      "https://wallpapercave.com/wp/wp4075366.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEyo_2HphF2coCJmx50vOsBt9t3FbvmjtQ7d_Te96cB2APpLYAhV1fj7wiqfhIX38GqQ&usqp=CAU",
+      "https://www.pixelstalk.net/wp-content/uploads/images1/Nepal-Wallpapers-HD.jpg",
+      "https://wallpapercave.com/wp/wp4075360.jpg"
+    ],
+    "price": "₹85,000 per person",
+    "description": "Explore Nepal’s cultural treasures and majestic Himalayan views.",
+    "itinerary": [
+      "Day 1: Arrival in Kathmandu – evening walk in Thamel.",
+      "Day 2: Kathmandu city tour – Pashupatinath, Boudhanath, Swayambhunath.",
+      "Day 3: Drive to Pokhara – lakeside evening view.",
+      "Day 4: Sunrise at Sarangkot and Pokhara sightseeing.",
+      "Day 5: Visit to Peace Pagoda and boating on Phewa Lake.",
+      "Day 6: Drive to Chitwan – jungle safari and Tharu culture show.",
+      "Day 7: Elephant ride and canoeing in Chitwan.",
+      "Day 8: Return to Kathmandu and departure."
+    ],
+    "inclusions": "Transport, accommodations, breakfast, local guide.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.8/5",
+        "user": "Ravi M",
+        "comment": "Beautiful nature and culture mix!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Nepal&t=&z=6&ie=UTF8&iwloc=&output=embed",
+    "related": ["Bhutan Serenity", "Tibetan Plateau Journey"]
+  },
+  "peru": {
+    "title": "Mystical Peru",
+    "subtitle": "10-Day expedition through Incan ruins and Andean peaks.",
+    "image": "../Images/peru.jpg",
+    "images": [
+      "https://wallpapers.com/images/hd/statue-of-pachacuti-in-cusco-peru-9qjpja8hbx2pbl0d.jpg",
+      "https://wallpapercave.com/wp/wp1844660.jpg",
+      "https://i.pinimg.com/originals/f2/1f/a4/f21fa45d6db11c765fec6a6a3f6246f5.jpg",
+      "https://wallpapers.com/images/hd/peru-green-cave-ybeaahhz5pzyor23.jpg",
+      "https://wallpapercat.com/w/full/3/f/c/1604734-1920x1080-desktop-full-hd-lima-peru-background-photo.jpg"
+    ],
+    "price": "₹3,10,000 per person",
+    "description": "Trek to Machu Picchu and explore Peru’s ancient culture.",
+    "itinerary": [
+      "Day 1: Arrival in Lima – Miraflores exploration.",
+      "Day 2: Lima city tour – historic center and Larco Museum.",
+      "Day 3: Fly to Cusco – acclimatization walk.",
+      "Day 4: Sacred Valley tour – Pisac, Ollantaytambo.",
+      "Day 5: Start Inca Trail trek (Day 1).",
+      "Day 6: Inca Trail trek (Day 2) – Dead Woman’s Pass.",
+      "Day 7: Inca Trail trek (Day 3) – Runkurakay & ruins.",
+      "Day 8: Arrive at Machu Picchu – guided tour.",
+      "Day 9: Return to Cusco – local shopping.",
+      "Day 10: Departure from Lima."
+    ],
+    "inclusions": "Domestic flights, permits, hotels, trek guide, meals on trek.",
+    "reviews": [
+      {
+        "rating": "⭐ 5/5",
+        "user": "Ana D",
+        "comment": "Life-changing trek and amazing ruins!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Peru&t=&z=4&ie=UTF8&iwloc=&output=embed",
+    "related": ["Bolivian Salt Flats", "Andean Highlands Escape"]
+  },
+  "sa": {
+    "title": "Wild South Africa",
+    "subtitle": "9-Day safari and coastal tour of South Africa’s wonders.",
+    "image": "../Images/sa.jpg",
+    "images": [
+      "https://wallpapercat.com/w/full/6/0/6/639235-3840x2160-desktop-4k-south-africa-wallpaper-photo.jpg",
+      "https://images5.alphacoders.com/767/767599.jpg",
+      "https://images.pexels.com/photos/9613713/pexels-photo-9613713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/59989/elephant-herd-of-elephants-african-bush-elephant-africa-59989.jpeg?cs=srgb&dl=pexels-pixabay-59989.jpg&fm=jpg",
+      "https://lh3.googleusercontent.com/proxy/HgGKSLsULLaHDLkbLSH3xvoVCSAotR91X5rF7-Zo846q3KT-kt3nf2VlW3OoqK6F9UU114t2rdwUZWkICje0ofA2cu2z33g"
+    ],
+    "price": "₹2,40,000 per person",
+    "description": "Experience wildlife safaris, Cape Town, and Garden Route adventures.",
+    "itinerary": [
+      "Day 1: Arrival in Johannesburg.",
+      "Day 2: Kruger National Park safari – big five spotting.",
+      "Day 3: Morning safari and travel to Cape Town.",
+      "Day 4: Table Mountain and city tour.",
+      "Day 5: Cape Point and Penguin Beach visit.",
+      "Day 6: Wine tasting in Stellenbosch.",
+      "Day 7: Drive Garden Route – Knysna and Tsitsikamma.",
+      "Day 8: Oudtshoorn ostrich farm and caves.",
+      "Day 9: Departure from Cape Town."
+    ],
+    "inclusions": "Safari drives, park fees, domestic flights, hotels.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.9/5",
+        "user": "Leena P",
+        "comment": "A thrilling adventure and amazing nature!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=South+Africa&t=&z=5&ie=UTF8&iwloc=&output=embed",
+    "related": ["Kenya Wildlife Tour", "Namibia Dunes & Desert"]
+  },
+
+  "coorg": {
+    "title": "Coorg Retreat",
+    "subtitle": "3-Day escape to the coffee hills of Karnataka.",
+    "image": "../Images/coorg.jpg",
+    "images": [
+      "https://www.skywaytour.com/media/gallery/2024-08-05-10-35-43-coorg01.jpg",
+      "https://cdn.pixabay.com/photo/2017/02/27/12/27/waterfall-2103104_1280.jpg",
+      "https://cdn.pixabay.com/photo/2014/05/15/17/11/holiday-home-345026_1280.jpg"
+    ],
+    "price": "₹14,000 per person",
+    "description": "Relax among lush plantations and misty hills.",
+    "itinerary": [
+      "Day 1: Arrival and Abbey Falls visit.",
+      "Day 2: Coffee plantation tour and Dubare Elephant Camp.",
+      "Day 3: Talacauvery visit and departure."
+    ],
+    "inclusions": "Transport, resort stay, breakfast, guide.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.5/5",
+        "user": "Manoj S",
+        "comment": "Perfect weekend getaway!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Coorg&t=&z=7&ie=UTF8&iwloc=&output=embed",
+    "related": ["Chikmagalur Trails", "Wayanad Nature Escape"]
+  },
+
+  "spiti": {
+    "title": "Spiti Valley Expedition",
+    "subtitle": "7-Day high-altitude adventure across Himachal’s desert.",
+    "image": "../Images/spiti.jpg",
+    "images": [
+      "https://images.pexels.com/photos/23522680/pexels-photo-23522680.jpeg?cs=srgb&dl=pexels-akshay-salunke-1250693538-23522680.jpg&fm=jpg",
+      "https://plus.unsplash.com/premium_photo-1661964133089-630b18fef6e2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BpdGl8ZW58MHx8MHx8fDA%3D",
+      "https://motooverlanders.com/wp-content/uploads/2020/06/Roads-in-Spiti-scaled.jpg"
+    ],
+    "price": "₹25,000 per person",
+    "description": "Drive through surreal landscapes and ancient monasteries.",
+    "itinerary": [
+      "Day 1: Shimla to Narkanda.",
+      "Day 2: Narkanda to Kalpa – scenic mountain views.",
+      "Day 3: Kalpa to Tabo – monasteries & Spiti River views.",
+      "Day 4: Tabo to Kaza – Dhankar and Key Monastery.",
+      "Day 5: Kaza local tour – Hikkim, Langza, Komik.",
+      "Day 6: Kaza to Chandratal Lake camp.",
+      "Day 7: Return to Manali via Rohtang Pass."
+    ],
+    "inclusions": "Transport, homestays/camps, permits, guide.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.7/5",
+        "user": "Tanya V",
+        "comment": "Every turn was postcard-worthy!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Spiti+Valley&t=&z=8&ie=UTF8&iwloc=&output=embed",
+    "related": ["Ladakh Circuit", "Himachal Hidden Gems"]
+  },
+
+  "meghalaya": {
+    "title": "Mystic Meghalaya",
+    "subtitle": "6-Day escape to waterfalls, caves and cloud-kissed hills.",
+    "image": "../Images/meghalaya.jpg",
+    "images": [
+      "https://staticimg.amarujala.com/assets/images/2023/05/07/meghalaya_1683453398.jpeg?q=80&w=480&dpr=2.6",
+      "https://oddessemania.in/wp-content/uploads/2023/09/krang-suri-falls.jpg",
+      "https://images.pexels.com/photos/19469036/pexels-photo-19469036.jpeg?cs=srgb&dl=pexels-abdulkayum97-19469036.jpg&fm=jpg"
+    ],
+    "price": "₹18,000 per person",
+    "description": "Explore Cherrapunji, root bridges, and cleanest village Mawlynnong.",
+    "itinerary": [
+      "Day 1: Arrival in Shillong.",
+      "Day 2: Day trip to Cherrapunji – waterfalls and caves.",
+      "Day 3: Living Root Bridge trek.",
+      "Day 4: Visit Dawki River and Mawlynnong.",
+      "Day 5: Shillong sightseeing – Ward’s Lake, Police Bazaar.",
+      "Day 6: Departure."
+    ],
+    "inclusions": "Hotel, transport, breakfast, local guide.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.6/5",
+        "user": "Ritika M",
+        "comment": "Fresh air and untouched beauty!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Meghalaya&t=&z=7&ie=UTF8&iwloc=&output=embed",
+    "related": ["Nagaland Culture Trail", "Arunachal Adventures"]
+  },
+
+  "goa": {
+    "title": "Goa Beach Bliss",
+    "subtitle": "4-Day tropical beach retreat in India’s party capital.",
+    "image": "../Images/goa.jpg",
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1697729701846-e34563b06d47?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29hfGVufDB8fDB8fHww",
+      "https://wallpapercave.com/wp/wp3170948.jpg",
+      "../Images/church.jpg"
+    ],
+    "price": "₹12,000 per person",
+    "description": "Sun, sand, and sea with heritage and nightlife.",
+    "itinerary": [
+      "Day 1: Arrival and Baga Beach evening.",
+      "Day 2: Fort Aguada, Calangute and club night.",
+      "Day 3: South Goa tour – churches and beaches.",
+      "Day 4: Local shopping and departure."
+    ],
+    "inclusions": "Hotel stay, breakfast, airport pickup/drop.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.4/5",
+        "user": "Rajeev T",
+        "comment": "Relaxed and fun-filled break!"
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Goa&t=&z=7&ie=UTF8&iwloc=&output=embed",
+    "related": ["Andaman Islands", "Kerala Beach Tour"]
+  },
+
+  "manali": {
+    "title": "Manali Hills Adventure",
+    "subtitle": "5-Day escape to snow-capped mountains and valleys.",
+    "image": "../Images/manali.jpg",
+    "images": [
+      "https://c0.wallpaperflare.com/preview/472/652/23/india-lahaul-and-spiti-keylong-leh-rd-cycling.jpg",
+      "https://challengershub.com/wp-content/uploads/2019/11/ManaliBridge.jpg",
+      "https://travloger.in/wp-content/uploads/2024/02/wp10121515-kullu-manali-wallpapers.jpg"
+    ],
+    "price": "₹15,000 per person",
+    "description": "Adventure and relaxation in Himachal’s favorite hill town.",
+    "itinerary": [
+      "Day 1: Arrival and Mall Road walk.",
+      "Day 2: Solang Valley activities and snow fun.",
+      "Day 3: Rohtang Pass excursion (seasonal).",
+      "Day 4: Hadimba Temple and local sightseeing.",
+      "Day 5: Departure."
+    ],
+    "inclusions": "Hotel stay, breakfast, cab transfers.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.7/5",
+        "user": "Sneha K",
+        "comment": "Perfect blend of thrill and peace."
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Manali&t=&z=7&ie=UTF8&iwloc=&output=embed",
+    "related": ["Shimla Short Stay", "Kullu Valley Trek"]
+  },
+
+  "jaipur": {
+    "title": "Jaipur Heritage Tour",
+    "subtitle": "3-Day royal trip through Rajasthan’s Pink City.",
+    "image": "../Images/jaipur.jpg",
+    "images": [
+      "https://cdn.wallpapersafari.com/79/17/Qnk0ef.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jaipur_03-2016_22_City_Palace_complex.jpg/2560px-Jaipur_03-2016_22_City_Palace_complex.jpg",
+      "https://captureatrip-cms-storage.s3.ap-south-1.amazonaws.com/Places_to_visit_in_jaipur_58054204c3.webp"
+    ],
+    "price": "₹9,500 per person",
+    "description": "Explore forts, palaces, markets, and rich Rajasthani culture.",
+    "itinerary": [
+      "Day 1: Arrival and Hawa Mahal, City Palace tour.",
+      "Day 2: Amer Fort, Jantar Mantar, local market.",
+      "Day 3: Jal Mahal visit and departure."
+    ],
+    "inclusions": "Hotel, guided tour, entrance fees.",
+    "reviews": [
+      {
+        "rating": "⭐ 4.6/5",
+        "user": "Arjun P",
+        "comment": "Felt like royalty all the way."
+      }
+    ],
+    "mapEmbed": "https://maps.google.com/maps?q=Jaipur&t=&z=7&ie=UTF8&iwloc=&output=embed",
+    "related": ["Udaipur Royal Escape", "Jodhpur Blue City Tour"]
   }
 }

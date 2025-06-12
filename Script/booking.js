@@ -1,4 +1,5 @@
-// Global variables
+// BOOKING.JS
+
 let currentTrip = null;
 let isSubmitting = false;
 
@@ -42,18 +43,15 @@ function populateTripDetails(trip) {
   document.getElementById("loadingMessage").style.display = "none";
   document.getElementById("bookingContainer").style.display = "block";
 
-  // Populate trip information
   document.getElementById("tripTitle").textContent = trip.title;
   document.getElementById("tripSubtitle").textContent = trip.subtitle;
   document.getElementById("basePrice").textContent = trip.price;
   document.getElementById("totalPrice").textContent = trip.price;
   document.getElementById("tripDescription").textContent = trip.description;
 
-  // Set minimum date to today
   document.getElementById("travelDate").min = getTodayDate();
 }
 
-// Initialize all form event handlers
 function initializeFormHandlers() {
   const form = document.getElementById("bookingForm");
   const forSomeoneCheckbox = document.getElementById("forSomeoneElse");
@@ -62,13 +60,11 @@ function initializeFormHandlers() {
   const mobileInput = document.getElementById("number");
   const guestMobileInput = document.getElementById("guestMobile");
 
-  // Toggle guest section
   forSomeoneCheckbox.addEventListener("change", () => {
     if (forSomeoneCheckbox.checked) {
       guestSection.style.display = "block";
       guestSection.scrollIntoView({ behavior: "smooth" });
 
-      // Make guest fields required
       document.getElementById("guestName").required = true;
       document.getElementById("guestEmail").required = true;
       document.getElementById("guestMobile").required = true;
@@ -76,16 +72,12 @@ function initializeFormHandlers() {
     } else {
       guestSection.style.display = "none";
 
-      // Remove required from guest fields
       document.getElementById("guestName").required = false;
       document.getElementById("guestEmail").required = false;
       document.getElementById("guestMobile").required = false;
       document.getElementById("guestAge").required = false;
 
-      // Clear guest field errors
-      ["guestName", "guestEmail", "guestMobile", "guestAge"].forEach(
-        clearError
-      );
+      ["guestName", "guestEmail", "guestMobile", "guestAge"].forEach(clearError);
     }
   });
 
@@ -127,7 +119,6 @@ function initializeFormHandlers() {
     }
   );
 
-  // Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -144,25 +135,20 @@ function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
-
 function validateName(name) {
   return name.length >= 2 && name.length <= 50 && /^[a-zA-Z\s]+$/.test(name);
 }
-
 function validateAge(age) {
   const ageNum = parseInt(age);
   return ageNum >= 1 && ageNum <= 120;
 }
-
 function formatMobileNumber(value) {
   return value.replace(/\D/g, "");
 }
-
 function validateMobile(mobile) {
   const cleanMobile = formatMobileNumber(mobile);
   return cleanMobile.length === 10 && /^[0-9]{10}$/.test(cleanMobile);
 }
-
 function getTodayDate() {
   const today = new Date();
   const year = today.getFullYear();
@@ -170,7 +156,6 @@ function getTodayDate() {
   const day = String(today.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
-
 function calculateTotalPrice(basePrice, numPeople) {
   const price = parseInt(basePrice.replace(/[^0-9]/g, ""));
   return price * parseInt(numPeople);
@@ -193,10 +178,8 @@ function showError(elementId, message) {
   element.classList.add("error");
   element.focus();
 
-  // Smooth scroll to error
   element.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  // Auto-remove error after 5 seconds
   setTimeout(() => {
     if (errorDiv.parentNode) {
       errorDiv.remove();
@@ -204,7 +187,6 @@ function showError(elementId, message) {
     }
   }, 5000);
 }
-
 function clearError(elementId) {
   const element = document.getElementById(elementId);
   const errorDiv = element.parentNode.querySelector(".error-message");
@@ -311,12 +293,10 @@ function submitBooking() {
   btnLoading.style.display = "flex";
   submitBtn.disabled = true;
 
-  // Simulate processing time
   setTimeout(() => {
     try {
-      // Collect form data
       const formData = {
-        // Primary contact (marked as primary)
+        // Primary contact
         primaryContact: {
           fullName: document.getElementById("fullName").value.trim(),
           email: document.getElementById("email").value.trim(),
@@ -325,7 +305,6 @@ function submitBooking() {
           isPrimary: true,
         },
 
-        // Trip details
         tripDetails: {
           title: currentTrip.title,
           subtitle: currentTrip.subtitle,
@@ -342,7 +321,6 @@ function submitBooking() {
             document.getElementById("specialRequests").value.trim() || "None",
         },
 
-        // Guest information (if applicable)
         guestInfo: forSomeoneCheckbox.checked
           ? {
               fullName: document.getElementById("guestName").value.trim(),
@@ -355,7 +333,6 @@ function submitBooking() {
             }
           : null,
 
-        // Metadata
         bookingMeta: {
           bookingId: generateBookingId(),
           bookingDate: new Date().toISOString(),
@@ -364,10 +341,8 @@ function submitBooking() {
         },
       };
 
-      // Save to storage
       saveBookingData(formData);
 
-      // Show success modal
       showSuccessModal(formData);
     } catch (error) {
       console.error("Booking submission error:", error);
@@ -375,7 +350,6 @@ function submitBooking() {
         "An error occurred while processing your booking. Please try again."
       );
     } finally {
-      // Reset button state
       isSubmitting = false;
       btnText.style.display = "inline";
       btnLoading.style.display = "none";
@@ -384,16 +358,13 @@ function submitBooking() {
   }, 2000);
 }
 
-// Generate unique booking ID
 function generateBookingId() {
   return (
     "BK" + Date.now() + Math.random().toString(36).substr(2, 5).toUpperCase()
   );
 }
 
-// Save booking data to storage
 function saveBookingData(formData) {
-  // Enhanced data structure for bookings
   const bookingTable = JSON.parse(localStorage.getItem("bookingTable")) || [];
   bookingTable.push(formData);
   localStorage.setItem("bookingTable", JSON.stringify(bookingTable));
@@ -404,10 +375,11 @@ function saveBookingData(formData) {
     const upcomingTrips = JSON.parse(localStorage.getItem("bookings")) || {};
     if (!upcomingTrips[userId]) upcomingTrips[userId] = [];
 
+    // Defensive: only push valid trip
     upcomingTrips[userId].push({
       bookingId: formData.bookingMeta.bookingId,
       title: formData.tripDetails.title,
-      image: formData.tripDetails.image,
+      image: formData.tripDetails.image || "../Images/default.jpg",
       date: formData.tripDetails.travelDate,
       totalPrice: formData.tripDetails.totalPrice,
       numPeople: formData.tripDetails.numPeople,
@@ -418,7 +390,6 @@ function saveBookingData(formData) {
   }
 }
 
-// Show success modal
 function showSuccessModal(formData) {
   const modal = document.getElementById("confirmationModal");
   const modalDetails = document.getElementById("modalDetails");
@@ -431,30 +402,30 @@ function showSuccessModal(formData) {
           formData.bookingMeta.bookingId
         }</strong></p>
       </div>
-      
+
       <div class="success-details">
         <div class="detail-row">
           <span class="label">👤 Primary Contact:</span>
           <span class="value">${formData.primaryContact.fullName}</span>
         </div>
-        
+
         <div class="detail-row">
           <span class="label">📅 Travel Date:</span>
           <span class="value">${new Date(
             formData.tripDetails.travelDate
           ).toLocaleDateString()}</span>
         </div>
-        
+
         <div class="detail-row">
           <span class="label">👥 Number of People:</span>
           <span class="value">${formData.tripDetails.numPeople}</span>
         </div>
-        
+
         <div class="detail-row">
           <span class="label">💰 Total Amount:</span>
           <span class="value">₹${formData.tripDetails.totalPrice.toLocaleString()}</span>
         </div>
-        
+
         ${
           formData.guestInfo
             ? `
@@ -465,13 +436,13 @@ function showSuccessModal(formData) {
         `
             : ""
         }
-        
+
         <div class="detail-row">
           <span class="label">📝 Special Requests:</span>
           <span class="value">${formData.tripDetails.specialRequests}</span>
         </div>
       </div>
-      
+
       <div class="success-footer">
         <p>🎉 Your booking has been confirmed! We'll contact you soon with further details.</p>
       </div>
@@ -480,7 +451,6 @@ function showSuccessModal(formData) {
 
   modal.style.display = "block";
 
-  // Modal event handlers
   const goHomeBtn = document.getElementById("goHomeBtn");
   const closeModal = document.getElementById("closeModal");
 
@@ -493,9 +463,7 @@ function showSuccessModal(formData) {
     }
   };
 
-  // Auto-redirect after 10 seconds
   setTimeout(() => {
     window.location.href = "home.html";
   }, 10000);
 }
-  

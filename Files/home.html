@@ -29,19 +29,20 @@
 
     <!-- Search Filter -->
     <section class="search-bar">
-      <input type="text" placeholder="Ex: Trekking">
-      <select>
-        <option>All</option>
-        <option>Adventure</option>
-        <option>Romantic</option>
+      <input type="text" id="searchInput" placeholder="Ex: Trekking" />
+      <select id="categorySelect">
+        <option value="All">All</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Romantic">Romantic</option>
       </select>
-      <select>
-        <option>All</option>
-        <option>Asia</option>
-        <option>Europe</option>
+      <select id="regionSelect">
+        <option value="All">All</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
       </select>
-      <button>Search</button>
+      <button type="button" id="searchBtn">Search</button>
     </section>
+
     <section class="popular-destinations">
       <h2 id="popular-destinations ">Popular Destinations</h2>
       <div class="destinations-container">
@@ -83,7 +84,7 @@
           </div>
         </a>
         <a href="info.html?trip=singapore">
-          <div class="destination-card" data-title="Singapore" data-category="adventure" data-region="asia"
+          <div class="destination-card" data-title="Trekking in Himalayas" data-category="Adventure" data-region="Asia"
             style="background-image: url('../Images/singapore.jpg');">
             <div class="card-overlay">
               <p class="card-subtitle">The Lion City</p>
@@ -111,6 +112,7 @@
         </a>
       </div>
     </section>
+
 
 
     <section class="explore-europe">
@@ -239,7 +241,7 @@
           </div>
 
       </a>
-      <a href="info.html?trip=thailand">
+      <a href="info.html?trip=thailand" id="largeCard">
 
         <div class="card large" style="background-image: url('../Images/thailand.jpg');">
           <div class="overlay">
@@ -248,7 +250,7 @@
           </div>
         </div>
       </a>
-      <a href="info.html?trip=maldives">
+      <a href="info.html?trip=maldives" id="secCard">
 
         <div class="card" style="background-image: url('../Images/maldives.jpg');">
           <div class="overlay">
@@ -266,7 +268,6 @@
           </div>
         </div>
       </a>
-      <a style="display: noen;"></a>
 
       <a href="info.html?trip=sriLanka">
         <div class="card small" style="background-image: url('../Images/sriLanka.jpg');">
@@ -302,6 +303,97 @@
       </a>
       </div>
     </section>
+    <section class="adventure-escapes">
+      <h2>Top Adventure Escapes</h2>
+      <div class="adventure-cards">
+        <a href="info.html?trip=nepal">
+          <div class="adventure-card" style="background-image: url('../Images/nepal.jpg')">
+            <div class="price-tag">From ₹18,500</div>
+            <div class="adventure-overlay">
+              <p>Base of Everest</p>
+              <h3>Nepal</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=peru">
+          <div class="adventure-card" style="background-image: url('../Images/peru.jpg')">
+            <div class="price-tag">From ₹72,000</div>
+            <div class="adventure-overlay">
+              <p>Machu Picchu Awaits</p>
+              <h3>Peru</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=sa">
+          <div class="adventure-card" style="background-image: url('../Images/sa.jpg')">
+            <div class="price-tag">From ₹48,900</div>
+            <div class="adventure-overlay">
+              <p>Safari Dreams</p>
+              <h3>South Africa</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="hidden-gems">
+      <h2>Offbeat Hidden Gems</h2>
+      <div class="getaways-grid">
+        <a href="info.html?trip=coorg">
+          <div class="getaway-card" style="background-image: url('../Images/coorg.jpg')">
+            <div class="price-tag">From ₹8,700</div>
+            <div class="overlay-text">
+              <h3>Coorg</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=spiti">
+          <div class="getaway-card" style="background-image: url('../Images/spiti.jpg')">
+            <div class="price-tag">From ₹14,999</div>
+            <div class="overlay-text">
+              <h3>Spiti Valley</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=meghalaya">
+          <div class="getaway-card" style="background-image: url('../Images/meghalaya.jpg')">
+            <div class="price-tag">From ₹11,300</div>
+            <div class="overlay-text">
+              <h3>Meghalaya</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="weekend-getaways">
+      <h2>Weekend Getaways</h2>
+      <div class="getaways-grid">
+        <a href="info.html?trip=goa">
+          <div class="getaway-card" style="background-image: url('../Images/goa.jpg')">
+            <div class="price-tag">From ₹9,999</div>
+            <div class="overlay-text">
+              <h3>Goa</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=manali">
+          <div class="getaway-card" style="background-image: url('../Images/manali.jpg')">
+            <div class="price-tag">From ₹12,499</div>
+            <div class="overlay-text">
+              <h3>Manali</h3>
+            </div>
+          </div>
+        </a>
+        <a href="info.html?trip=jaipur">
+          <div class="getaway-card" style="background-image: url('../Images/jaipur.jpg')">
+            <div class="price-tag">From ₹10,200</div>
+            <div class="overlay-text">
+              <h3>Jaipur</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     </section>
   </main>
 
@@ -343,6 +435,31 @@
       document.getElementById("footer").innerHTML = data;
     })
     .catch((error) => console.error("Error loading footer:", error));
+
+
+  document.getElementById("searchBtn").addEventListener("click", function () {
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    const category = document.getElementById("categorySelect").value;
+    const region = document.getElementById("regionSelect").value;
+
+    const trips = document.querySelectorAll(".trip-card");
+
+    trips.forEach((trip) => {
+      const title = trip.dataset.title.toLowerCase();
+      const tripCategory = trip.dataset.category;
+      const tripRegion = trip.dataset.region;
+
+      const matchesKeyword = title.includes(keyword);
+      const matchesCategory = category === "All" || tripCategory === category;
+      const matchesRegion = region === "All" || tripRegion === region;
+
+      if (matchesKeyword && matchesCategory && matchesRegion) {
+        trip.style.display = "block";
+      } else {
+        trip.style.display = "none";
+      }
+    });
+  });
 
 </script>
 

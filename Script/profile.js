@@ -1,4 +1,6 @@
-function showTab(tabId) {
+// PROFILE.JS - Clean and robust
+
+function showTab(tabId, event) {
   const contents = document.querySelectorAll(".tab-content");
   const tabs = document.querySelectorAll(".tab");
 
@@ -6,7 +8,9 @@ function showTab(tabId) {
   document.getElementById(tabId).classList.remove("hidden");
 
   tabs.forEach((tab) => tab.classList.remove("active"));
-  event.target.classList.add("active");
+  if (event && event.target) {
+    event.target.classList.add("active");
+  }
 }
 
 function editProfile() {
@@ -33,31 +37,44 @@ function logout() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
-  const userId = params.get("id");
+  let userId = params.get("id") || sessionStorage.getItem("loggedInUserId");
 
+  // User profile section
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const user = users.find((user) => String(user.id) === userId);
-
-  const upcomingContainer = document.getElementById("upcoming-trips");
-  const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
-  const tripBookings = Array.isArray(bookings[userId]) ? bookings[userId] : [];
+  const user = users.find((user) => String(user.id) === String(userId));
 
   if (user) {
     document.getElementById("userName").innerText = `Name: ${user.name}`;
     document.getElementById("userEmail").innerText = `Email: ${user.email}`;
-    document.getElementById(
-      "userPhone"
-    ).innerText = `Phone: ${user.mobileNumber}`;
+    document.getElementById("userPhone").innerText = `Phone: ${user.mobileNumber}`;
     document.getElementById("profileImage").src =
       user.profileImage || "../Images/default-profile.jpg";
   }
 
-  if (upcomingContainer) {
-    upcomingContainer.innerHTML = "";
+  // UPCOMING TRIPS SECTION
+  const upcomingContainer = document.getElementById("upcoming-trips");
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
+  const tripBookings = Array.isArray(bookings[userId]) ? bookings[userId] : [];
 
-    const validTrips = tripBookings.filter(
-      (trip) => trip && trip.title && trip.image && trip.date
-    );
+  // Defensive: filter only valid trips
+  const validTrips = tripBookings.filter(
+    (trip) =>
+      trip &&
+      typeof trip === "object" &&
+      trip.title &&
+      trip.image &&
+      trip.date
+  );
+
+  // Remove broken trips from storage (one-time cleanup)
+  if (tripBookings.length !== validTrips.length) {
+    bookings[userId] = validTrips;
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+  }
+
+  if (upcomingContainer) {
+    // Always clear any existing DOM!
+    upcomingContainer.innerHTML = "";
 
     if (validTrips.length === 0) {
       upcomingContainer.innerHTML = "<p>No upcoming trips booked yet.</p>";
@@ -75,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // WISHLIST FUNCTIONALITY
   document.querySelectorAll(".wishlist-item .remove").forEach((button) => {
     button.addEventListener("click", function () {
       const item = this.closest(".wishlist-item");
@@ -90,18 +108,17 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", function () {
       const tripElement = this.closest(".wishlist-item");
       const title = tripElement.querySelector("h4")?.textContent;
-      const icon = tripElement.querySelector(".icon")?.textContent;
-
-      const trip = {
-        title: title,
-        image: "../Images/default.jpg",
-        date: new Date().toISOString().split("T")[0],
-      };
+      // Always use a fallback image if not present
+      const image =
+        tripElement.querySelector("img")?.src || "../Images/default.jpg";
+      const date = new Date().toISOString().split("T")[0];
 
       if (!title) {
         alert("Invalid trip. Cannot book.");
         return;
       }
+
+      const trip = { title, image, date };
 
       const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
       const userTrips = Array.isArray(bookings[userId]) ? bookings[userId] : [];
@@ -111,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("bookings", JSON.stringify(bookings));
 
       alert("Trip booked successfully!");
-      location.reload(); // Reload to update upcoming trips
+      location.reload();
     });
   });
 });
