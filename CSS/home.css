@@ -44,11 +44,11 @@ main {
 }
 
 .overlay1 {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   padding: 60px;
   border-radius: 15px;
   text-align: center;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 }
 
 .hero-content h1 {
@@ -62,25 +62,23 @@ main {
 }
 
 .cta {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-
+  background: rgb(109, 108, 108);
   color: white;
   border: none;
   padding: 15px 35px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bolder;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
   transition: all 0.3s ease;
+  font-family: "Dancing Script";
+
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 .cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
-  background: linear-gradient(135deg, #0056b3, #004085);
 }
 /* Search Bar */
 .search-bar {
@@ -414,17 +412,11 @@ h2:after {
   position: relative;
   overflow: hidden;
   scroll-snap-align: start;
-  transition: transform 0.3s;
+  transition: background-color 0.3s ease;
 }
-
+  
 .experience-card:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  transform: scale(1.03);
-}
-
-.experience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .overlay {
@@ -456,6 +448,27 @@ h2:after {
   background-color: #f8f9fa;
   width: 1200px;
 }
+.see-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.see-more-btn {
+  background: white;
+  color: black;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.see-more-btn:hover {
+  transform: translateY(-2px);
+}
 
 .visa-free-section h2 {
   text-align: center;
@@ -469,7 +482,7 @@ h2:after {
 .destinations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 20px;
 }
 #largeCard {
   grid-row: span 2;
@@ -543,13 +556,14 @@ a {
 /* Updated CSS section for consistent price tags across all sections */
 
 .adventure-escapes {
-  margin: 60px 0;
+  /* margin: 60px 0; */
   padding: 40px 20px;
-  background: linear-gradient(135deg, #ff7e5f10, #feb47b10);
+  padding-top: 0%;
   border-radius: 20px;
 }
 
 .adventure-cards {
+  margin-left: 40px;
   display: flex;
   gap: 25px;
   justify-content: center;
@@ -610,14 +624,14 @@ a {
 
 .weekend-getaways {
   padding: 60px 20px;
-  background-color: #fff8f4;
+  /* background-color: #fff8f4; */
   border-radius: 20px;
   /* margin-top: 60px; */
 }
 
 .hidden-gems {
   padding: 60px 20px;
-  background-color: #fff8f4;
+  /* background-color: #fff8f4; */
   border-radius: 20px;
   margin-top: 60px;
 }
@@ -667,12 +681,58 @@ a {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: white;
 }
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: #555;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
 
 .overlay-text h3 {
   font-size: 20px;
   /* margin: 0; */
   margin-bottom: 10px;
 }
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in with delay */
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+.fade-in.delay-1 {
+  animation-delay: 0.8s;
+}
+.fade-in.delay-2 {
+  animation-delay: 0.8s;
+}
+.fade-in.delay-3 {
+  animation-delay: 0.8s;
+}
+.fade-in.delay-4 {
+  animation-delay: 0.8s;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {

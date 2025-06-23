@@ -486,6 +486,9 @@ textarea.error:focus {
   margin: 0;
   font-size: 1.5rem;
 }
+#closeModal img{
+  height: 30px;
+}
 
 .close-btn {
   color: white;

@@ -379,7 +379,7 @@ function saveBookingData(formData) {
     upcomingTrips[userId].push({
       bookingId: formData.bookingMeta.bookingId,
       title: formData.tripDetails.title,
-      image: formData.tripDetails.image || "../Images/default.jpg",
+      image: formData.tripDetails.image || `${tripDetails.image}`,
       date: formData.tripDetails.travelDate,
       totalPrice: formData.tripDetails.totalPrice,
       numPeople: formData.tripDetails.numPeople,

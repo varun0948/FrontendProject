@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us</title>
-  <link rel="stylesheet" href="../Header/header.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Wanderlust Travels</title>
   <link rel="stylesheet" href="../CSS/about.css">
+  <link rel="stylesheet" href="../Header/header.css">
   <link rel="stylesheet" href="../Footer/footer.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
- 
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+
+
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+
 </head>
+
 <body>
+  <div id="header"></div>
 
-<div id="header"></div>
 
-<!-- Hero Section -->
-<section class="hero-about">
-  <div class="overlay">
-    <div class="hero-content">
-      <h1>Who We Are</h1>
-      <p>Creating meaningful travel experiences one journey at a time.</p>
+  <section class="about-section" data-aos="fade-up">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+          TravelinTravels was born from a love of exploration and a dream to connect people with the world. Since our
+          founding in 2015, we’ve helped thousands of travelers discover new destinations, cultures, and adventures.
+        </p>
+        <p>
+          Our team is passionate about crafting personalized experiences—from weekend getaways to once-in-a-lifetime
+          journeys.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="../Images/p11.jpg" alt="Travel Adventure" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About Info Section -->
-<section class="about-section">
-  <div class="about-image">
-    <img src="../Images/p8.jpg" alt="Our Story">
-  </div>
-  <div class="about-text">
-    <h2>Our Story</h2>
-    <p>At Travelin, we believe in the magic of exploration. With a passion for travel and a commitment to exceptional service, we help you discover the world in comfort and style.</p>
-    <button id="btn">Learn More &nbsp;&nbsp; <span class="arrow">→</span></button>
-  </div>
-</section>
-
-<!-- Values Section -->
-<section class="values-section">
-  <h2>What We Value</h2>
-  <div class="values-grid">
-    <div class="value-box">
-      <h3>Trust</h3>
-      <p>We’re committed to transparency, safety, and reliability.</p>
+  <section class="value-section" data-aos="fade-up">
+    <h2>Why Travel With Us</h2>
+    <div class="value-grid">
+      <div class="value-box" data-aos="zoom-in">
+        <img src="../Images/expert-team.png" alt="Expert Team" />
+        <h4>Expertise</h4>
+        <p>Years of experience and insider knowledge to guide your adventure.</p>
+      </div>
+      <div class="value-box" data-aos="zoom-in" data-aos-delay="150">
+        <img src="../Images/handpicked.png" alt="Handpicked Trips" />
+        <h4>Tailored Experiences</h4>
+        <p>Curated trips that match your preferences, style, and dreams.</p>
+      </div>
+      <div class="value-box" data-aos="zoom-in" data-aos-delay="300">
+        <img src="../Images/support.png" alt="Support" />
+        <h4>24/7 Support</h4>
+        <p>We’re with you from booking to return—anytime, anywhere.</p>
+      </div>
     </div>
-    <div class="value-box">
-      <h3>Adventure</h3>
-      <p>We help travelers create moments that become unforgettable stories.</p>
+  </section>
+
+  <section class="team-section" data-aos="fade-up">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+        <img src="../Images/team1.jpg" alt="Team Member 1">
+        <h4>Raj Sharma</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+        <img src="../Images/team2.jpg" alt="Team Member 2">
+        <h4>Jalay  Mehta</h4>
+        <p>Lead Travel Consultant</p>
+      </div>
+      <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+        <img src="../Images/team3.jpg" alt="Team Member 3">
+        <h4>Priya verma</h4>
+        <p>Customer Experience Head</p>
+      </div>
     </div>
-    <div class="value-box">
-      <h3>Excellence</h3>
-      <p>From planning to destination, we aim for perfection in every detail.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div id="footer"></div>
+  <div id="footer"></div>
 
-<script>
-  // Load Header
-  fetch("../Header/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading header:", error));
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
 
-  // Load Footer
-  fetch("../Footer/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading footer:", error));
-</script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
 
+    fetch("../Header/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading header:", error));
+
+    // Load Footer
+    fetch("../Footer/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading footer:", error));
+  </script>
 </body>
+
 </html>
