@@ -12,7 +12,7 @@ const Input = forwardRef((props, ref) => {
         {props.label}
       </label>
       <div className={classes.inputWrap}>
-        <input
+        <input 
           ref={ref}
           id={props.id}
           type={props.type}
