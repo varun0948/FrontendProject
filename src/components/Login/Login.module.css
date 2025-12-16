@@ -1,0 +1,40 @@
+.login {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  margin: auto;
+}
+.login {
+  width: 90%;
+  max-width: 40rem;
+  margin: 8rem auto; /* 🔥 THIS LINE FIXES EVERYTHING */
+  padding: 2rem;
+}
+.actions {
+  text-align: center;
+}
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #03be9f;
+  border: 1px solid #03be9f;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+ 
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* center the login button row */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}

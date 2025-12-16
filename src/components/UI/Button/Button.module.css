@@ -1,0 +1,24 @@
+.button {
+  color: #cfcfcf;
+  background-color: #741188;
+  border: none;
+  padding: 12px 48px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.06s ease, background 0.12s;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}

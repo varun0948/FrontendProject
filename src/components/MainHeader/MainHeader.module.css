@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem; /* MUST MATCH */
+  background: #741188;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
